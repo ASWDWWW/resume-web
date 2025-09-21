@@ -1,0 +1,813 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakiy T. Manigo | Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .glow-card {
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .glow-card:hover {
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+            transform: translateY(-5px);
+        }
+        
+        .ai-particle {
+            position: absolute;
+            background: rgba(56, 189, 248, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #38bdf8;
+            border: 3px solid #0f172a;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #38bdf8;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #38bdf8 }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Floating AI Particles -->
+    <div id="particles-container"></div>
+    
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-center justify-between mb-16">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">Zakiy T. Manigo</h1>
+                <h2 class="text-xl md:text-2xl font-medium text-slate-300 mb-6 typewriter">Founder/CEO/Developer</h2>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    Recent graduate with a dual degree in Computer Engineering and Mathematics, I currently serve as Head Digital Strategy & Development Associate at Bariatric Associates, where I build hybrid technology solutions across clinical and business workflows. As the founder of FITD, an AI-powered fashion app, I combine full-stack development, workflow automation, and AI-driven design to create impactful, user-focused products.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="mailto:zakiymanigo@gmail.com"
+                    class="px-6 py-3 bg-sky-500 hover:bg-sky-600 rounded-full font-medium transition-all flex items-center"
+                    aria-label="Email Zakiy Manigo">
+                    <i class="fas fa-envelope mr-2"></i> Contact
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/in/zakiymanigo/" target="_blank" rel="noopener noreferrer" 
+                    class="px-6 py-3 border border-sky-500 text-sky-400 hover:bg-sky-900/30 rounded-full font-medium transition-all flex items-center">
+                    <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                    </a>
+
+                    <a href="https://github.com/ztm2106" target="_blank" rel="noopener noreferrer" 
+                    class="px-6 py-3 border border-sky-500 text-sky-400 hover:bg-sky-900/30 rounded-full font-medium transition-all flex items-center">
+                    <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+
+
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 aspect-square md:w-80 rounded-full overflow-hidden border-4 border-sky-500/30 relative glow-card">
+                    <img src="./images/headshot.jpg" alt="Zakiy T. Manigo" class="w-full h-full object-cover" />
+                    </div>
+
+                    <div class="absolute -bottom-6 -right-6 bg-slate-800 px-4 py-2 rounded-lg border border-slate-700 shadow-lg">
+                        <span class="text-sky-400 font-bold">Innovator/Engineer</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Stats Section -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                <h3 class="text-slate-400 text-sm mb-2">One-Word Motto </h3>
+                <p class="text-3xl font-bold text-sky-400">Visionary</p>
+            </div>
+            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                <h3 class="text-slate-400 text-sm mb-2">Years in Tech</h3>
+                <p class="text-3xl font-bold text-sky-400">4+</p>
+            </div>
+            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                <h3 class="text-slate-400 text-sm mb-2">Overall GPA</h3>
+                <p class="text-3xl font-bold text-sky-400">3.3</p>
+            </div>
+            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                <h3 class="text-slate-400 text-sm mb-2">FITD Users</h3>
+                <p class="text-3xl font-bold text-sky-400">76+</p>
+            </div>
+        </section>
+        
+        <!-- Current Employment -->
+        <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Current Employment</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card space-y-[10px]">
+            <div class="text-sky-400 text-4xl mb-4">
+                <!-- Health practice -->
+                <i class="fas fa-hospital"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Bariatric Associates</h3>
+            <p class="text-slate-400">Integrated 5+ workflows and built 2 full-stack prototypes, streamlining data collection and testing new product features.</p>
+            <p class="text-slate-400">Automated operations across Microsoft 365, Google Apps Script, Jotform Suite, and Bariatrix360, reducing manual workload by 30%+.</p>
+            <p class="text-slate-400">Developed 3+ custom webhooks and routing algorithms, including integrations with biometric wearable devices to enhance patient monitoring and data-driven insights.</p>
+            <p class="text-slate-400">Conducted research on 25+ competitors, shaping B2B and B2C roadmaps to guide leadership strategy.</p>
+            </div>
+
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card space-y-[10px]">
+            <div class="text-sky-400 text-4xl mb-4">
+                <!-- Fashion / product -->
+                <i class="fas fa-shirt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">FITD AI</h3>
+            <p class="text-slate-400">Founded and launched an AI-powered fashion app that curates outfits and connects users with small clothing brands.</p>
+            <p class="text-slate-400">Spearheaded beta launch and brand outreach, onboarding early partners and building a growing user community</p>
+            <p class="text-slate-400">Built scalable data pipelines with Firestore and AI integrations to power outfit generation and brand discovery within a Swift environment.</p>
+            <p class="text-slate-400">Hired and managed a summer intern, delegating tasks in development and research while fostering technical growth and project ownership.</p>
+            </div>
+
+        </div>
+        </section>
+
+
+        <!-- Past Employment -->
+        <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Past Employment</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card space-y-[10px]">
+            <div class="text-sky-400 text-4xl mb-4">
+                <!-- City / municipal -->
+                <i class="fas fa-city"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">City of Elizabeth</h3>
+            <p class="text-slate-400">Managed MongoDB and Excel databases to enhance storage, collaboration, and access for 500+ users.</p>
+            <p class="text-slate-400">Automated reporting pipelines, reducing time required for data processing and decision-making.</p>
+            <p class="text-slate-400">Improved knowledge-sharing networks by optimizing data flow across departments.</p>
+            <p class="text-slate-400">Supported digital initiatives that modernized record-keeping and increased efficiency in city operations.</p>
+            </div>
+
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card space-y-[10px]">
+            <div class="text-sky-400 text-4xl mb-4">
+                <!-- Innovation / IDE -->
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Columbia University IDE</h3>
+            <p class="text-slate-400">Managed and enhanced IDE’s WordPress website, boosting engagement with affiliated organizations.</p>
+            <p class="text-slate-400">Collaborated with faculty and students to improve communication across Columbia’s engineering community.</p>
+            <p class="text-slate-400">Designed and implemented UI/UX improvements for the program’s digital platform.</p>
+            <p class="text-slate-400">Assisted in coordinating events and workshops supporting innovation and student entrepreneurship.</p>
+            </div>
+
+        </div>
+        </section>
+
+
+        <!-- Highlighted Projects -->
+        <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Highlighted Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+            <div class="text-sky-400 text-4xl mb-4">
+                <!-- Code / algorithms -->
+                <i class="fas fa-code"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Data Structures Algorithms</h3>
+            <p class="text-slate-400">Created and implemented core data structures (linked lists, stacks, queues, trees, hash maps) in Java/C, building utilities and algorithms for sorting, traversal, and memory management.</p>
+            </div>
+
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+            <div class="text-sky-400 text-4xl mb-4">
+                <!-- Code generation / scripting -->
+                <i class="fas fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Meme Generation Program</h3>
+            <p class="text-slate-400">Developed a custom lexer, parser, and code generator in Python to transform meme description scripts into executable Java programs, automating meme creation with configurable styles, text, and layouts.</p>
+            </div>
+
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+            <div class="text-sky-400 text-4xl mb-4">
+                <!-- AI / analytics -->
+                <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">AI Data Mining & Predictive Modeling</h3>
+            <p class="text-slate-400">Applied regression and machine learning methods (OLS, Ridge, Lasso, PCR, PLS) in R to predict automobile prices, converting categorical variables to numerical features and optimizing models with cross-validation.</p>
+            </div>
+
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+            <div class="text-sky-400 text-4xl mb-4">
+                <!-- Networking -->
+                <i class="fas fa-network-wired"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Network Proxy & Server</h3>
+            <p class="text-slate-400">Built a Python-based client-server networking tool with proxy intermediaries, handling traffic via custom server and client scripts while logging and analyzing intermediary proxy data.</p>
+            </div>
+        </div>
+        </section>
+
+        
+        <!-- Timeline Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Career Journey</h2>
+            <div class="relative">
+                <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-slate-700"></div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Left Side Items -->
+                    <div class="md:mr-auto md:pr-16 md:text-right">
+                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-8">
+                            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                                <h3 class="font-bold text-lg text-sky-400 mb-2">Columbia University</h3>
+                                <p class="text-sm text-slate-400 mb-2">BS Computer Engineering | August 2023-May 2025</p>
+                                <p class="text-slate-300">Specialized in neural networks and early AI architectures</p>
+                            </div>
+                        </div>
+                        
+                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-8">
+                            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                                <h3 class="font-bold text-lg text-sky-400 mb-2">James Cook University</h3>
+                                <p class="text-sm text-slate-400 mb-2">Study Abroad | June 2022-November 2022</p>
+                                <p class="text-slate-300">Led breakthrough research in deep learning applications</p>
+                            </div>
+                        </div>
+                                                <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-8">
+                            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                                <h3 class="font-bold text-lg text-sky-400 mb-2">St. Lawrence University</h3>
+                                <p class="text-sm text-slate-400 mb-2">BS Mathematics | August 2020-May 2023</p>
+                                <p class="text-slate-300">Specialized in neural networks and early AI architectures</p>
+                            </div>
+                        </div>
+                        
+                        <div class="relative pl-12 md:pl-0 md:pr-12 timeline-item mb-8">
+                            <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                                <h3 class="font-bold text-lg text-sky-400 mb-2">Berkshire School</h3>
+                                <p class="text-sm text-slate-400 mb-2">Google Brain | August 2016-May 2020</p>
+                                <p class="text-slate-300">Led breakthrough research in deep learning applications</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side Items -->
+                    <div class="md:ml-auto md:pl-16">
+
+                    <!-- Bariatric Associates -->
+                    <div class="relative pl-12 timeline-item mb-8">
+                        <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                        <h3 class="font-bold text-lg text-sky-400 mb-2">Head Digital Strategy & Development Associate</h3>
+                        <p class="text-sm text-slate-400 mb-2">Bariatric Associates | May 2024 – Present</p>
+                        <p class="text-slate-300">Workflow automation, full-stack development, API integration, and data pipeline engineering.</p>
+                        </div>
+                    </div>
+
+                    <!-- FITD AI -->
+                    <div class="relative pl-12 timeline-item mb-8">
+                        <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                        <h3 class="font-bold text-lg text-sky-400 mb-2">Founder & CEO</h3>
+                        <p class="text-sm text-slate-400 mb-2">FITD AI | Jan 2023 – Present</p>
+                        <p class="text-slate-300">Mobile app development, AI/ML integration, Firebase/Firestore, and UI/UX prototyping.</p>
+                        </div>
+                    </div>
+
+                    <!-- City of Elizabeth -->
+                    <div class="relative pl-12 timeline-item mb-8">
+                        <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                        <h3 class="font-bold text-lg text-sky-400 mb-2">Database Engineer Intern</h3>
+                        <p class="text-sm text-slate-400 mb-2">City of Elizabeth | May 2024 – Sept 2024</p>
+                        <p class="text-slate-300">Database management, data pipelines, reporting automation, and collaboration tools.</p>
+                        </div>
+                    </div>
+
+                    <!-- Columbia University IDE -->
+                    <div class="relative pl-12 timeline-item mb-8">
+                        <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                        <h3 class="font-bold text-lg text-sky-400 mb-2">Innovation, Design, Entrepreneurship Intern</h3>
+                        <p class="text-sm text-slate-400 mb-2">Columbia University IDE | Sept 2023 – May 2024</p>
+                        <p class="text-slate-300">Web development, UI/UX design, communication systems, and event coordination.</p>
+                        </div>
+                    </div>
+
+                    <!-- St. Lawrence University Career Excellence -->
+                    <div class="relative pl-12 timeline-item">
+                        <div class="bg-slate-800/50 p-6 rounded-xl glow-card">
+                        <h3 class="font-bold text-lg text-sky-400 mb-2">Career Excellence Intern</h3>
+                        <p class="text-sm text-slate-400 mb-2">St. Lawrence University | Aug 2021 – May 2022</p>
+                        <p class="text-slate-300">Student advising, career support, and communication skills development.</p>
+                        </div>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Study Abroad Opportunity -->
+        <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Study Abroad Opportunity</h2>
+        <div class="bg-slate-800/50 p-8 rounded-xl glow-card max-w-4xl mx-auto text-center">
+            <h3 class="text-xl font-bold mb-3">James Cook University</h3>
+            <h3 class="text-xl font-bold mb-3">College of Science and Engineering</h3>
+            <p class="text-sm text-slate-400 mb-4">Townsville, Australia | 2022</p>
+            <p class="text-slate-300 leading-relaxed mb-6">
+            At James Cook University, I strengthened my foundation in <strong>data mining, probability, and game design</strong> while also exploring 
+            <strong>human rights and social justice</strong>. I applied these skills beyond the classroom by publishing a 
+            <strong>Weave News article on shark and ray conservation</strong>, linking data-driven analysis with advocacy. 
+            Living in Townsville offered cultural immersion and inspiration—whether studying marine ecosystems at <strong>Magnetic Island</strong>, 
+            hiking <strong>Castle Hill</strong>, or connecting with the community along <strong>The Strand</strong>. 
+            This experience blended technical growth with global perspective, reinforcing my commitment to bridging technology, society, and sustainability.
+            </p>
+            <a href="https://www.weavenews.org/authors/zakiy-manigo" target="_blank" rel="noopener noreferrer" 
+            class="inline-block px-6 py-3 border border-sky-500 text-sky-400 hover:bg-sky-900/30 rounded-full font-medium transition-all">
+            View Weave News Article
+            </a>
+        </div>
+        </section>
+
+        <!-- Resume (Dropdown) -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Resume</h2>
+
+            <div class="bg-slate-800/50 p-6 md:p-8 rounded-xl glow-card max-w-4xl mx-auto">
+                <button id="toggleResume"
+                        class="w-full flex items-center justify-between px-5 py-3 border border-sky-500 text-sky-400 hover:bg-sky-900/30 rounded-lg font-medium transition-all"
+                        aria-expanded="false" aria-controls="resumePanel">
+                <span class="flex items-center">
+                    <i class="fas fa-file-pdf mr-3"></i>
+                    View / Hide PDF Resume
+                </span>
+                <i id="chevIcon" class="fas fa-chevron-down transition-transform"></i>
+                </button>
+
+                <!-- Collapsible panel -->
+                <div id="resumePanel" class="mt-6 hidden">
+                <div class="rounded-lg overflow-hidden border border-slate-700">
+                    <!-- Inline PDF -->
+                    <iframe
+                    src="images/resume.pdf#view=FitH"
+                    title="Resume PDF"
+                    class="w-full h-[75vh] md:h-[80vh] bg-slate-900"
+                    ></iframe>
+                </div>
+
+                <!-- Actions -->
+                <div class="mt-4 flex flex-wrap gap-3 justify-center">
+                    <!-- JS download (no navigation) -->
+                    <a id="downloadResume"
+                    href="images/resume.pdf"
+                    class="px-5 py-2 bg-sky-500 hover:bg-sky-600 rounded-full font-medium transition-all flex items-center">
+                    <i class="fas fa-download mr-2"></i> Download PDF
+                    </a>
+
+                    <!-- Open in new tab (keeps dropdown open) -->
+                    <a href="images/resume.pdf" target="_blank" rel="noopener noreferrer"
+                    class="px-5 py-2 border border-sky-500 text-sky-400 hover:bg-sky-900/30 rounded-full font-medium transition-all flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i> Open in New Tab
+                    </a>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+        <!-- Keynote Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Top Technical Skills</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Full-Stack Development</h3>
+                    <p class="text-slate-400">
+                        Experienced in building responsive, user-focused applications from front-end interfaces to back-end logic. Skilled in developing, testing, and deploying scalable full-stack solutions.
+                    </p>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Workflow Automation & Scripting</h3>
+                    <p class="text-slate-400">
+                        Automated multi-step business and clinical workflows to improve efficiency and reduce manual tasks. Proficient in designing scripts and automation pipelines across enterprise tools.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">API Integration & Data Pipelines</h3>
+                    <p class="text-slate-400">
+                        Integrated third-party APIs and built reliable data pipelines for seamless system interoperability. Designed custom webhooks and routing algorithms to improve data flow accuracy.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Artificial Intelligence & Machine Learning</h3>
+                    <p class="text-slate-400">
+                        Applied AI and ML techniques to enhance product functionality and generate data-driven insights. Experienced in integrating AI-powered features into mobile and web applications.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">UI/UX Design & Prototyping</h3>
+                    <p class="text-slate-400">
+                        Created intuitive, user-friendly designs and interactive prototypes to align technical development with product vision. Skilled in translating design concepts into functional user experiences.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Database Engineering & Systems Integration</h3>
+                    <p class="text-slate-400">
+                        Developed and optimized database solutions to support scalable applications and centralized data collection. Experienced in integrating multiple systems into cohesive, data-driven workflows.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Keynote Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Top Soft Skills</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Problem-Solving</h3>
+                    <p class="text-slate-400">
+                        Able to approach technical and organizational challenges with structured solutions that improve efficiency and scalability. Known for turning complex problems into practical, results-driven outcomes.
+                    </p>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Innovation & Creativity</h3>
+                    <p class="text-slate-400">
+                        Skilled at transforming ideas into tangible solutions by designing innovative products, workflows, and prototypes. Passionate about applying creativity to drive meaningful user and business impact.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Collaboration & Communication</h3>
+                    <p class="text-slate-400">
+                        Strong communicator with experience bridging technical and non-technical teams. Adept at building alignment and ensuring clarity across diverse stakeholders.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Adaptability</h3>
+                    <p class="text-slate-400">
+                        Comfortable working in dynamic environments where priorities shift quickly. Able to learn and adopt new tools or frameworks efficiently to meet project demands.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Leadership & Initiative</h3>
+                    <p class="text-slate-400">
+                        Demonstrated leadership through founding an AI-powered startup and spearheading digital transformation initiatives. Known for taking initiative to launch, manage, and scale impactful projects.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl glow-card">
+                    <h3 class="text-xl font-bold mb-3">Analytical Thinking</h3>
+                    <p class="text-slate-400">
+                        Experienced in using research and data analysis to inform decision-making and strategy. Skilled at drawing actionable insights from large datasets and competitive landscapes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <!-- Contact Section -->
+            <div class="bg-slate-800/50 p-8 rounded-xl glow-card max-w-2xl mx-auto">
+            <form id="contactForm" class="space-y-6">
+                <!-- Status message -->
+                <div id="contactStatus" class="hidden text-sm p-3 rounded-lg"></div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-slate-400 mb-2">Name</label>
+                    <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500" />
+                </div>
+                <div>
+                    <label for="email" class="block text-slate-400 mb-2">Email</label>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500" />
+                </div>
+                </div>
+
+                <div>
+                <label for="subject" class="block text-slate-400 mb-2">Subject</label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500" />
+                </div>
+
+                <div>
+                <label for="message" class="block text-slate-400 mb-2">Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                </div>
+
+                <!-- Honeypot (spam trap) -->
+                <div style="position:absolute; left:-9999px;" aria-hidden="true">
+                <label>Leave this field empty</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <button
+                id="contactSubmit"
+                type="submit"
+                class="w-full bg-sky-500 hover:bg-sky-600 text-white font-medium py-3 px-6 rounded-lg transition-all flex items-center justify-center">
+                <i class="fas fa-paper-plane mr-2"></i>
+                Send Message
+                </button>
+            </form>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+<footer class="bg-slate-900/50 py-8 mt-16">
+  <div class="container mx-auto px-4 text-center">
+    <div class="flex justify-center space-x-6 mb-6">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/zakiymanigo/" target="_blank" rel="noopener noreferrer"
+         class="text-slate-400 hover:text-sky-400 transition-all">
+        <i class="fab fa-linkedin-in text-xl"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/ztm2106" target="_blank" rel="noopener noreferrer"
+         class="text-slate-400 hover:text-sky-400 transition-all">
+        <i class="fab fa-github text-xl"></i>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:zakiymanigo@gmail.com" class="text-slate-400 hover:text-sky-400 transition-all">
+        <i class="fas fa-envelope text-xl"></i>
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:+19082306948" class="text-slate-400 hover:text-sky-400 transition-all">
+        <i class="fas fa-phone text-xl"></i>
+      </a>
+    </div>
+    <p class="text-slate-500 text-sm">
+      © 2025 Zakiy T. Manigo. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+        <script>
+        (() => {
+        const form   = document.getElementById('contactForm');
+        const status = document.getElementById('contactStatus');
+        const submit = document.getElementById('contactSubmit');
+
+        // TODO: replace with your deployed Apps Script Web App URL
+        const endpoint = 'https://script.google.com/macros/s/AKfycbxYwsOLFJEdvX3ptqo0fUxxoQx1yJFRgKFENlsVvsS20w50zigb572sxWttRhnuBoBg/exec';
+
+        function showStatus(msg, type = 'info') {
+            status.textContent = msg;
+            status.classList.remove('hidden', 'text-red-300', 'bg-red-900/40', 'text-green-300', 'bg-green-900/30', 'text-sky-300', 'bg-slate-700/60');
+            const map = {
+            error: ['text-red-300', 'bg-red-900/40'],
+            success: ['text-green-300', 'bg-green-900/30'],
+            info: ['text-sky-300', 'bg-slate-700/60'],
+            };
+            status.classList.add(...(map[type] || map.info));
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Honeypot check
+            const trap = document.getElementById('website').value;
+            if (trap) return; // silently drop spam
+
+            const name    = document.getElementById('name').value.trim();
+            const email   = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+            showStatus('Please fill in your name, email, and message.', 'error');
+            return;
+            }
+
+            // Disable button during submit
+            submit.disabled = true;
+            submit.classList.add('opacity-60', 'cursor-not-allowed');
+            showStatus('Sending...', 'info');
+
+            const payload = { name, email, subject, message };
+
+            try {
+            const res = await fetch(endpoint, {
+                method: 'POST',
+                // Use a "simple request" to avoid CORS preflight with Apps Script
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify(payload),
+            });
+
+            // Expect JSON like: { ok: true } from Apps Script
+            const data = await res.json().catch(() => ({}));
+
+            if (res.ok && data.ok) {
+                showStatus('Message sent! I’ll get back to you soon.', 'success');
+                form.reset();
+            } else {
+                showStatus('Something went wrong. Please email me directly at zakiymanigo@gmail.com.', 'error');
+            }
+            } catch (err) {
+            showStatus('Network error. Please email me directly at zakiymanigo@gmail.com.', 'error');
+            } finally {
+            submit.disabled = false;
+            submit.classList.remove('opacity-60', 'cursor-not-allowed');
+            // Auto-hide status after a while (optional)
+            setTimeout(() => status.classList.add('hidden'), 6000);
+            }
+        });
+        })();
+        </script>
+
+
+    <script>
+        // Create floating AI particles
+        function createParticles() {
+            const container = document.getElementById('particles-container');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('ai-particle');
+                
+                // Random size between 2px and 6px
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                particle.style.animation = `float ${duration}s linear infinite`;
+                
+                // Add to container
+                container.appendChild(particle);
+                
+                // Animate particle
+                animateParticle(particle);
+            }
+        }
+        
+        function animateParticle(particle) {
+            let x = parseFloat(particle.style.left);
+            let y = parseFloat(particle.style.top);
+            let xSpeed = (Math.random() - 0.5) * 0.2;
+            let ySpeed = (Math.random() - 0.5) * 0.2;
+            
+            function move() {
+                x += xSpeed;
+                y += ySpeed;
+                
+                // Bounce off edges
+                if (x <= 0 || x >= 100) xSpeed *= -1;
+                if (y <= 0 || y >= 100) ySpeed *= -1;
+                
+                particle.style.left = `${x}vw`;
+                particle.style.top = `${y}vh`;
+                
+                requestAnimationFrame(move);
+            }
+            
+            move();
+        }
+        
+        // Initialize particles when page loads
+        window.addEventListener('load', createParticles);
+        
+        // Add animation to timeline items when they come into view
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'all 0.6s ease';
+            observer.observe(item);
+        });
+    </script>
+
+    <!-- Resume dropdown + download + state memory -->
+    <script>
+    (function () {
+        const btn = document.getElementById('toggleResume');
+        const panel = document.getElementById('resumePanel');
+        const icon = document.getElementById('chevIcon');
+        const KEY = 'resumePanelOpen';
+
+        function setOpen(open) {
+        panel.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        icon.classList.toggle('rotate-180', open);
+        }
+
+        // Restore state
+        if (localStorage.getItem(KEY) === '1') setOpen(true);
+
+        // Toggle + save state
+        btn.addEventListener('click', () => {
+        const willOpen = panel.classList.contains('hidden');
+        setOpen(willOpen);
+        localStorage.setItem(KEY, willOpen ? '1' : '0');
+        });
+
+        // JS Download (prevents page navigation)
+        const dl = document.getElementById('downloadResume');
+        dl.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const href = dl.getAttribute('href');
+        try {
+            const res = await fetch(href);
+            if (!res.ok) throw new Error('Network response was not ok');
+            const blob = await res.blob();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Zakiy_Manigo_Resume.pdf';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+        } catch (err) {
+            console.error('Download failed, opening in new tab:', err);
+            window.open(href, '_blank', 'noopener');
+        }
+        });
+    })();
+    </script>
+</html>
