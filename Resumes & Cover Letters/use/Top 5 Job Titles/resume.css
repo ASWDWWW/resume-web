@@ -1,0 +1,113 @@
+@page {
+  size: letter;
+  margin: 0.45in 0.52in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 10pt;
+  line-height: 1.22;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+.page {
+  max-width: 8in;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1.4px solid #1a1a1a;
+  padding-bottom: 6px;
+  margin-bottom: 7px;
+}
+
+h1 {
+  font-size: 18.5pt;
+  letter-spacing: 1.4px;
+  margin: 0 0 3px;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 11pt;
+  font-style: italic;
+  margin: 0 0 4px;
+  color: #222;
+}
+
+.contact {
+  font-size: 9pt;
+  margin: 0;
+}
+
+h2 {
+  font-size: 10pt;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  border-bottom: 0.8px solid #1a1a1a;
+  margin: 7px 0 4px;
+  padding-bottom: 1px;
+}
+
+.summary {
+  margin: 0 0 2px;
+}
+
+.job {
+  margin: 0 0 5px;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.job-title {
+  font-weight: 700;
+}
+
+.job-meta {
+  white-space: nowrap;
+  font-size: 9.2pt;
+}
+
+.job-sub {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-style: italic;
+  font-size: 9.4pt;
+  margin-bottom: 1px;
+}
+
+ul {
+  margin: 2px 0 0 16px;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 1.5px;
+}
+
+.skills p,
+.edu p {
+  margin: 0 0 2px;
+}
+
+.skills strong,
+.edu strong {
+  font-weight: 700;
+}

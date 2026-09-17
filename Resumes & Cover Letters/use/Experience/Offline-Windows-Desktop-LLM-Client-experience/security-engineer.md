@@ -1,0 +1,47 @@
+# Security Engineer
+
+**Project:** Local AI (this repository)  
+**Fit score:** 5.5 / 10  `██████░░░░`  
+**Level:** Solid application-security instincts; not a SecEng career yet
+
+## Rating notes
+
+Ratings are **0–10 for this repository only**, not a full career score.
+
+| Score | Meaning |
+| --- | --- |
+| 9–10 | This project is a primary hiring signal for the role |
+| 7–8 | Strong transferable evidence; interviewable as I/II on this stack |
+| 5–6 | Partial overlap; you can tell a credible story with gaps named |
+| 3–4 | Adjacent skills only |
+| 0–2 | Essentially no evidence from this work |
+
+## What this role usually means
+
+Threat models, reviews, detections, identity, vuln management, sometimes exploit work (defensive).
+
+## What you actually did in this project
+
+**Local AI** (`com.localai.desktop`, v0.2.0) is a Windows desktop product: **Tauri 2 + React 19 + TypeScript + Rust**. It runs **offline GGUF** inference via pinned **llama.cpp** (`llama-cli` b10488) as a child process (stdio, not HTTP). Chats persist in **SQLite** (`rusqlite` + migrations). The UI never calls cloud inference APIs.
+
+Shipped surface: first-run wizard, chat (stream/stop/regenerate/edit), model library (import/scan/load/unload/GPU backends), documents + local RAG, settings/presets, command palette, help, themes, portable USB layout, current-user **NSIS** installer. Tests: Vitest + Cargo unit/fixture tests + a 38-item Windows installer manual matrix.
+
+Role-specific work:
+
+Documented threat model: untrusted GGUF, canonicalize/reject `..`, fail closed magic, model text not executed, tools JSON-only, destructive tools gated, Fully Offline, log redaction of `sk-`/Bearer, Tauri capabilities without opener/shell in webview, CSP default-src self, path allowlists, unsigned installer honestly documented.
+
+## How this project applies to this title
+
+Enough to pass “how would you sandbox an LLM that can call tools?” as an application engineer. Not enough to be the company’s Security Engineer.
+
+## Gaps (do not overclaim)
+
+No pentest program, no IAM, no SIEM, no CVE triage rotation. Signing still not done.
+
+## How to talk about it
+
+Position as secure-by-default product engineering. Apply to SecEng only if the role is “product security for clients.”
+
+---
+
+*Generated from repository evidence (architecture, Rust/TS sources, tests, packaging, and the Windows manual matrix in `docs/TESTING.md`). This is not a background check or a claim about work outside this repo.*
