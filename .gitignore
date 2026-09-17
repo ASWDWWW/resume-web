@@ -67,3 +67,17 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Local gallery copies (~80MB). Public URLs live in public/media.js and Firebase Storage.
+public/media/
+
+# Operating system runtime (not secrets, but local event logs)
+.cursor/hooks/logs/
+
+# Restricted records may be stored locally; folders are not a security boundary.
+# Track only the access policy files, never the records themselves.
+ops/restricted/**
+!ops/restricted/README.md
+!ops/restricted/ACCESS.md
+ops/owner/private/**
+!ops/owner/private/README.md
