@@ -1,0 +1,28 @@
+# Handoff
+
+- Date: 17 September 2026
+- From: agent (SITE-20260917-refresh)
+- To: Zakiy Manigo
+- Goal: Refresh the career site with approved Career copy and Content media, put media in Firebase Storage, redesign galleries and project stories for desktop and mobile, stop before deploy
+- What changed:
+  - `public/index.html` redesigned: about, TREI stories (Belgrade videos + NYC gallery), experience, products, education (including Berkshire and 3+2), contact. Both GitHub profiles linked.
+  - `public/media.js` plus local copies under `public/media/` (20 files). Firebase Storage uploads to `zakiymanigo-career.firebasestorage.app` / `career-media/`.
+  - `storage.rules` and `firebase.json` storage block added. **Rules not deployed.**
+  - URL inventory: `ops/product-engineering/media-urls.json` and `media-inventory.md`
+- What was verified:
+  - Local `npx serve` at http://localhost:8765/
+  - Desktop: galleries loaded from Storage (HTTP 200); lightbox opened a church photo from Storage; both Belgrade `.mov` files reported durations (4.8s and 19.8s) and accepted play
+  - Mobile ~390px: hamburger opens; Education link navigates to `#education`; no horizontal overflow
+  - Contact form present; **not submitted**
+  - 404 observed only for `/favicon.ico` (headshot set as icon after that)
+  - Independent review (17 Sep 2026): acceptance largely met. Follow-up applied: dropped operator “packet” wording, added Resume to desktop nav, FitGenius date set to May 2026 from the overview
+- Unfinished / preserve:
+  - `Career/`, `Content/` originals, `Resumes & Cover Letters/` unfinished set, `index-safety.html`, root `css/style.css`
+  - `Career/Experience/Offline-experience/` left on disk, unused by the site
+  - Hosting/Storage **rules deploy** still unauthorized
+  - `public/media/` is ~80MB local fallback; live page uses Storage URLs
+  - Before live deploy: compress gallery stills for phones; play Belgrade `.mov` on a real iPhone/Safari
+- Account identities used: github-aswdwww (no switch); Firebase `zakiymanigo@gmail.com` / `zakiymanigo-career`
+- Do not copy (secrets): none. Download tokens in `media.js` are public Storage tokens by design
+- Next step: merge the career-site PR if the git copy looks right. Authorize `firebase deploy` (hosting + storage rules) separately; Hosting `ignore` now excludes `media/**` so local fallbacks are not uploaded.
+- Due: none
