@@ -19,10 +19,10 @@
 - Unfinished / preserve:
   - `Career/`, `Content/` originals, `Resumes & Cover Letters/` unfinished set, `index-safety.html`, root `css/style.css`
   - `Career/Experience/Offline-experience/` left on disk, unused by the site
-  - Hosting/Storage **rules deploy** still unauthorized
+  - Hosting + Storage **rules released** 17 Sep 2026 to `zakiymanigo-career` (CLI `--project zakiymanigo-career`; 4 Hosting files, `media/**` ignored)
   - `public/media/` is ~80MB local fallback; live page uses Storage URLs
-  - Before live deploy: compress gallery stills for phones; play Belgrade `.mov` on a real iPhone/Safari
+  - Optional later: compress gallery stills for phones; play Belgrade `.mov` on a real iPhone/Safari
 - Account identities used: github-aswdwww (no switch); Firebase `zakiymanigo@gmail.com` / `zakiymanigo-career`
 - Do not copy (secrets): none. Download tokens in `media.js` are public Storage tokens by design
-- Next step: merge the career-site PR if the git copy looks right. Authorize `firebase deploy` (hosting + storage rules) separately; Hosting `ignore` now excludes `media/**` so local fallbacks are not uploaded.
+- Next step: none required for go-live. Optional: compress stills; iPhone Safari video check
 - Due: none

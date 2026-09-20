@@ -1,0 +1,14 @@
+---
+description: Draft vs send, test vs live payments, and other external-action limits.
+alwaysApply: true
+---
+
+# Authorization boundaries
+
+- Draft communications, invoices, filings, and outreach. Sending requires an explicit user request, verified recipients, and the correct sending identity.
+- Stripe: default to test/sandbox. Live-mode changes need named authority in [ops/business-operations/finance.md](ops/business-operations/finance.md). Keep actuals, estimates, and forecasts in separate files.
+- Do not deploy Firebase, ship App Store builds, buy ads, or run paid generation without budget and authorization recorded in the control center.
+- Do not update git config. Do not force-push `main` or `master`.
+- Generated contracts, privacy text, and compliance checklists are preparation for a professional. They are not legal approval.
+- Do not store secrets, tokens, or card data in the repo. Redact them from logs.
+- Folders under `ops/restricted/` are labels plus gitignore, not access control.

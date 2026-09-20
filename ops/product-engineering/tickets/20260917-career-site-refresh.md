@@ -2,15 +2,15 @@
 
 - ID: SITE-20260917-refresh
 - Date: 17 September 2026
-- Status: done
+- Status: done (live)
 - Product / repo: resume-web (`ASWDWWW/resume-web`)
 - GitHub identity: **github-aswdwww** (`ASWDWWW`) for this repo. Do not switch to `FITD-fash`. **Public site** must link **both** `https://github.com/ztm2106` and `https://github.com/ASWDWWW`.
 - Firebase: `zakiymanigo@gmail.com` / project `zakiymanigo-career` (aliases `default` and `dev`)
 - Gmail: not required for this ticket (no send). Contact form stays as-is.
 - Owner: Zakiy Manigo
 - Goal: Refresh `public/` with approved public facts from `Career/` and media from `Content/`, put media in Firebase Storage with public download URLs, and redesign galleries and project stories so they work on desktop and mobile. **Stop before deploy.**
-- Success metric: Local `public/index.html` shows galleries, project stories, education, and contact using only allowed copy and Storage URLs; desktop and mobile verified in the browser; no `firebase deploy`; no git commit unless a later message asks.
-- Authorization (draft/send, test/live, deploy?): local site files + Storage setup only. **Do not** `firebase deploy`, **do not** git commit, **do not** change the billing account. Billing is already **on** (verified 17 Sep 2026). Do not treat MCP `Billing Enabled: No` as ground truth.
+- Success metric: Live Hosting shows galleries, project stories, education, and contact using only allowed copy and Storage URLs. GitHub identity **github-aswdwww**. Deploy authorized 17 Sep 2026 by owner request (“push to ASWDWWW and live deploy”).
+- Authorization (draft/send, test/live, deploy?): **Live Hosting + Storage rules deploy authorized** 17 Sep 2026. Do not change the billing account. Billing is already **on** (verified 17 Sep 2026). Do not treat MCP `Billing Enabled: No` as ground truth.
 
 ## In scope
 

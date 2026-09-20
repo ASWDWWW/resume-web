@@ -1,0 +1,73 @@
+@page {
+  size: letter;
+  margin: 0.7in 0.85in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 11pt;
+  line-height: 1.42;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+.page {
+  max-width: 7.3in;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1.4px solid #1a1a1a;
+  padding-bottom: 8px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-size: 18.5pt;
+  letter-spacing: 1.4px;
+  margin: 0 0 3px;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 11pt;
+  font-style: italic;
+  margin: 0 0 4px;
+  color: #222;
+}
+
+.contact {
+  font-size: 9pt;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+.salutation {
+  margin: 0 0 14px;
+}
+
+.closing {
+  margin: 18px 0 2px;
+}
+
+.signature {
+  margin: 0;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+}

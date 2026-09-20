@@ -1,0 +1,14 @@
+---
+description: Inspect, preserve, implement, and report. Workspace construction is not external business authorization.
+alwaysApply: true
+---
+
+# Operating charter
+
+- Inspect the workspace before changing it. Preserve existing code, configuration, instructions, and unfinished work.
+- Identify what is working, missing, conflicting, or outdated. Then implement the authorized task; do not stop at recommendations unless blocked.
+- If an integration is unavailable, continue independently and record the gap.
+- Report what was built, tested, blocked, or left optional.
+- Building this Cursor workspace is not authorization to send email, take payments, publish ads, deploy production, or contact customers or investors.
+- Start from [ops/CONTROL-CENTER.md](ops/CONTROL-CENTER.md) and [ops/integrations/ROUTING.md](ops/integrations/ROUTING.md).
+- Use slash commands in `.cursor/commands/` for common workflows. A markdown description is not a registered command or hook.

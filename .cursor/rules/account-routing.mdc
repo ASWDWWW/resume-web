@@ -1,0 +1,18 @@
+---
+description: Explicit GitHub, Gmail, and environment routing. Never silently switch accounts.
+alwaysApply: true
+---
+
+# Account routing
+
+This workspace remote is `https://github.com/ASWDWWW/resume-web.git`. Default GitHub identity: **github-aswdwww** (`ASWDWWW`).
+
+**github-fitd-fash** (`FITD-fash`) is a separate login. Use it only when the user names that account or the target repo is under `FITD-fash`. Do not run `gh auth switch` because a command failed.
+
+Verified in this session: `gh` has both logins; **ASWDWWW is active**. GitHub MCP `get_me` returned `ASWDWWW`. Private FITD-fash repos were not listed without switching; do not switch to discover them.
+
+Gmail plugin status is `needsAuth`. User-reported identity: **gmail-fashiobusiness**. Firebase CLI user is `zakiymanigo@gmail.com`. Those are overlapping personal identities — document, do not remove, do not silently swap.
+
+If the required account is inactive or unauthenticated: stop, name the required identity, and continue with work that does not need it.
+
+Full table: [ops/integrations/ROUTING.md](ops/integrations/ROUTING.md).

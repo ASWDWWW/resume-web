@@ -1,0 +1,16 @@
+---
+description: Do not discard unfinished career, resume, or content work while operating the OS.
+alwaysApply: true
+---
+
+# Preserve existing work
+
+Leave these in place unless the user explicitly asks to change them:
+
+- `Career/` (untracked job-title packets and life/career notes)
+- `Content/` (photos and video)
+- `public/`, `css/`, `index-safety.html`, Firebase config
+- `Resumes & Cover Letters/` including new `Resumes/` and `Cover Letters/` folders
+- Indexed files currently deleted from the working tree under `Resumes & Cover Letters/use/`
+
+Do not restore, move, or delete that unfinished set as a side effect of operating-system work. Founder pivots must preserve it, mark what is superseded, and retarget agents.
