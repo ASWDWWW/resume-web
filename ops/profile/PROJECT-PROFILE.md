@@ -1,6 +1,6 @@
 # Project profile
 
-Last updated: 17 September 2026.  
+Last updated: 20 September 2026.  
 Owner: Zakiy T. Manigo.  
 This file is the reusable intake. Mark every statement as **confirmed**, **assumed**, or **unresolved**.
 

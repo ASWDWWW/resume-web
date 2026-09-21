@@ -18,9 +18,9 @@ Keep a simple table: date, channel, hypothesis, budget cap, result. Paid ads and
 
 ## Figma, Canva, Magnific
 
-- Canva: **verified** (owned designs include FITD and automotive one-pagers). Draft/edit only unless asked to export.
-- Figma: **unsupported** in this MCP catalog.
-- Magnific: **unsupported** here. Continue with local or Canva drafts.
+- Canva: **verified** (brand kit present; owned designs include FITD and automotive one-pagers). Draft/edit only unless asked to export.
+- Figma: **verified** identity (`zakiymanigo@gmail.com`). File workflows **untested**. See `ops/integrations/figma.md`.
+- Magnific: **verified** identity. MCP generations consume credits (unlimited does not apply here). Do not generate without a named budget.
 
 ## Sales, partnerships, onboarding
 

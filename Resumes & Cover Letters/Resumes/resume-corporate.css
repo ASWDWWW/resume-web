@@ -1,0 +1,138 @@
+@page {
+  size: letter;
+  margin: 0.6in 0.7in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.28;
+  color: #111;
+  background: #fff;
+}
+
+.page {
+  max-width: 7.6in;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #111;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 16pt;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin: 0 0 2px;
+}
+
+.role {
+  font-size: 10.5pt;
+  font-weight: 400;
+  margin: 0 0 4px;
+  color: #111;
+  font-style: normal;
+}
+
+.contact {
+  font-size: 9.5pt;
+  margin: 0;
+}
+
+.contact a {
+  color: #111;
+  text-decoration: none;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border-bottom: 0.75px solid #111;
+  margin: 11px 0 6px;
+  padding-bottom: 2px;
+}
+
+.summary {
+  margin: 0 0 2px;
+}
+
+.job,
+.edu-block {
+  margin: 0 0 8px;
+}
+
+.job-head,
+.edu-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.job-org,
+.edu-org {
+  font-weight: 700;
+}
+
+.job-loc,
+.edu-loc,
+.job-dates,
+.edu-dates {
+  white-space: nowrap;
+  font-size: 10.5pt;
+}
+
+.job-sub,
+.edu-sub {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+  font-size: 10.5pt;
+  margin-bottom: 1px;
+}
+
+.job-role,
+.edu-degree {
+  font-style: italic;
+}
+
+ul {
+  margin: 2px 0 0 18px;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 2.5px;
+}
+
+.skills p,
+.edu p,
+.edu-block p {
+  margin: 0 0 2px;
+}
+
+.skills strong,
+.edu strong {
+  font-weight: 700;
+}

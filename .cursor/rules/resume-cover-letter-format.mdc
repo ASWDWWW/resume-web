@@ -1,0 +1,45 @@
+---
+description: Corporate format for all resumes and cover letters under Resumes & Cover Letters/
+globs: "**/Resumes & Cover Letters/**"
+alwaysApply: false
+---
+
+# Resume and cover-letter format
+
+Packets under `Resumes & Cover Letters/` use the corporate layout. Do not revive Palatino, all-caps names, or Education-before-Experience.
+
+**Render:** markdown → `_render.py` (titles list) → HTML with `resume-corporate.css` / `cover-letter-corporate.css` → one-page PDF. Keep `md/`, `html/`, and `pdf/` in sync.
+
+**Section order (required):** header → summary → **Experience** → **Education** → **Skills**. Education sits immediately above Skills, never above Experience.
+
+**Resume markdown**
+
+```
+# Zakiy T. Manigo
+**Target Title**
+
+New York, NY  |  +1 (908) 230-6948  |  zakiymanigo@gmail.com  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
+
+One-line summary, third person, no “I”.
+
+## Experience
+**Employer** | City, ST
+Title | Mon YYYY – Present
+- Action + context + result.
+
+## Education
+**Columbia University** | New York, NY
+Bachelor of Science, Computer Engineering | May 2025
+Combined Plan with St. Lawrence University. Bachelor of Arts, Mathematics, May 2023. Exchange: James Cook University, Townsville, QLD, 2022.
+
+## Skills
+**Label:** items
+```
+
+Dates right of ` | `. Spell out degrees. BariAccess: **Jun 2025 – Present**. One page. No photos, tables, colors, or two-column layout. Honesty gaps go in the letter, not on the resume. Do not invent GPA.
+
+**Cover letters:** same header. Reusable: date, then `Dear Hiring Team:`. Named employer: date, inside address, `Re:` line, `Dear Recruiting Team:`.
+
+**Examples folder:** `Resumes & Cover Letters/Examples/` is third-party formatting reference only — not Zakiy’s biography. Copy layout, never their content.
+
+Own packets: `06-Rillet-Consultant` (named letter) and `01-Forward-Deployed-Engineer` (reusable).

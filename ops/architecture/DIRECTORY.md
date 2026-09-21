@@ -8,6 +8,9 @@ resume-web/                          # public career site + owner OS
   Resumes & Cover Letters/           # application materials (preserve)
   ops/
     CONTROL-CENTER.md
+    CONSTRUCTION-PHASES.md
+    CONSTRUCTION-REPORT.md
+    OPERATING-GUIDE.md
     profile/                         # intake
     architecture/                    # this file, sources of truth
     integrations/                    # inventory + routing

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render top-5 resumes from markdown into one-page HTML."""
+"""Render job-title resumes from markdown into one-page HTML."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ from pathlib import Path
 
 DIR = Path(__file__).resolve().parent
 CSS = (DIR / "resume.css").read_text()
+CSS_CORPORATE = (DIR / "resume-corporate.css").read_text()
 
 TITLES = [
     "01-Forward-Deployed-Engineer",
@@ -15,7 +16,12 @@ TITLES = [
     "03-Software-Engineer",
     "04-Product-Engineer",
     "05-AI-Product-Engineer",
+    "06-Rillet-Consultant",
+    "07-Data-AI-Platform-Engineer",
+    "08-AI-Automation-Engineer",
 ]
+
+CORPORATE = set(TITLES)
 
 
 def inline(text: str) -> str:
@@ -25,11 +31,20 @@ def inline(text: str) -> str:
     return text
 
 
-def render_md(md: str) -> str:
+def split_pair(line: str) -> tuple[str, str] | None:
+    if " | " not in line:
+        return None
+    left, right = line.split(" | ", 1)
+    return left.strip(), right.strip()
+
+
+def render_md(md: str, *, corporate: bool) -> str:
     lines = md.strip().splitlines()
     name = lines[0].lstrip("# ").strip()
     role = lines[1].replace("**", "").strip()
     contact = inline(lines[3])
+    css = CSS_CORPORATE if corporate else CSS
+    heading = name if corporate else name.upper()
 
     body: list[str] = []
     i = 5
@@ -39,11 +54,13 @@ def render_md(md: str) -> str:
             summary.append(inline(lines[i].strip()))
         i += 1
 
-    body.append(f'<p class="summary">{"".join(summary)}</p>')
+    if summary:
+        body.append(f'<p class="summary">{"".join(summary)}</p>')
 
     section = ""
     job_open = False
     list_open = False
+    edu_open = False
 
     def close_list() -> None:
         nonlocal list_open
@@ -58,17 +75,25 @@ def render_md(md: str) -> str:
             body.append("</div>")
             job_open = False
 
+    def close_edu() -> None:
+        nonlocal edu_open
+        if edu_open:
+            body.append("</div>")
+            edu_open = False
+
     while i < len(lines):
         line = lines[i]
         if line.startswith("## "):
             close_job()
-            if section in {"Education", "Skills"}:
+            close_edu()
+            if section in {"Education", "Skills"} and not corporate:
                 body.append("</div>")
             section = line[3:].strip()
-            cls = "skills" if section == "Skills" else "edu" if section == "Education" else ""
             body.append(f"<h2>{section}</h2>")
-            if cls:
-                body.append(f'<div class="{cls}">')
+            if section == "Skills":
+                body.append('<div class="skills">')
+            elif section == "Education" and not corporate:
+                body.append('<div class="edu">')
             i += 1
             continue
 
@@ -76,7 +101,41 @@ def render_md(md: str) -> str:
             i += 1
             continue
 
-        if section in {"Education", "Skills"}:
+        if section == "Skills":
+            body.append(f"<p>{inline(line)}</p>")
+            i += 1
+            continue
+
+        if section == "Education" and corporate:
+            pair = split_pair(line)
+            if line.startswith("**") and pair:
+                close_edu()
+                org, loc = pair
+                body.append('<div class="edu-block">')
+                edu_open = True
+                body.append(
+                    '<div class="edu-head">'
+                    f'<span class="edu-org">{inline(org)}</span>'
+                    f'<span class="edu-loc">{inline(loc)}</span>'
+                    "</div>"
+                )
+                i += 1
+                continue
+            if pair and edu_open:
+                degree, dates = pair
+                body.append(
+                    '<div class="edu-sub">'
+                    f'<span class="edu-degree">{inline(degree)}</span>'
+                    f'<span class="edu-dates">{inline(dates)}</span>'
+                    "</div>"
+                )
+                i += 1
+                continue
+            body.append(f"<p>{inline(line)}</p>")
+            i += 1
+            continue
+
+        if section in {"Education"} and not corporate:
             body.append(f"<p>{inline(line)}</p>")
             i += 1
             continue
@@ -90,12 +149,38 @@ def render_md(md: str) -> str:
             continue
 
         close_list()
+        pair = split_pair(line)
+
+        if line.startswith("**") and pair:
+            close_job()
+            org, loc = pair
+            body.append('<div class="job">')
+            job_open = True
+            body.append(
+                '<div class="job-head">'
+                f'<span class="job-org">{inline(org)}</span>'
+                f'<span class="job-loc">{inline(loc)}</span>'
+                "</div>"
+            )
+            i += 1
+            continue
+
+        if pair and job_open:
+            title, dates = pair
+            body.append(
+                '<div class="job-sub">'
+                f'<span class="job-role">{inline(title)}</span>'
+                f'<span class="job-dates">{inline(dates)}</span>'
+                "</div>"
+            )
+            i += 1
+            continue
+
         if line.startswith("*") and line.endswith("*"):
             body.append(f'<div class="job-sub"><span>{inline(line)}</span></div>')
             i += 1
             continue
 
-        # Job title line: **Company** — Role
         if line.startswith("**"):
             close_job()
             body.append('<div class="job">')
@@ -108,6 +193,7 @@ def render_md(md: str) -> str:
         i += 1
 
     close_job()
+    close_edu()
     if section in {"Education", "Skills"}:
         body.append("</div>")
 
@@ -116,12 +202,12 @@ def render_md(md: str) -> str:
 <head>
   <meta charset="utf-8" />
   <title>{name} — {role}</title>
-  <style>{CSS}</style>
+  <style>{css}</style>
 </head>
 <body>
   <div class="page">
     <header>
-      <h1>{name.upper()}</h1>
+      <h1>{heading}</h1>
       <p class="role">{role}</p>
       <p class="contact">{contact}</p>
     </header>
@@ -135,7 +221,7 @@ def render_md(md: str) -> str:
 def main() -> None:
     for title in TITLES:
         md_path = DIR / title / "md" / f"{title}.md"
-        html = render_md(md_path.read_text())
+        html = render_md(md_path.read_text(), corporate=title in CORPORATE)
         out = DIR / title / "html" / f"{title}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html)

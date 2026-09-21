@@ -1,17 +1,19 @@
 # Zakiy T. Manigo
 **Software Engineer**
 
-+1 (908) 230-6948 · zakiymanigo@gmail.com · [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
+New York, NY  |  +1 (908) 230-6948  |  zakiymanigo@gmail.com  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
 
-Dear Hiring Team,
+September 21, 2026
 
-I turn an unclear product need into contracts, code, and a release that stays honest when vendors, clocks, and users misbehave. Strongest on TypeScript product systems; I also ship Swift, React Native, and Firebase/Azure.
+Dear Hiring Team:
 
-At BariAccess I build production TypeScript across API, worker, website, staff console, and iPhone client for a clinic-real GLP-1 product. Features land behind tests, CI, schema migrations, and fail-closed release gates. The ordinary hard problems are the job: delayed creates, event ordering, disconnect vs outage, webhook idempotency, stale-load guards.
+I am writing to apply for a Software Engineer role. I turn an unclear product need into contracts, code, and a release that stays correct when vendors, clocks, and users misbehave. I am strongest on TypeScript product systems and also ship Swift, React Native, Firebase, and Azure.
 
-I have also shipped live sites and apps for a roadside shop, a telepsychiatry practice, and a tax-record product, plus a SwiftUI fashion app on Firebase/GCP. I do not claim sole authorship of any of these platforms.
+At BariAccess I build production TypeScript across API, worker, website, staff console, and iPhone client for a clinic GLP-1 product. Features land behind tests, CI, schema migrations, and fail-closed release gates. The ordinary hard problems are the job: delayed creates, event ordering, disconnect versus outage, webhook idempotency, and stale-load guards.
 
-I am looking for a Software Engineer seat where production honesty matters more than a demo. I would welcome a conversation.
+I have also shipped live sites and apps for a roadside shop, a telepsychiatry practice, and a tax-record product, plus a SwiftUI fashion app on Firebase / GCP. I am one of two primary engineers on TREI and do not present that platform as sole-authored.
+
+Thank you for considering my application. I can be reached at (908) 230-6948 or zakiymanigo@gmail.com and look forward to discussing the role.
 
 Sincerely,
 

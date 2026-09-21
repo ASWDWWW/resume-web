@@ -18,7 +18,18 @@ Hooks must not call MCP or start subagents.
 
 ## n8n
 
-Not connected. When added, register each workflow here with the same columns plus schedule, budget, and a disable switch. Until then, agents continue independently.
+Instance listed 20 Sep 2026. Agents must not `execute_workflow` or `publish_workflow` unless the user names the workflow and authorizes it. Cursor hooks remain the only registered local automations.
+
+| ID (name) | Trigger | Eligible | Authorized actions | Limits | Schedule / budget | Disable | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| FG Weekly Social Drafts | claimed: Mondays 09:00 ET | FitGenius drafts | write calendar drafts | does not post | unknown | leave inactive | MCP-available, **inactive** |
+| FG Review Draft Queues | manual | FitGenius drafts | review queues | does not post/send | none | leave inactive | MCP-available, **inactive** |
+| FG Business Draft Pack | manual | FitGenius drafts | outreach/support macros | does not send | none | leave inactive | MCP-available, **inactive** |
+| FG Bootstrap Tables | one-time | FitGenius tables | create tables | safe to re-run per description | none | leave inactive | MCP-available, **inactive** |
+| Scheduled Instagram Posting (Single + Reel + Mixed Carousel + Optional Story) | unknown (MCP details blocked) | Instagram | posting (instance **active**) | not callable from Cursor MCP | unknown | disable in n8n UI | **active** on instance, MCP-unavailable |
+| Older Instagram / Reddit / AI video workflows | unknown | various | posting / gen | not MCP-available | unknown | leave as found | inactive except the row above |
+
+Failure handling: `FAILURE-HANDLING.md`. Do not retry sends from Cursor if n8n already posted.
 
 ## Recurring agents
 

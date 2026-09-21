@@ -25,7 +25,7 @@ Other products’ **code** is authoritative in their own GitHub repos, not here.
 | Tickets | `ops/product-engineering/tickets/` | Chat history |
 | Customer records | Not in this repo (unresolved CRM) | Invented customers |
 | Financial figures | `ops/business-operations/finance/` split actuals / estimates / forecasts | Mixing the three |
-| Designs | Canva account (verified owned designs); optional local exports | Assuming Figma is connected |
+| Designs | Figma (identity verified; files untested); Canva (verified); Magnific generations (credits) | Mixing Figma/Canva/Magnific as if they were one file |
 | Decisions | `ops/product-engineering/decisions/` | Silent chat agreements |
 | Documents | Dated markdown under the matching surface | Stale copies in `index-safety.html` unless you restore it |
 

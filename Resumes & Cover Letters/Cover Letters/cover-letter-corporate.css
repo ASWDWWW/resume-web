@@ -1,0 +1,96 @@
+@page {
+  size: letter;
+  margin: 0.85in 1in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.38;
+  color: #111;
+  background: #fff;
+}
+
+.page {
+  max-width: 6.5in;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #111;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 16pt;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin: 0 0 2px;
+}
+
+.role {
+  font-size: 10.5pt;
+  font-style: normal;
+  margin: 0 0 4px;
+  color: #111;
+}
+
+.contact {
+  font-size: 9.5pt;
+  margin: 0;
+}
+
+.contact a {
+  color: #111;
+  text-decoration: none;
+}
+
+.date {
+  margin: 0 0 14px;
+}
+
+.address {
+  margin: 0 0 14px;
+}
+
+.address span {
+  display: block;
+}
+
+.re {
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 11px;
+}
+
+.salutation {
+  margin: 0 0 11px;
+}
+
+.closing {
+  margin: 16px 0 2px;
+}
+
+.signature {
+  margin: 14px 0 0;
+  font-weight: 700;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}

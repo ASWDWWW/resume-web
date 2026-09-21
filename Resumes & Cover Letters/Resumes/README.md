@@ -10,4 +10,10 @@ These resumes are built from the experience mapped in `Job Titles/` plus the cur
 | 4 | Product Engineer | TREI 9.1, FitGenius 9.1, Linear/Figma/Ramp-shaped jobs | Notion, Linear, Figma, Ramp, Dropbox, PostHog |
 | 5 | AI Product Engineer | FITD 9, Local AI 9.0, FitGenius 8.6; applied models in shipped UX | Anthropic, OpenAI, Perplexity, Cursor, Notion AI, Oura personalization |
 
-Each job-title folder contains `md` (source), `html` (rendered), and `pdf` (one-page application file).
+Each job-title folder contains `md` (source), `html` (rendered), and `pdf` (one-page application file). All eight packets use the corporate layout (Calibri, Experience then Education then Skills, dates right-aligned). Formatting-only samples (not Zakiy’s) live in `../Examples/`.
+
+| # | Title | Use for |
+|---|---|---|
+| 6 | Rillet Consultant | JR104362 — implementation consulting, UAT, finance-ops systems |
+| 7 | Data & AI Platform Engineer | JR104191 — Azure ops, CI/CD, runbooks, guarded GenAI enablement |
+| 8 | AI & Automation Engineer | Unposted practice seat — custom AI, n8n/workflow automation, fail-closed assistants |

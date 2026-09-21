@@ -31,7 +31,7 @@ Pass a bounded task: goal, repo, identity, files, done-when, and what not to do.
 
 ## Event and n8n triggers
 
-Cursor hooks gate and log; they must not start new external side effects. n8n is not connected — if you add it later, register the workflow in `ops/automations/CATALOG.md` with trigger, limits, and disable switch.
+Cursor hooks gate and log; they must not start new external side effects. n8n is connected for **listing**. Do not execute or publish unless the user names the workflow. Register every workflow in `ops/automations/CATALOG.md` with trigger, limits, and a disable switch. Do not pair a Cursor hook with an n8n workflow that performs the same send/post/charge.
 
 ## Shared records, not shared memory
 

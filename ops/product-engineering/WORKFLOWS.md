@@ -12,7 +12,14 @@ Update `ops/CONTROL-CENTER.md`. Owner: Zakiy. Superceded items stay in the ticke
 
 ## UX/UI and Figma handoff
 
-Figma is **unsupported** in this workspace. Use Canva when needed, or local markdown/HTML. Do not fake a Figma file.
+Figma MCP is **verified** (identity `zakiymanigo@gmail.com`). File read and design-to-code are **untested**.
+
+1. Load the Figma design-to-code skill before pulling a node.
+2. Name the file and node in the ticket. Use the personal starter team unless a TREI ticket names the Bariatric Associates org (guest view only).
+3. Adapt into this repo’s HTML/CSS; do not paste Figma export as a second source of truth.
+4. Canva remains valid when the asset already lives there. Magnific is for generation with a budget, not for Figma file sync.
+
+Do not invent a Figma file that was not provided.
 
 ## Architecture, frontend, backend, mobile, databases, APIs
 

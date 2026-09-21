@@ -4,4 +4,5 @@ This folder is the business/owner OS. Native Cursor execution lives in `.cursor/
 
 Start: [CONTROL-CENTER.md](CONTROL-CENTER.md)  
 How to run it: [OPERATING-GUIDE.md](OPERATING-GUIDE.md)  
+Phases: [CONSTRUCTION-PHASES.md](CONSTRUCTION-PHASES.md)  
 What was built: [CONSTRUCTION-REPORT.md](CONSTRUCTION-REPORT.md)

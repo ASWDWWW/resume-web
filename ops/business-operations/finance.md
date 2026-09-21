@@ -12,7 +12,9 @@ Command: `/finance-review`. Skill: `finance-stripe`.
 | Stripe live changes | Zakiy explicit approval |
 | Send invoice / change subscription | Zakiy explicit approval |
 
-Stripe MCP is **unsupported** in this workspace. TREI packets mention Stripe sandbox in that product’s Azure staging — operate it there, not here.
+Stripe MCP is **verified** (account list). Default mode: **test**. Live writes need Zakiy’s named approval in the ticket.
+
+Visible accounts (names only): Fleet Trucking Platform, TaxTracker, Zakiy T. Manigo. Which account this OS may use is **awaiting a decision**. TREI packets also mention a Stripe sandbox in that product’s Azure staging — operate it there unless a ticket names one of the MCP accounts.
 
 ## File split
 
@@ -28,4 +30,6 @@ Use scenarios in forecasts. Reconciliation prep = match sourced actuals to invoi
 
 ## Costs known
 
-Firebase billing **enabled** on `zakiymanigo-career` (verified 17 September 2026). Spend **unresolved** (no invoices in-repo). Other cloud costs **unresolved**.
+Firebase billing **enabled** on `zakiymanigo-career` (verified 17 September 2026). Spend **unresolved** (no invoices in-repo).
+
+Hostinger billing list 20 Sep 2026: `.CLOUD Domain` next bill 13 Dec 2026; `KVM 2` next bill 23 Feb 2028. API `total_price` values were recorded as-is in actuals (unit not confirmed in hPanel). Other cloud costs **unresolved**.

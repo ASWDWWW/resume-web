@@ -1,0 +1,6 @@
+{
+  "token_endpoint_auth_method": "client_secret_basic",
+  "redirect_uris": [
+    "https://fitd-fash.github.io/cursor-zoom-oauth-callback/index.html"
+  ]
+}

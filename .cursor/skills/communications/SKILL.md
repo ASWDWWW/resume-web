@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Communications
 
-Gmail and Zoom MCP were unauthenticated at OS setup. Continue with drafts.
+Gmail MCP is signed into a FITD Sent mailbox (`fitdadmin@fitdai.com`). Catalog Zoom OAuth stays `needsAuth` (error 4700). Always use `user-zoom-bridge`. Never call catalog Zoom `mcp_auth`. Continue with drafts until Gmail is reconnected to `zakiymanigo@gmail.com` and a send is authorized.
 
 1. Gather evidence and quote sources.
 2. Choose audience and the sending identity from `ops/integrations/ROUTING.md`. If two Gmail identities exist, ask.

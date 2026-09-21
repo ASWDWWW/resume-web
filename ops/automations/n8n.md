@@ -1,12 +1,11 @@
 # n8n
 
-Status: **unsupported** in this workspace (no URL, API key, or MCP).
+Instance MCP URL (no token in git): `https://n8n.srv1255136.hstgr.cloud/mcp-server/http`
 
-Do not invent webhooks. If you later host n8n, add:
+Auth lives only in `%USERPROFILE%\\.cursor\\mcp.json` (`n8n` server, Bearer header). Do not commit that file.
 
-- instance URL (no secrets in git)
-- workflow id, trigger, eligible conditions
-- authorized actions and budgets
-- failure logs location
-- how to disable
-- how it avoids looping with Cursor hooks
+Older Hostinger hostname `zakiy-n8n-auto.cloud` returned HTTP 500 on 20 Sep 2026.
+
+Instance details and observed workflows: `ops/integrations/n8n.md`. Catalog: `CATALOG.md`.
+
+Do not let n8n and Cursor hooks both fire the same external action. Do not execute or publish unless asked.

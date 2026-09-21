@@ -6,11 +6,7 @@ disable-model-invocation: true
 
 # Finance and Stripe
 
-Stripe MCP was not in this workspace catalog at setup. If it appears later:
-
-- Default environment: test
-- Live changes need the named authority in `ops/business-operations/finance.md`
-- Never log PAN, CVC, or full account numbers
+Stripe MCP is present. Default environment: **test**. Live changes need the named authority in `ops/business-operations/finance.md`. Never log PAN, CVC, or full account numbers. Do not pick a Stripe account because another one failed.
 
 Keep files separate:
 
