@@ -5,7 +5,7 @@ Read `ops/CONTROL-CENTER.md`, `ops/profile/PROJECT-PROFILE.md`, and `ops/integra
 Then:
 
 1. Inspect the workspace. Preserve existing and unfinished work.
-2. Confirm which product, repository, GitHub identity, and Gmail identity this task uses. Do not switch accounts on failure.
+2. Use the GitHub identity from origin automatically (`ASWDWWW` for this repo). Do not prompt to pick an account. Do not switch accounts on failure. Confirm product, repository, and Gmail identity.
 3. Restate the goal, owner, success metric, and authorization boundary (draft vs send, test vs live).
 4. List what is working, missing, conflicting, or outdated for this task.
 5. Implement the authorized work. If an integration is down, continue independently and record the gap.

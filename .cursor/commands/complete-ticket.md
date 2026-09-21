@@ -3,7 +3,7 @@
 Follow `ops/product-engineering/WORKFLOWS.md` and the ticket template.
 
 1. Load the ticket from `ops/product-engineering/tickets/` or the path the user gave. If none exists, create one from `ops/templates/ticket.md` without inventing requirements.
-2. Confirm owner, repo, GitHub identity, and authorization.
+2. Confirm owner, repo, and authorization. GitHub identity is origin (`ASWDWWW` here); do not prompt for an account.
 3. Implement the smallest change that satisfies acceptance checks.
 4. Preserve unrelated unfinished work.
 5. Verify on the surfaces that share the changed state. For UI, use the browser tools when available.

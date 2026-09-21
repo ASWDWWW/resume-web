@@ -16,14 +16,22 @@ This workspace is the public career site plus an owner operating system. It is n
 | Independent review | `independent-reviewer` subagent |
 | Verify | `verifier` subagent or `/repair-workspace` checks |
 | Ops writing | `business-ops` or the finance/marketing/legal commands |
-| Mail/meetings | drafts via `/draft-communication` until Gmail/Zoom are authenticated **and** you authorize a send |
+| Mail/meetings | drafts via `/draft-communication`. Gmail MCP is on the wrong mailbox until reconnected. Zoom is `user-zoom-bridge` only (catalog stays `needsAuth`). Do not send or create meetings unless you authorize it |
 
 ## Account routing
 
-This repo: **github-aswdwww** (`ASWDWWW`).  
+This repo: **github-aswdwww** (`ASWDWWW`). Do not pick an account — origin maps to the login. `/commit`, `/push`, `/commit-and-push` use that identity.  
 FITD GitHub: **github-fitd-fash** only when you name it.  
-Gmail: ask if `gmail-fashiobusiness` vs `zakiymanigo@gmail.com`.  
+Gmail: **zakiymanigo** (`zakiymanigo@gmail.com`) for this repo. Do not use FITD / fashiobusiness here.  
+Firebase for this repo: project `zakiymanigo-career`. MCP may be sitting on `fitd-app-203cb` — do not deploy that from this tree.  
+Stripe: test/sandbox default. Live needs named authority.  
 Never silent fallback.
+
+## Design and generation
+
+- Figma: signed in as `zakiymanigo@gmail.com`. File workflows untested. Do not open the Bariatric Associates org unless a TREI ticket names it.
+- Canva: read verified. Do not auto-publish.
+- Magnific: signed in. MCP sessions spend credits even if the Magnific app has unlimited. Do not generate without a budget.
 
 ## What not to do
 
@@ -31,11 +39,12 @@ Never silent fallback.
 - Do not `git config` or force-push main (hooks deny these).
 - Do not treat `ops/restricted/` as safe storage.
 - Do not treat generated legal or finance text as approved.
+- Do not execute or publish n8n workflows unless asked. The instance has an active Instagram poster that is not MCP-enabled.
 
 ## Repair
 
-`/repair-workspace` rebuilds native files. Hook scripts require Node (verified v24 on this machine).
+`/repair-workspace` rebuilds native files. Hook scripts require Node (verified v24 on this machine). Harness: `node .cursor/hooks/test-harness.mjs`.
 
 ## Optional later
 
-Custom dashboard, n8n, Stripe plugin, Figma plugin, Gmail/Zoom auth, private OS repo.
+Custom dashboard, IONOS Cloud MCP, Zoom bridge repair, Gmail reconnect, private OS repo.

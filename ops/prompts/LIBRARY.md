@@ -23,6 +23,9 @@ Slash commands are the executable entry points. Pasteable prompts below are for 
 | Draft mail/meeting | `/draft-communication` |
 | Integrations | `/diagnose-integration` |
 | Refresh overview | `/control-center` |
+| Commit | `/commit` |
+| Push | `/push` |
+| Commit and push | `/commit-and-push` |
 
 ## Full workflow prompts
 
@@ -68,11 +71,11 @@ Separate actuals, estimates, forecasts. Label assumptions.
 
 ### Marketing
 
-Approved claims only. Canva OK; Figma and Magnific may be unavailable. No paid spend without a cap.
+Approved claims only. Canva and Figma are signed in; Magnific spends credits via MCP. No paid spend without a cap.
 
 ### Finance
 
-Stripe unsupported here; if added later, test mode default. Do not mix actuals and forecasts.
+Stripe MCP present; test mode default. Live needs named authority. Do not mix actuals and forecasts.
 
 ### Legal preparation
 
@@ -84,11 +87,15 @@ Dated sourced metrics. Draft only. Keep sensitive files out of public git.
 
 ### Communications
 
-Draft. Gmail/Zoom may be unauthenticated. Ask which Gmail identity.
+Draft. This repo’s Gmail is `zakiymanigo@gmail.com`. MCP is still on a FITD Sent mailbox until reconnected. Zoom catalog is unusable; do not create meetings until the bridge works and you ask.
 
 ### Integration diagnosis
 
 Verify claims. Do not gh auth switch. Do not record secrets.
+
+### Commit / push
+
+Use `/commit`, `/push`, or `/commit-and-push`. Identity is `ASWDWWW` from origin. Do not show an account picker. Do not `gh auth switch`. Leave Career/, Content/, and secrets unstaged unless named.
 
 ## Reviewer / specialist
 

@@ -5,14 +5,16 @@ alwaysApply: true
 
 # Account routing
 
-This workspace remote is `https://github.com/ASWDWWW/resume-web.git`. Default GitHub identity: **github-aswdwww** (`ASWDWWW`).
+This workspace remote is `ASWDWWW/resume-web`. GitHub identity is **automatic**: **github-aswdwww** (`ASWDWWW`). Do not prompt to pick a GitHub account. Do not run `gh auth switch`. Do not call GitHub `mcp_auth`.
 
-**github-fitd-fash** (`FITD-fash`) is a separate login. Use it only when the user names that account or the target repo is under `FITD-fash`. Do not run `gh auth switch` because a command failed.
+Use `/commit`, `/push`, and `/commit-and-push`. Push through `node .cursor/skills/git-github/scripts/push.mjs` so Git Credential Manager does not show an account picker. Origin should stay `https://ASWDWWW@github.com/ASWDWWW/resume-web.git`.
 
-Verified in this session: `gh` has both logins; **ASWDWWW is active**. GitHub MCP `get_me` returned `ASWDWWW`. Private FITD-fash repos were not listed without switching; do not switch to discover them.
+**github-fitd-fash** (`FITD-fash`) is a separate login. Use it only when the user names that account or origin is `FITD-fash/*`. If `ASWDWWW` auth fails, stop and name it — do not try FITD-fash.
 
-Gmail plugin status is `needsAuth`. User-reported identity: **gmail-fashiobusiness**. Firebase CLI user is `zakiymanigo@gmail.com`. Those are overlapping personal identities — document, do not remove, do not silently swap.
+GitHub MCP (`user-github`) for this repo is `ASWDWWW`. Gmail for this repo is **zakiymanigo** (`zakiymanigo@gmail.com`). Firebase CLI user is `zakiymanigo@gmail.com`. Do not silently swap overlapping identities.
 
-If the required account is inactive or unauthenticated: stop, name the required identity, and continue with work that does not need it.
+If the required account is inactive: stop, name it, and continue work that does not need it.
+
+Zoom: catalog `plugin-zoom-zoom` stays `needsAuth`. Do not call that plugin’s `mcp_auth`. Use `user-zoom-bridge` only when `ops/integrations/zoom.md` says it works.
 
 Full table: [ops/integrations/ROUTING.md](ops/integrations/ROUTING.md).

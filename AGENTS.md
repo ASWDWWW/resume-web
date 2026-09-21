@@ -28,7 +28,8 @@ Unfinished work already present: untracked `Career/` and `Content/`; new resume 
 ## Hard rules
 
 - Never silently switch GitHub, Gmail, Firebase, Stripe, or other accounts when an operation fails.
-- This workspace’s git remote is `ASWDWWW/resume-web`. Use `github-aswdwww` unless the user names `github-fitd-fash`.
+- This workspace’s git remote is `ASWDWWW/resume-web`. Always use `github-aswdwww` (`ASWDWWW`) here. Do not prompt for a GitHub account. Commit/push: `/commit`, `/push`, `/commit-and-push`.
+- Zoom is `user-zoom-bridge` only. Ignore catalog Zoom `needsAuth`. Do not call that plugin’s `mcp_auth`.
 - Draft messages, invoices, filings, and outreach. Sending, charging, deploying, or advertising requires explicit authorization plus the correct identity.
 - Folders named `restricted` or `private` are not security. Do not store secrets in git.
 - Do not turn a one-off correction into a global rule.
@@ -36,4 +37,4 @@ Unfinished work already present: untracked `Career/` and `Content/`; new resume 
 
 ## How to start a task
 
-Use the matching slash command when one exists (`/complete-ticket`, `/founder-pivot`, `/diagnose-integration`, and others listed in the capability directory). Sequential work stays on one agent. Use subagents for independent review, verification, or bounded research.
+Use the matching slash command when one exists (`/commit`, `/push`, `/commit-and-push`, `/complete-ticket`, `/founder-pivot`, `/diagnose-integration`, and others listed in the capability directory). Sequential work stays on one agent. Use subagents for independent review, verification, or bounded research.
