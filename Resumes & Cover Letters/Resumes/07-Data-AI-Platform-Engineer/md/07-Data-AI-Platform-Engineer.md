@@ -61,4 +61,4 @@ Statistical Data Mining, Probability and Stochastic Processes, Game Design, and 
 
 **Skills:** Azure (Container Apps, Entra, Key Vault, Service Bus), Firebase / GCP, GitHub Actions, PostgreSQL, Firestore, MongoDB, SQL, TypeScript / Node.js, Python, Azure OpenAI, Gemini / Vertex AI, kill switches
 **Interests:** calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker
-**Community:** worship tech, Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church
+**Community:** Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church

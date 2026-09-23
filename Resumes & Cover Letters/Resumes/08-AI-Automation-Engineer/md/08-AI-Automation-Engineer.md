@@ -63,4 +63,4 @@ Statistical Data Mining, Probability and Stochastic Processes, Game Design, and 
 
 **Skills:** Azure OpenAI, Gemini / Vertex AI, GPT-4o, llama.cpp / GGUF, n8n, Cloud Functions, GitHub Actions, Google Apps Script, worker / outbox jobs, TypeScript, Python, Swift, React, Firebase / GCP, Azure
 **Interests:** calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker
-**Community:** worship tech, Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church
+**Community:** Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church

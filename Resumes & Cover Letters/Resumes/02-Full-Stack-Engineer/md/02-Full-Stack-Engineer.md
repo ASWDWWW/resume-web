@@ -61,4 +61,4 @@ Statistical Data Mining, Probability and Stochastic Processes, Game Design, and 
 
 **Skills:** TypeScript, JavaScript, Swift, Python, SQL, React, Expo / React Native, SwiftUI, Fastify, PostgreSQL, Firebase, Stripe, GitHub Actions, Azure Container Apps, EAS
 **Interests:** calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker
-**Community:** worship tech, Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church
+**Community:** Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church
