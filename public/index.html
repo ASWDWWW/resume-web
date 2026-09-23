@@ -61,7 +61,6 @@
                 radial-gradient(700px 420px at 92% 8%, rgba(147, 197, 253, 0.12), transparent 50%),
                 radial-gradient(800px 500px at 70% 90%, rgba(196, 181, 253, 0.1), transparent 55%),
                 #070b14;
-            animation: mesh-shift 22s ease-in-out infinite alternate;
         }
 
         .noise {
@@ -73,11 +72,56 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
+        #webgl {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            pointer-events: none;
+        }
+
         .nav-blur {
-            background: rgba(7, 11, 20, 0.72);
+            position: relative;
+            background: rgba(7, 11, 20, 0.78);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(148, 163, 184, 0.12);
         }
+
+        .scroll-progress {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            pointer-events: none;
+        }
+
+        .scroll-progress > span {
+            display: block;
+            height: 100%;
+            width: 100%;
+            transform: scaleX(0);
+            transform-origin: left center;
+            background: linear-gradient(90deg, #5eead4, #93c5fd);
+        }
+
+        .nav-link.is-active { color: #5eead4; }
+
+        main > section.scroll-in {
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            padding-top: 3.25rem;
+        }
+
+        .portrait {
+            padding: 1px;
+            border-radius: 2rem;
+            background: linear-gradient(165deg, rgba(94, 234, 212, 0.75), rgba(147, 197, 253, 0.12) 42%, rgba(196, 181, 253, 0.55));
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .portrait img { border-radius: calc(2rem - 1px); }
 
         .card {
             background: rgba(18, 26, 43, 0.72);
@@ -167,51 +211,107 @@
 
         .link-row:hover { gap: 0.65rem; color: #ccfbf1; }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.65rem;
+        .section-lead {
+            margin-bottom: 2.5rem;
+            max-width: 46rem;
+            color: #94a3b8;
+            line-height: 1.7;
         }
 
-        @media (min-width: 768px) {
-            .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.85rem; }
-            .gallery-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            .gallery-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        }
+        .stat-card { min-height: 7.25rem; }
 
-        .gallery-item {
-            display: block;
+        .carousel-frame { position: relative; }
+
+        .carousel-viewport {
             overflow: hidden;
             border-radius: 1rem;
             border: 1px solid rgba(148, 163, 184, 0.16);
             background: #0b1220;
-            min-height: 7.5rem;
         }
 
-        .gallery-item img,
-        .gallery-item video {
+        .carousel-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 16 / 10;
+            background: #0b1220;
+        }
+
+        .carousel-media,
+        .carousel-media-btn,
+        .carousel-media-btn img {
             width: 100%;
-            height: 10.5rem;
-            object-fit: cover;
+            height: 100%;
+            object-fit: contain;
+            background: #0b1220;
+        }
+
+        .carousel-media-btn {
             display: block;
+            border: 0;
+            padding: 0;
+            cursor: zoom-in;
+            background: transparent;
         }
 
-        @media (min-width: 768px) {
-            .gallery-item img,
-            .gallery-item video { height: 12.5rem; }
-        }
-
-        .gallery-item:focus-visible {
+        .carousel-media-btn:focus-visible,
+        .carousel-btn:focus-visible,
+        .carousel-dot:focus-visible {
             outline: 2px solid #5eead4;
             outline-offset: 3px;
         }
 
-        .story-video {
-            width: 100%;
-            max-height: 22rem;
-            border-radius: 1rem;
-            background: #000;
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            display: inline-flex;
+            width: 2.5rem;
+            height: 2.5rem;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-50%);
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            background: rgba(7, 11, 20, 0.82);
+            color: #e8eef7;
         }
+
+        .carousel-btn:hover { border-color: #5eead4; color: #ccfbf1; }
+        .carousel-prev { left: 0.65rem; }
+        .carousel-next { right: 0.65rem; }
+
+        .carousel-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 0.75rem;
+            min-height: 1.25rem;
+        }
+
+        .carousel-status {
+            font-family: "IBM Plex Mono", ui-monospace, monospace;
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        .carousel-dots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 0.4rem;
+        }
+
+        .carousel-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, 0.35);
+        }
+
+        .carousel-dot.is-active { background: #5eead4; }
 
         #lightbox {
             position: fixed;
@@ -259,6 +359,7 @@
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
             .mesh, .live-dot { animation: none; }
+            #webgl { display: none; }
             .reveal, .scroll-in {
                 opacity: 1;
                 transform: none;
@@ -269,9 +370,13 @@
         }
     </style>
     <script src="./media.js"></script>
+    <script type="importmap">
+        { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+    </script>
 </head>
 <body class="min-h-screen antialiased">
     <div class="mesh" aria-hidden="true"></div>
+    <canvas id="webgl" aria-hidden="true"></canvas>
     <div class="noise" aria-hidden="true"></div>
 
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-teal-300 focus:text-slate-950 focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
@@ -283,128 +388,85 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div id="navLinks" class="hidden md:flex items-center gap-5 text-sm text-slate-300">
-                <a href="#about" class="hover:text-teal-300 transition-colors">About</a>
-                <a href="#stories" class="hover:text-teal-300 transition-colors">Stories</a>
-                <a href="#experience" class="hover:text-teal-300 transition-colors">Experience</a>
-                <a href="#work" class="hover:text-teal-300 transition-colors">Work</a>
-                <a href="#education" class="hover:text-teal-300 transition-colors">Education</a>
-                <a href="#resume" class="hover:text-teal-300 transition-colors">Resume</a>
+                <a href="#experience" class="nav-link hover:text-teal-300 transition-colors">Experience</a>
+                <a href="#stories" class="nav-link hover:text-teal-300 transition-colors">Partners</a>
+                <a href="#work" class="nav-link hover:text-teal-300 transition-colors">Work</a>
+                <a href="#education" class="nav-link hover:text-teal-300 transition-colors">Education</a>
+                <a href="#resume" class="nav-link hover:text-teal-300 transition-colors">Resume</a>
+                <a href="#about" class="nav-link hover:text-teal-300 transition-colors">About</a>
                 <a href="#contact" class="rounded-full bg-teal-300 px-4 py-2 font-semibold text-slate-950 hover:bg-teal-200 transition-colors">Contact</a>
             </div>
         </nav>
         <div id="mobileNav" class="hidden md:hidden border-t border-slate-800 px-4 py-4 space-y-3 text-slate-200">
-            <a href="#about" class="block">About</a>
-            <a href="#stories" class="block">Stories</a>
-            <a href="#experience" class="block">Experience</a>
-            <a href="#work" class="block">Work</a>
-            <a href="#education" class="block">Education</a>
-            <a href="#resume" class="block">Resume</a>
+            <a href="#experience" class="nav-link block">Experience</a>
+            <a href="#stories" class="nav-link block">Partners</a>
+            <a href="#work" class="nav-link block">Work</a>
+            <a href="#education" class="nav-link block">Education</a>
+            <a href="#resume" class="nav-link block">Resume</a>
+            <a href="#about" class="nav-link block">About</a>
             <a href="#contact" class="block text-teal-300 font-semibold">Contact</a>
         </div>
+        <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
     </header>
 
-    <main id="main" class="mx-auto max-w-6xl px-4 md:px-6">
-        <section id="top" class="grid items-start gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-20">
-            <div>
-                <p class="reveal delay-1 mb-4 inline-flex items-center gap-2 rounded-full border border-teal-400/20 bg-teal-400/10 px-3 py-1 text-sm text-teal-200">
+    <main id="main" class="mx-auto min-w-0 max-w-6xl px-4 md:px-6">
+        <section id="top" class="grid min-w-0 items-center gap-12 py-16 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:py-20">
+            <div class="min-w-0">
+                <p class="reveal delay-1 mb-4 flex w-fit max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-teal-400/20 bg-teal-400/10 px-3 py-1 text-sm leading-snug text-teal-200">
                     <span class="live-dot" aria-hidden="true"></span>
-                    Currently at BariAccess · New York / Remote
+                    Currently at <a href="https://www.bariatricassociates.com/" target="_blank" rel="noopener noreferrer" class="font-semibold underline decoration-teal-300/40 underline-offset-2 hover:decoration-teal-200">BariAccess</a> · Livingston, NJ / Hybrid
                 </p>
                 <h1 class="reveal delay-2 text-4xl font-bold leading-tight tracking-tight md:text-6xl">Zakiy T. Manigo</h1>
                 <p class="reveal delay-3 mt-3 text-xl text-slate-300 md:text-2xl">Software Engineer</p>
                 <p class="reveal delay-4 mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
                     I build products that clinics, operators, and consumers actually use. Right now I am one of two primary engineers on TREI, a wellness-first GLP-1 and metabolic-care platform. I also ship consumer apps and operations software across TypeScript, Swift, React Native, Azure, and Firebase.
                 </p>
-                <div class="reveal delay-4 mt-8 flex flex-wrap gap-3">
-                    <a href="mailto:zakiymanigo@gmail.com" class="inline-flex items-center rounded-full bg-teal-300 px-5 py-3 font-semibold text-slate-950 hover:bg-teal-200 transition-colors">
+                <div class="reveal delay-4 mt-8 flex flex-wrap items-center gap-3">
+                    <a href="mailto:zakiymanigo@gmail.com" class="inline-flex h-12 items-center rounded-full bg-teal-300 px-5 font-semibold text-slate-950 hover:bg-teal-200 transition-colors">
                         <i class="fas fa-envelope mr-2"></i> Email
                     </a>
-                    <a href="https://www.linkedin.com/in/zakiymanigo/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full border border-slate-600 px-5 py-3 font-medium text-slate-200 hover:border-teal-300 hover:text-teal-200 transition-colors">
+                    <a href="https://www.linkedin.com/in/zakiymanigo/" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 items-center rounded-full border border-slate-600 px-5 font-medium text-slate-200 hover:border-teal-300 hover:text-teal-200 transition-colors">
                         <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
                     </a>
-                    <a href="https://github.com/ztm2106" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full border border-slate-600 px-5 py-3 font-medium text-slate-200 hover:border-teal-300 hover:text-teal-200 transition-colors">
-                        <i class="fab fa-github mr-2"></i> ztm2106
+                    <a href="https://github.com/ASWDWWW" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 items-center rounded-full border border-slate-600 px-5 font-medium text-slate-200 hover:border-teal-300 hover:text-teal-200 transition-colors">
+                        <i class="fab fa-github mr-2"></i> Personal
                     </a>
-                    <a href="https://github.com/ASWDWWW" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full border border-slate-600 px-5 py-3 font-medium text-slate-200 hover:border-teal-300 hover:text-teal-200 transition-colors">
-                        <i class="fab fa-github mr-2"></i> ASWDWWW
+                    <a href="https://github.com/ztm2106" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 items-center rounded-full border border-slate-600 px-5 font-medium text-slate-200 hover:border-teal-300 hover:text-teal-200 transition-colors">
+                        <i class="fab fa-github mr-2"></i> Columbia
                     </a>
                 </div>
                 <p class="reveal delay-4 mt-6 text-sm text-slate-400">Open to SWE · Full-Stack · Product · Forward Deployed roles</p>
             </div>
-            <div class="reveal delay-3 mx-auto w-full max-w-sm">
-                <div class="overflow-hidden rounded-[2rem] border border-slate-700/70 shadow-2xl shadow-teal-950/40">
-                    <img src="./images/headshot.jpg" alt="Portrait of Zakiy T. Manigo" class="aspect-[4/5] w-full object-cover">
+            <div class="reveal delay-3 mx-auto w-full min-w-0 max-w-sm">
+                <div class="portrait overflow-hidden">
+                    <img src="./images/hero.jpg" alt="Portrait of Zakiy T. Manigo" class="aspect-[4/5] w-full object-cover object-[center_18%]">
                 </div>
             </div>
         </section>
 
-        <section class="scroll-in mb-20 mt-4 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            <div class="card rounded-2xl p-5">
+        <section class="scroll-in mb-20 mt-4 grid grid-cols-2 items-stretch gap-3 md:grid-cols-4 md:gap-4">
+            <a href="https://www.bariatricassociates.com/" target="_blank" rel="noopener noreferrer" class="card stat-card flex flex-col justify-between rounded-2xl p-5">
                 <p class="text-xs uppercase tracking-wider text-slate-400">Current company</p>
-                <p class="mt-2 text-xl font-semibold text-teal-300">BariAccess</p>
-            </div>
-            <div class="card rounded-2xl p-5">
+                <p class="mt-2 text-lg font-semibold leading-tight text-teal-300 md:text-xl">BariAccess</p>
+            </a>
+            <div class="card stat-card flex flex-col justify-between rounded-2xl p-5">
                 <p class="text-xs uppercase tracking-wider text-slate-400">Employment</p>
-                <p class="mt-2 text-xl font-semibold">Jun 2025 – Present</p>
+                <p class="mt-2 text-lg font-semibold leading-tight md:text-xl">Jun 2025 – Present</p>
             </div>
-            <div class="card rounded-2xl p-5">
+            <div class="card stat-card flex flex-col justify-between rounded-2xl p-5">
                 <p class="text-xs uppercase tracking-wider text-slate-400">Degrees</p>
-                <p class="mt-2 text-xl font-semibold">CE + Math</p>
+                <p class="mt-2 text-lg font-semibold leading-tight md:text-xl">CE + Math</p>
             </div>
-            <div class="card rounded-2xl p-5">
+            <div class="card stat-card flex flex-col justify-between rounded-2xl p-5">
                 <p class="text-xs uppercase tracking-wider text-slate-400">3+2 path</p>
-                <p class="mt-2 text-xl font-semibold">SLU + Columbia</p>
+                <p class="mt-2 text-lg font-semibold leading-tight md:text-xl">SLU + Columbia</p>
             </div>
-        </section>
-
-        <section id="about" class="scroll-in mb-24">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">01 — About</p>
-            <h2 class="mt-2 mb-3 text-3xl font-bold">Faith, community, and how I spend time</h2>
-            <p class="mb-8 max-w-3xl text-slate-400">I attend Siloam-Hope First Presbyterian Church in Elizabeth, New Jersey. I lead the technical side of worship each week — bulletin presentation and the live-stream workflow — and go to Wednesday Bible study. I also help the NAACP Elizabeth Branch with social posting workflows, and I supervise tutoring at Central Presbyterian Church in Summit with children in 1st through 8th grade.</p>
-            <div class="gallery-grid cols-2 mb-8" data-gallery="siloam-hope" data-alt="Siloam-Hope First Presbyterian Church in Elizabeth, New Jersey"></div>
-            <div class="flex flex-wrap gap-2">
-                <span class="chip">Calisthenics</span>
-                <span class="chip">Gym</span>
-                <span class="chip">Running</span>
-                <span class="chip">Basketball</span>
-                <span class="chip">Football</span>
-                <span class="chip">Pop &amp; R&amp;B</span>
-                <span class="chip">Golf</span>
-                <span class="chip">Snowboarding</span>
-                <span class="chip">Hiking</span>
-                <span class="chip">Travel</span>
-                <span class="chip">Cooking</span>
-                <span class="chip">Journaling</span>
-            </div>
-        </section>
-
-        <section id="stories" class="scroll-in mb-24">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">02 — Project stories</p>
-            <h2 class="mt-2 mb-3 text-3xl font-bold">TREI on the floor</h2>
-            <p class="mb-10 max-w-3xl text-slate-400">BariAccess is my current employment. TREI is the patient and care-team product: the layer between a clinic visit and everything that happens in a patient’s life between appointments. These trips are how that product met partners in the real world.</p>
-
-            <article class="card rounded-2xl p-6 md:p-8 mb-6">
-                <p class="font-mono text-xs text-teal-300">June 2026 · Belgrade, Serbia</p>
-                <h3 class="mt-2 text-2xl font-bold">PROFEX Academy</h3>
-                <p class="mt-3 leading-relaxed text-slate-300">Four days in Belgrade to explore a partnership between BariAccess and PROFEX Academy. Business meetings, live platform demos, and a full diagnostic protocol the same day I landed. I left the lab with a lot of data and no digital layer to carry it forward — that gap is the product brief.</p>
-                <div class="mt-6 grid gap-4 md:grid-cols-2">
-                    <div data-videos="belgrade"></div>
-                    <div class="gallery-grid cols-2" data-gallery="belgrade" data-images-only="true" data-alt="BariAccess work trip with PROFEX Academy in Belgrade"></div>
-                </div>
-            </article>
-
-            <article class="card rounded-2xl p-6 md:p-8">
-                <p class="font-mono text-xs text-teal-300">27–28 June 2026 · Biohackers World New York</p>
-                <h3 class="mt-2 text-2xl font-bold">NYC Biohacker Expo</h3>
-                <p class="mt-3 leading-relaxed text-slate-300">First expo and first booth. RITHM ran a dual booth with PROFEX at the InterContinental New York Barclay. PROFEX ran live diagnostics; RITHM is what happens after the snapshot — biometrics, behavior, and context. That is the same gap BariAccess is built to close.</p>
-                <div class="gallery-grid mt-6" data-gallery="nyc-biohacker-expo" data-alt="RITHM and PROFEX booth at Biohackers World New York"></div>
-            </article>
         </section>
 
         <section id="experience" class="scroll-in mb-24">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">03 — Experience</p>
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">01 — Experience</p>
             <h2 class="mt-2 mb-3 text-3xl font-bold">Experience</h2>
-            <p class="mb-10 max-w-2xl text-slate-400">BariAccess is my current company (since June 2025). FitGenius is a contract that started in May 2026. Internships follow.</p>
+            <p class="section-lead"><a href="https://www.bariatricassociates.com/" target="_blank" rel="noopener noreferrer" class="text-teal-300 hover:underline">BariAccess</a> is my current company (since June 2025). FitGenius is a contract that started in May 2026. Internships follow.</p>
 
             <div class="space-y-5">
                 <article class="card role-card current rounded-2xl p-6 md:p-8">
@@ -415,9 +477,9 @@
                                 <span class="chip">Full-time</span>
                             </div>
                             <h3 class="text-2xl font-bold">Software Engineer</h3>
-                            <p class="text-lg text-slate-300">BariAccess · TREI</p>
+                            <p class="text-lg text-slate-300"><a href="https://www.bariatricassociates.com/" target="_blank" rel="noopener noreferrer" class="hover:text-teal-200">BariAccess</a> · TREI</p>
                         </div>
-                        <p class="font-mono text-sm text-slate-400 md:text-right">Jun 2025 – Present<br>New York, NY / Remote</p>
+                        <p class="font-mono text-sm leading-relaxed text-slate-400 md:w-44 md:shrink-0 md:text-right">Jun 2025 – Present<br>New York, NY / Remote</p>
                     </div>
                     <p class="mt-4 leading-relaxed text-slate-300">One of two primary engineers on TREI, a wellness-first GLP-1 and metabolic-care platform for Bariatric Associates. TypeScript monorepo spanning a Fastify API, PostgreSQL, worker + outbox, Expo iPhone app, React staff console, and the public site at trei.care. Staging on Azure Container Apps with Entra, Key Vault, Service Bus, Stripe sandbox, Calendly, Spike wearables, and a guarded Azure OpenAI assistant named Aba.</p>
                     <div class="mt-5 flex flex-wrap gap-2">
@@ -438,7 +500,7 @@
                             <h3 class="mt-2 text-2xl font-bold">Founding Technical Partner</h3>
                             <p class="text-lg text-slate-300">FitGenius</p>
                         </div>
-                        <p class="font-mono text-sm text-slate-400 md:text-right">May 2026 – Present</p>
+                        <p class="font-mono text-sm leading-relaxed text-slate-400 md:w-44 md:shrink-0 md:text-right">May 2026 – Present</p>
                     </div>
                     <p class="mt-4 leading-relaxed text-slate-300">Pre-launch consumer fitness product: iOS and Android (Expo / React Native, 65+ screens), Firebase backend (~64 Cloud Functions), Gemini coaching with allowlisted context, and training engines for progressive overload, outdoor pace, GPS validation, and Fit Score. Store submit is still open.</p>
                     <div class="mt-5 flex flex-wrap gap-2">
@@ -455,7 +517,7 @@
                             <h3 class="text-2xl font-bold">Database Engineer Intern</h3>
                             <p class="text-lg text-slate-300">City of Elizabeth</p>
                         </div>
-                        <p class="font-mono text-sm text-slate-400 md:text-right">May 2024 – Sep 2024<br>Elizabeth, NJ</p>
+                        <p class="font-mono text-sm leading-relaxed text-slate-400 md:w-44 md:shrink-0 md:text-right">May 2024 – Sep 2024<br>Elizabeth, NJ</p>
                     </div>
                     <ul class="mt-4 space-y-2 text-slate-400">
                         <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-300"></span>Managed MongoDB and Excel document stores supporting a 500+ user knowledge-sharing network.</li>
@@ -469,7 +531,7 @@
                             <h3 class="text-2xl font-bold">Innovation, Design &amp; Entrepreneurship Intern</h3>
                             <p class="text-lg text-slate-300">Columbia University IDE</p>
                         </div>
-                        <p class="font-mono text-sm text-slate-400 md:text-right">Sep 2023 – May 2024<br>New York, NY</p>
+                        <p class="font-mono text-sm leading-relaxed text-slate-400 md:w-44 md:shrink-0 md:text-right">Sep 2023 – May 2024<br>New York, NY</p>
                     </div>
                     <ul class="mt-4 space-y-2 text-slate-400">
                         <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-300"></span>Maintained and improved the program WordPress site, UI, and communication across Columbia Engineering affiliates.</li>
@@ -479,98 +541,113 @@
             </div>
         </section>
 
-        <section id="work" class="scroll-in mb-24">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">04 — Selected work</p>
-            <h2 class="mt-2 mb-3 text-3xl font-bold">Products I built</h2>
-            <p class="mb-10 max-w-2xl text-slate-400">Founder and independent work hiring teams can click through.</p>
+        <section id="stories" class="scroll-in mb-24">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">02 — Partner work</p>
+            <h2 class="mt-2 mb-3 text-3xl font-bold">TREI with partners</h2>
+            <p class="section-lead"><a href="https://www.bariatricassociates.com/" target="_blank" rel="noopener noreferrer" class="text-teal-300 hover:underline">BariAccess</a> is my current employment. TREI is the patient and care-team product: the layer between a clinic visit and everything that happens in a patient’s life between appointments. These trips are how that product met partners in the real world.</p>
+            <div class="grid items-stretch gap-5">
+                <article class="card rounded-2xl p-6 md:p-8">
+                    <p class="font-mono text-xs text-teal-300">June 2026 · Belgrade, Serbia</p>
+                    <h3 class="mt-2 text-2xl font-bold">PROFEX Academy</h3>
+                    <p class="mt-3 max-w-3xl leading-relaxed text-slate-300">Four days in Belgrade to explore a partnership between BariAccess and PROFEX Academy. Business meetings, live platform demos, and a full diagnostic protocol the same day I landed. I left the lab with a lot of data and no digital layer to carry it forward — that gap is the product brief.</p>
+                    <div class="carousel mt-6" data-gallery="belgrade" data-alt="BariAccess work trip with PROFEX Academy in Belgrade"></div>
+                </article>
+                <article class="card rounded-2xl p-6 md:p-8">
+                    <p class="font-mono text-xs text-teal-300">27–28 June 2026 · Biohackers World New York</p>
+                    <h3 class="mt-2 text-2xl font-bold">NYC Biohacker Expo</h3>
+                    <p class="mt-3 max-w-3xl leading-relaxed text-slate-300">First expo and first booth. RITHM ran a dual booth with PROFEX at the InterContinental New York Barclay. PROFEX ran live diagnostics; RITHM is what happens after the snapshot — biometrics, behavior, and context. That is the same gap BariAccess is built to close.</p>
+                    <div class="carousel mt-6" data-gallery="nyc-biohacker-expo" data-alt="RITHM and PROFEX booth at Biohackers World New York"></div>
+                </article>
+            </div>
+        </section>
 
-            <div class="grid gap-5 md:grid-cols-2">
-                <article class="card rounded-2xl p-6 md:p-7">
+        <section id="work" class="scroll-in mb-24">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">03 — Selected work</p>
+            <h2 class="mt-2 mb-3 text-3xl font-bold">Products I built</h2>
+            <p class="section-lead">Founder and independent work hiring teams can click through.</p>
+
+            <div class="grid items-stretch gap-5 md:grid-cols-2">
+                <article class="card flex h-full flex-col rounded-2xl p-6 md:p-7">
                     <p class="font-mono text-xs text-teal-300">Founder</p>
-                    <h3 class="mt-2 text-xl font-bold">FITD</h3>
+                    <h3 class="mt-2 text-xl font-bold">FITD AI</h3>
                     <p class="mt-3 leading-relaxed text-slate-400">Fashion AI company hub: production SwiftUI iOS app, Compose Android port, fitdai.com plus Next.js admin CRM, Cloud Functions on Firebase/GCP, Gemini labeling/stylist, Vertex virtual try-on, StoreKit 2, and a catalog of about 16.5k SKUs.</p>
-                    <a href="https://fitdai.com" target="_blank" rel="noopener noreferrer" class="link-row mt-5">fitdai.com <i class="fas fa-arrow-right text-xs"></i></a>
+                    <a href="https://fitdai.com" target="_blank" rel="noopener noreferrer" class="link-row mt-auto pt-5">fitdai.com <i class="fas fa-arrow-right text-xs"></i></a>
                 </article>
-                <article class="card rounded-2xl p-6 md:p-7">
-                    <p class="font-mono text-xs text-teal-300">Sole engineer · 2026</p>
-                    <h3 class="mt-2 text-xl font-bold">LaunchPage Studios</h3>
-                    <p class="mt-3 leading-relaxed text-slate-400">Marketing site and shop operations platform for Alex Road Service in Keasbey, NJ: RBAC, server-owned writes, sequential IDs, Stripe Checkout and refunds, VIN decode, and security-rules tests, with a delivery kit so the same platform can be duplicated for other shops.</p>
-                    <a href="https://launchpage-alex-roadservice.web.app/" target="_blank" rel="noopener noreferrer" class="link-row mt-5">Live demo <i class="fas fa-arrow-right text-xs"></i></a>
+                <article class="card flex h-full flex-col rounded-2xl p-6 md:p-7">
+                    <p class="font-mono text-xs text-teal-300">Founding engineer · Oct 2025 – Present</p>
+                    <h3 class="mt-2 text-xl font-bold">LaunchPage Studio</h3>
+                    <p class="mt-3 leading-relaxed text-slate-400">Remote studio for client and product systems. Automotive Operations System is the marketing site and shop operations platform for a Keasbey, NJ roadside business: RBAC, server-owned writes, sequential IDs, Stripe Checkout and refunds, VIN decode, and security-rules tests, with a delivery kit so the same platform can be duplicated for other shops. TaxTracker Pro is the studio’s tax-record organizer for freelancers and small businesses — not a filing engine — on React + TypeScript web and Expo iOS/Android with Stripe, store IAP, App Check, Crashlytics, Firestore and Storage rules, and live hosting.</p>
+                    <a href="https://launchpage-alex-roadservice.web.app/" target="_blank" rel="noopener noreferrer" class="link-row mt-auto pt-5">Automotive Operations System demo <i class="fas fa-arrow-right text-xs"></i></a>
+                    <a href="https://launchpage-tax-tracker.web.app" target="_blank" rel="noopener noreferrer" class="link-row pt-2">TaxTracker Pro <i class="fas fa-arrow-right text-xs"></i></a>
                 </article>
-                <article class="card rounded-2xl p-6 md:p-7">
-                    <p class="font-mono text-xs text-teal-300">Personal product</p>
-                    <h3 class="mt-2 text-xl font-bold">TaxTacker</h3>
-                    <p class="mt-3 leading-relaxed text-slate-400">Tax-record organizer for freelancers and small businesses — not a filing engine. React + TypeScript web app and Expo iOS/Android with Stripe, store IAP, App Check, Crashlytics, Firestore and Storage rules, and live hosting.</p>
-                    <a href="https://launchpage-tax-tracker.web.app" target="_blank" rel="noopener noreferrer" class="link-row mt-5">launchpage-tax-tracker.web.app <i class="fas fa-arrow-right text-xs"></i></a>
-                </article>
-                <article class="card rounded-2xl p-6 md:p-7">
+                <article class="card flex h-full flex-col rounded-2xl p-6 md:p-7">
                     <p class="font-mono text-xs text-teal-300">Client site · Oct 2025 – Jul 2026</p>
                     <h3 class="mt-2 text-xl font-bold">Insightful Care Solutions</h3>
                     <p class="mt-3 leading-relaxed text-slate-400">Production telepsychiatry site for a New Jersey practice: React + Vite + Tailwind SPA, Firebase Hosting, Google Apps Script contact backend, ChARM Health booking, and accessible responsive UX.</p>
-                    <a href="https://insightfulcare.solutions/" target="_blank" rel="noopener noreferrer" class="link-row mt-5">insightfulcare.solutions <i class="fas fa-arrow-right text-xs"></i></a>
+                    <a href="https://insightfulcare.solutions/" target="_blank" rel="noopener noreferrer" class="link-row mt-auto pt-5">insightfulcare.solutions <i class="fas fa-arrow-right text-xs"></i></a>
                 </article>
-                <article class="card rounded-2xl p-6 md:p-7 md:col-span-2">
+                <article class="card flex h-full flex-col rounded-2xl p-6 md:p-7">
                     <p class="font-mono text-xs text-teal-300">Personal product · 2026</p>
                     <h3 class="mt-2 text-xl font-bold">Local AI</h3>
-                    <p class="mt-3 max-w-3xl leading-relaxed text-slate-400">Windows desktop app (Tauri 2 + React 19 + TypeScript + Rust). Offline GGUF inference via llama.cpp as a child process. Chats persist in SQLite. The UI never calls cloud inference APIs. Shipped surface includes a first-run wizard, chat, model library, documents + local RAG, and an NSIS installer.</p>
+                    <p class="mt-3 leading-relaxed text-slate-400">Windows desktop app (Tauri 2 + React 19 + TypeScript + Rust). Offline GGUF inference via llama.cpp as a child process. Chats persist in SQLite. The UI never calls cloud inference APIs. Shipped surface includes a first-run wizard, chat, model library, documents + local RAG, and an NSIS installer.</p>
                 </article>
             </div>
         </section>
 
         <section id="education" class="scroll-in mb-24">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">05 — Education</p>
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">04 — Education</p>
             <h2 class="mt-2 mb-3 text-3xl font-bold">School</h2>
-            <p class="mb-8 max-w-3xl text-slate-400">St. Lawrence University’s 3+2 Engineering Combined Program with Columbia: three years of a mathematics B.A. path plus pre-engineering core, then two years of Computer Engineering at Columbia. Two bachelor’s degrees at the end — not a mid-degree transfer.</p>
+            <p class="section-lead">St. Lawrence University’s 3+2 Engineering Combined Program with Columbia: three years of a mathematics B.A. path plus pre-engineering core, then two years of Computer Engineering at Columbia. Two bachelor’s degrees at the end — not a mid-degree transfer.</p>
 
-            <div class="grid gap-5 md:grid-cols-2">
-                <article class="card rounded-2xl p-6">
+            <div class="grid items-stretch gap-5 md:grid-cols-2">
+                <article class="card flex h-full flex-col rounded-2xl p-6">
                     <h3 class="text-lg font-bold">Columbia University</h3>
                     <p class="mt-1 text-teal-200">B.S. Computer Engineering</p>
                     <p class="mt-2 font-mono text-sm text-slate-400">Fall 2023 – May 2025 · New York, NY</p>
-                    <p class="mt-3 text-sm text-slate-400">Combined Plan junior and senior years. Degree conferred 21 May 2025.</p>
-                    <div class="gallery-grid cols-2 mt-5" data-gallery="columbia-graduation" data-alt="Columbia University Computer Engineering graduation"></div>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-400">Combined Plan junior and senior years. Degree conferred 21 May 2025.</p>
+                    <div class="carousel mt-auto pt-5" data-gallery="columbia-graduation" data-alt="Columbia University Computer Engineering graduation"></div>
                 </article>
-                <article class="card rounded-2xl p-6">
+                <article class="card flex h-full flex-col rounded-2xl p-6">
                     <h3 class="text-lg font-bold">St. Lawrence University</h3>
                     <p class="mt-1 text-teal-200">B.A. path in Mathematics · 3+2</p>
                     <p class="mt-2 font-mono text-sm text-slate-400">Fall 2020 – Spring 2023 · Canton, NY</p>
-                    <p class="mt-3 text-sm text-slate-400">Football for two seasons (2020 and 2021), then the Fall 2022 Australia semester, then the last SLU term in Spring 2023.</p>
-                    <div class="gallery-grid cols-2 mt-5" data-gallery="slu-graduation" data-alt="St. Lawrence University graduation"></div>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-400">Football for two seasons (2020 and 2021), then the Fall 2022 Australia semester, then the last SLU term in Spring 2023.</p>
+                    <div class="carousel mt-auto pt-5" data-gallery="slu-graduation" data-alt="St. Lawrence University graduation"></div>
                 </article>
-                <article class="card rounded-2xl p-6">
+                <article class="card flex h-full flex-col rounded-2xl p-6">
                     <h3 class="text-lg font-bold">James Cook University</h3>
                     <p class="mt-1 text-teal-200">Study abroad inside the 3+2 plan</p>
                     <p class="mt-2 font-mono text-sm text-slate-400">Jun 2022 – Nov 2022 · Townsville, QLD</p>
-                    <p class="mt-3 text-sm text-slate-400">Data mining, probability, and game design, plus a Weave News analysis on shark and ray conservation.</p>
-                    <a href="https://www.weavenews.org/stories/2023/4/7/sharks-and-rays-belong-on-australias-protected-species-lists" target="_blank" rel="noopener noreferrer" class="link-row mt-4">Weave News article <i class="fas fa-arrow-right text-xs"></i></a>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-400">Data mining, probability, and game design, plus a Weave News analysis on shark and ray conservation.</p>
+                    <a href="https://www.weavenews.org/stories/2023/4/7/sharks-and-rays-belong-on-australias-protected-species-lists" target="_blank" rel="noopener noreferrer" class="link-row mt-auto pt-5">Weave News article <i class="fas fa-arrow-right text-xs"></i></a>
                 </article>
-                <article class="card rounded-2xl p-6">
+                <article class="card flex h-full flex-col rounded-2xl p-6">
                     <h3 class="text-lg font-bold">Berkshire School</h3>
                     <p class="mt-1 text-teal-200">Boarding · Class of 2020</p>
                     <p class="mt-2 font-mono text-sm text-slate-400">2016 – 2020 · Sheffield, Massachusetts</p>
-                    <p class="mt-3 text-sm text-slate-400">Four-year boarder. STEM focus, senior-year prefect, football all four years (middle linebacker, center, running back).</p>
-                    <div class="gallery-grid cols-2 mt-5" data-gallery="berkshire" data-alt="Berkshire School in Sheffield, Massachusetts"></div>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-400">Four-year boarder. STEM focus, senior-year prefect, football all four years (middle linebacker, center, running back).</p>
+                    <div class="carousel mt-auto pt-5" data-gallery="berkshire" data-alt="Berkshire School in Sheffield, Massachusetts"></div>
                 </article>
             </div>
         </section>
 
         <section id="skills" class="scroll-in mb-24">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">06 — Skills</p>
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">05 — Skills</p>
             <h2 class="mt-2 mb-8 text-3xl font-bold">What I use to ship</h2>
-            <div class="grid gap-5 md:grid-cols-2">
-                <div class="card rounded-2xl p-6">
+            <div class="grid items-stretch gap-5 md:grid-cols-2">
+                <div class="card h-full rounded-2xl p-6">
                     <h3 class="font-semibold text-slate-100">Languages</h3>
                     <p class="mt-3 text-slate-400">TypeScript, JavaScript, Swift, Python, SQL, HTML/CSS, some Kotlin and Rust.</p>
                 </div>
-                <div class="card rounded-2xl p-6">
+                <div class="card h-full rounded-2xl p-6">
                     <h3 class="font-semibold text-slate-100">Clients</h3>
                     <p class="mt-3 text-slate-400">React, Expo / React Native, SwiftUI, Vite, Next.js, Tauri.</p>
                 </div>
-                <div class="card rounded-2xl p-6">
+                <div class="card h-full rounded-2xl p-6">
                     <h3 class="font-semibold text-slate-100">Backend &amp; data</h3>
                     <p class="mt-3 text-slate-400">Fastify, PostgreSQL, Firebase (Auth, Firestore, Functions, Hosting, Storage), Stripe, webhooks, RBAC.</p>
                 </div>
-                <div class="card rounded-2xl p-6">
+                <div class="card h-full rounded-2xl p-6">
                     <h3 class="font-semibold text-slate-100">Cloud &amp; AI product</h3>
                     <p class="mt-3 text-slate-400">Azure Container Apps, GitHub Actions, EAS, Gemini / Vertex, Azure OpenAI, llama.cpp. Applied models in products — not foundation-model training.</p>
                 </div>
@@ -578,7 +655,7 @@
         </section>
 
         <section id="resume" class="scroll-in mb-24">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">07 — Resume</p>
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">06 — Resume</p>
             <h2 class="mt-2 mb-8 text-3xl font-bold">PDF</h2>
             <div class="card rounded-2xl p-6 md:p-8">
                 <button id="toggleResume"
@@ -603,13 +680,34 @@
             </div>
         </section>
 
+        <section id="about" class="scroll-in mb-24">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">07 — Community</p>
+            <h2 class="mt-2 mb-3 text-3xl font-bold">Faith, community, and how I spend time</h2>
+            <p class="section-lead">I attend Siloam-Hope First Presbyterian Church in Elizabeth, New Jersey. I lead the technical side of worship each week — bulletin presentation and the live-stream workflow — and go to Wednesday Bible study. I also help the NAACP Elizabeth Branch with social posting workflows, and I supervise tutoring at Central Presbyterian Church in Summit with children in 1st through 8th grade.</p>
+            <div class="carousel mb-8" data-gallery="siloam-hope" data-alt="Siloam-Hope First Presbyterian Church in Elizabeth, New Jersey"></div>
+            <div class="flex flex-wrap gap-2">
+                <span class="chip">Calisthenics</span>
+                <span class="chip">Gym</span>
+                <span class="chip">Running</span>
+                <span class="chip">Basketball</span>
+                <span class="chip">Football</span>
+                <span class="chip">Pop &amp; R&amp;B</span>
+                <span class="chip">Golf</span>
+                <span class="chip">Snowboarding</span>
+                <span class="chip">Hiking</span>
+                <span class="chip">Travel</span>
+                <span class="chip">Cooking</span>
+                <span class="chip">Journaling</span>
+            </div>
+        </section>
+
         <section id="contact" class="scroll-in mb-8">
             <p class="font-mono text-xs uppercase tracking-[0.2em] text-teal-300">08 — Contact</p>
             <h2 class="mt-2 mb-3 text-3xl font-bold">Let’s talk</h2>
-            <p class="mb-8 max-w-xl text-slate-400">Recruiters and hiring managers can reach me here, or email <a class="text-teal-300 hover:underline" href="mailto:zakiymanigo@gmail.com">zakiymanigo@gmail.com</a>.</p>
-            <div class="mb-8 flex flex-wrap gap-3">
-                <a href="https://github.com/ztm2106" target="_blank" rel="noopener noreferrer" class="chip hover:border-teal-300 hover:text-teal-200">github.com/ztm2106</a>
-                <a href="https://github.com/ASWDWWW" target="_blank" rel="noopener noreferrer" class="chip hover:border-teal-300 hover:text-teal-200">github.com/ASWDWWW</a>
+            <p class="section-lead">Recruiters and hiring managers can reach me here, or email <a class="text-teal-300 hover:underline" href="mailto:zakiymanigo@gmail.com">zakiymanigo@gmail.com</a>.</p>
+            <div class="mb-8 flex flex-wrap items-center gap-3">
+                <a href="https://github.com/ASWDWWW" target="_blank" rel="noopener noreferrer" class="chip hover:border-teal-300 hover:text-teal-200">Personal</a>
+                <a href="https://github.com/ztm2106" target="_blank" rel="noopener noreferrer" class="chip hover:border-teal-300 hover:text-teal-200">Columbia</a>
                 <a href="https://www.linkedin.com/in/zakiymanigo/" target="_blank" rel="noopener noreferrer" class="chip hover:border-teal-300 hover:text-teal-200">LinkedIn</a>
                 <a href="tel:+19082306948" class="chip hover:border-teal-300 hover:text-teal-200">Phone</a>
             </div>
@@ -650,8 +748,8 @@
         <div class="mx-auto flex max-w-6xl flex-col items-center gap-5 px-4 text-center">
             <div class="flex flex-wrap justify-center gap-6 text-slate-400">
                 <a href="https://www.linkedin.com/in/zakiymanigo/" target="_blank" rel="noopener noreferrer" class="hover:text-teal-300 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-xl"></i></a>
-                <a href="https://github.com/ztm2106" target="_blank" rel="noopener noreferrer" class="hover:text-teal-300 transition-colors" aria-label="GitHub ztm2106"><i class="fab fa-github text-xl"></i></a>
-                <a href="https://github.com/ASWDWWW" target="_blank" rel="noopener noreferrer" class="hover:text-teal-300 transition-colors" aria-label="GitHub ASWDWWW"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://github.com/ASWDWWW" target="_blank" rel="noopener noreferrer" class="hover:text-teal-300 transition-colors" aria-label="GitHub Personal"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://github.com/ztm2106" target="_blank" rel="noopener noreferrer" class="hover:text-teal-300 transition-colors" aria-label="GitHub Columbia"><i class="fab fa-github text-xl"></i></a>
                 <a href="mailto:zakiymanigo@gmail.com" class="hover:text-teal-300 transition-colors" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
                 <a href="tel:+19082306948" class="hover:text-teal-300 transition-colors" aria-label="Phone"><i class="fas fa-phone text-xl"></i></a>
             </div>
@@ -744,55 +842,135 @@
                 if (e.key === 'Escape') closeLightbox();
             });
 
+            const usedMedia = new Set();
+
             document.querySelectorAll('[data-gallery]').forEach((root) => {
                 const folder = root.getAttribute('data-gallery');
                 const alt = root.getAttribute('data-alt') || folder;
-                const imagesOnly = root.getAttribute('data-images-only') === 'true';
-                const items = (folders[folder] || []).filter((item) => imagesOnly ? item.kind === 'image' : true);
-                items.forEach((item, index) => {
-                    const label = alt + ' (' + (index + 1) + ')';
+                const items = (folders[folder] || []).filter((item) => {
+                    const key = item.src || item.file;
+                    if (!key || usedMedia.has(key)) return false;
+                    usedMedia.add(key);
+                    return true;
+                });
+                if (!items.length) return;
+
+                root.setAttribute('role', 'region');
+                root.setAttribute('aria-roledescription', 'carousel');
+                root.setAttribute('aria-label', alt);
+
+                const frame = document.createElement('div');
+                frame.className = 'carousel-frame';
+                const viewport = document.createElement('div');
+                viewport.className = 'carousel-viewport';
+
+                const slides = items.map((item, index) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+                    slide.setAttribute('role', 'group');
+                    slide.setAttribute('aria-roledescription', 'slide');
+                    slide.setAttribute('aria-label', (index + 1) + ' of ' + items.length);
+                    const label = alt + ', ' + (index + 1) + ' of ' + items.length;
                     if (item.kind === 'video') {
                         const video = document.createElement('video');
-                        video.className = 'gallery-item';
+                        video.className = 'carousel-media';
                         video.src = item.src;
                         video.controls = true;
                         video.setAttribute('playsinline', '');
                         video.setAttribute('preload', 'metadata');
                         video.setAttribute('aria-label', label);
                         bindFallback(video, item.local);
-                        root.appendChild(video);
-                        return;
+                        slide.appendChild(video);
+                    } else {
+                        const button = document.createElement('button');
+                        button.type = 'button';
+                        button.className = 'carousel-media-btn';
+                        button.setAttribute('aria-label', 'Open ' + label);
+                        const img = document.createElement('img');
+                        img.src = item.src;
+                        img.alt = label;
+                        img.loading = 'lazy';
+                        bindFallback(img, item.local);
+                        button.appendChild(img);
+                        button.addEventListener('click', () => openLightbox(item, label));
+                        slide.appendChild(button);
                     }
-                    const button = document.createElement('button');
-                    button.type = 'button';
-                    button.className = 'gallery-item';
-                    button.setAttribute('aria-label', 'Open ' + label);
-                    const img = document.createElement('img');
-                    img.src = item.src;
-                    img.alt = label;
-                    img.loading = 'lazy';
-                    bindFallback(img, item.local);
-                    button.appendChild(img);
-                    button.addEventListener('click', () => openLightbox(item, label));
-                    root.appendChild(button);
+                    viewport.appendChild(slide);
+                    return slide;
                 });
-            });
 
-            document.querySelectorAll('[data-videos]').forEach((root) => {
-                const folder = root.getAttribute('data-videos');
-                const poster = ((folders[folder] || []).find((item) => item.kind === 'image') || {}).src;
-                (folders[folder] || []).filter((item) => item.kind === 'video').forEach((item, index) => {
-                    const video = document.createElement('video');
-                    video.className = 'story-video mb-3';
-                    video.src = item.src;
-                    video.controls = true;
-                    video.setAttribute('playsinline', '');
-                    video.setAttribute('preload', 'metadata');
-                    if (poster) video.setAttribute('poster', poster);
-                    video.setAttribute('aria-label', 'Belgrade PROFEX Academy video ' + (index + 1));
-                    bindFallback(video, item.local);
-                    root.appendChild(video);
+                const prev = document.createElement('button');
+                prev.type = 'button';
+                prev.className = 'carousel-btn carousel-prev';
+                prev.setAttribute('aria-label', 'Previous');
+                prev.innerHTML = '<i class="fas fa-chevron-left" aria-hidden="true"></i>';
+
+                const next = document.createElement('button');
+                next.type = 'button';
+                next.className = 'carousel-btn carousel-next';
+                next.setAttribute('aria-label', 'Next');
+                next.innerHTML = '<i class="fas fa-chevron-right" aria-hidden="true"></i>';
+
+                const status = document.createElement('p');
+                status.className = 'carousel-status';
+
+                const dots = document.createElement('div');
+                dots.className = 'carousel-dots';
+                const dotButtons = items.map((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'carousel-dot';
+                    dot.setAttribute('aria-label', 'Show item ' + (index + 1) + ' of ' + items.length);
+                    dots.appendChild(dot);
+                    return dot;
                 });
+
+                let index = 0;
+                function show(nextIndex) {
+                    index = (nextIndex + items.length) % items.length;
+                    slides.forEach((slide, i) => {
+                        const active = i === index;
+                        slide.hidden = !active;
+                        const video = slide.querySelector('video');
+                        if (video && !active) video.pause();
+                    });
+                    status.textContent = (index + 1) + ' / ' + items.length;
+                    dotButtons.forEach((dot, i) => {
+                        const active = i === index;
+                        dot.classList.toggle('is-active', active);
+                        if (active) dot.setAttribute('aria-current', 'true');
+                        else dot.removeAttribute('aria-current');
+                    });
+                    const single = items.length < 2;
+                    prev.hidden = single;
+                    next.hidden = single;
+                    dots.hidden = single;
+                }
+
+                prev.addEventListener('click', () => show(index - 1));
+                next.addEventListener('click', () => show(index + 1));
+                dotButtons.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+                root.addEventListener('keydown', (event) => {
+                    if (event.target.closest('video')) return;
+                    if (event.key === 'ArrowLeft') {
+                        event.preventDefault();
+                        show(index - 1);
+                    } else if (event.key === 'ArrowRight') {
+                        event.preventDefault();
+                        show(index + 1);
+                    }
+                });
+
+                frame.appendChild(viewport);
+                frame.appendChild(prev);
+                frame.appendChild(next);
+                const meta = document.createElement('div');
+                meta.className = 'carousel-meta';
+                meta.appendChild(status);
+                meta.appendChild(dots);
+                root.appendChild(frame);
+                root.appendChild(meta);
+                show(0);
             });
         })();
 
@@ -909,5 +1087,6 @@
             });
         })();
     </script>
+    <script type="module" src="./scene.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ Assumed until you confirm: job search and TREI delivery are the live priorities.
 - Which GitHub identity owns each private FITD repo (`FITD-fash` private list not retrieved without account switch).
 - Reconnect Gmail MCP to `zakiymanigo@gmail.com` (currently Sent as `fitdadmin@fitdai.com`).
 - Zoom is **always** `user-zoom-bridge`. Catalog plugin stays `needsAuth` (error 4700). Reload **zoom-bridge** in Settings → MCP after the Windows header-path fix. See `ops/integrations/zoom.md`.
-- Which Stripe account is in-scope for this OS (Fleet Trucking Platform, TaxTracker, Zakiy T. Manigo). Default stays **test**.
+- Which Stripe account is in-scope for this OS (Fleet Trucking Platform, TaxTracker Pro, Zakiy T. Manigo). Default stays **test**.
 - IONOS: local MCP binary + real DCD token, or confirm IONOS is unused.
 - Hugging Face OAuth expires **21 Sep 2026 03:41Z** — refresh if Hub tools are needed after that.
 - Whether Figma file work for TREI may use the Bariatric Associates org (guest view only).
@@ -50,7 +50,7 @@ Assumed until you confirm: job search and TREI delivery are the live priorities.
 | FITD | Career packets; Firebase `fitd-app-203cb` and staging | Code not in this repo |
 | FitGenius | Career packets; Firebase `fitgenius-5847b`; n8n draft workflows exist (inactive) | Pre-launch per packets |
 | Insightful Care | Career packets; Firebase `insightful-care-solutions` | Live site cited in packets |
-| Alex Road Service | Career packets; Firebase `launchpage-alex-roadservice` | Public GitHub repo `ASWDWWW/Alex-Road-Service` |
+| Automotive Operations System | Career packets; Firebase `launchpage-alex-roadservice` | Public GitHub repo `ASWDWWW/Alex-Road-Service` |
 
 No live customer-issue queue is connected. Use tickets under `ops/product-engineering/tickets/`.
 

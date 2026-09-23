@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Zakiy T. Manigo — AI & Automation Engineer</title>
+  <title>Zakiy T. Manigo</title>
   <style>@page {
   size: letter;
-  margin: 0.6in 0.7in;
+  margin: 0.26in 0.42in;
 }
 
 * {
@@ -19,37 +19,33 @@ html, body {
 
 body {
   font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
-  font-size: 10.5pt;
-  line-height: 1.28;
+  font-size: 9.7pt;
+  line-height: 1.12;
   color: #111;
   background: #fff;
 }
 
 .page {
-  max-width: 7.6in;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
 }
 
 header {
   text-align: center;
   border-bottom: 1px solid #111;
-  padding-bottom: 8px;
-  margin-bottom: 10px;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 h1 {
-  font-size: 16pt;
+  font-size: 16.5pt;
   font-weight: 700;
-  letter-spacing: 0.4px;
-  margin: 0 0 2px;
+  letter-spacing: 0.35px;
+  margin: 0 0 3px;
 }
 
 .role {
-  font-size: 10.5pt;
-  font-weight: 400;
-  margin: 0 0 4px;
-  color: #111;
-  font-style: normal;
+  display: none;
 }
 
 .contact {
@@ -57,40 +53,38 @@ h1 {
   margin: 0;
 }
 
-.contact a {
-  color: #111;
-  text-decoration: none;
-}
-
+.contact a,
 a {
   color: #111;
   text-decoration: none;
 }
 
 h2 {
-  font-size: 10pt;
+  font-size: 9.5pt;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
   border-bottom: 0.75px solid #111;
-  margin: 11px 0 6px;
-  padding-bottom: 2px;
+  margin: 4px 0 1px;
+  padding-bottom: 1px;
 }
 
 .summary {
   margin: 0 0 2px;
+  text-align: justify;
 }
 
 .job,
-.edu-block {
-  margin: 0 0 8px;
+.edu-block,
+.project {
+  margin: 0 0 1px;
 }
 
 .job-head,
 .edu-head {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   align-items: baseline;
 }
 
@@ -104,37 +98,42 @@ h2 {
 .job-dates,
 .edu-dates {
   white-space: nowrap;
-  font-size: 10.5pt;
+  font-size: 10pt;
 }
 
 .job-sub,
 .edu-sub {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   align-items: baseline;
-  font-size: 10.5pt;
-  margin-bottom: 1px;
+  font-size: 10pt;
+  margin-bottom: 0;
 }
 
-.job-role,
-.edu-degree {
+.job-role {
   font-style: italic;
 }
 
+.edu-degree {
+  font-style: normal;
+}
+
 ul {
-  margin: 2px 0 0 18px;
+  margin: 1px 0 0 18px;
   padding: 0;
+  list-style: disc;
 }
 
 li {
-  margin: 0 0 2.5px;
+  margin: 0;
 }
 
 .skills p,
 .edu p,
-.edu-block p {
-  margin: 0 0 2px;
+.edu-block p,
+.project p {
+  margin: 0 0 1px;
 }
 
 .skills strong,
@@ -147,10 +146,10 @@ li {
   <div class="page">
     <header>
       <h1>Zakiy T. Manigo</h1>
-      <p class="role">AI & Automation Engineer</p>
-      <p class="contact">New York, NY  |  +1 (908) 230-6948  |  zakiymanigo@gmail.com  |  <a href="https://www.linkedin.com/in/zakiymanigo">linkedin.com/in/zakiymanigo</a></p>
+      
+      <p class="contact">+1 (908) 230-6948  |  zakiymanigo@gmail.com  |  NY / NJ  |  <a href="https://www.linkedin.com/in/zakiymanigo">linkedin.com/in/zakiymanigo</a></p>
     </header>
-    <p class="summary">Applied AI and workflow-automation engineer who places models and scheduled jobs behind product gates: grounding, quotas, human approval, and kill switches.</p><h2>Experience</h2><div class="job"><div class="job-head"><span class="job-org"><strong>FITD</strong></span><span class="job-loc">New York, NY</span></div><div class="job-sub"><span class="job-role">Founder and AI / Automation Engineer</span><span class="job-dates">2025 – Present</span></div><ul><li>Shipped Gemini 2.0 Flash in product for closet and brand labeling and a stylist grounded on wardrobe and weather; Vertex virtual try-on runs through a Cloud Function proxy so the mobile client never embeds the key.</li><li>Built community bots (Gemini, Imagen, Veo) with human approval, quotas, moderation, and a kill switch.</li><li>Automated brand and growth operations: catalog import for approximately 57 brands and 16,500 SKUs, an Instagram CRM (Flask, SQLite, GPT-4o), and n8n posting workflows.</li></ul></div><div class="job"><div class="job-head"><span class="job-org"><strong>BariAccess (TREI)</strong></span><span class="job-loc">New York, NY / Remote</span></div><div class="job-sub"><span class="job-role">Software Engineer (one of two primary engineers)</span><span class="job-dates">Jun 2025 – Present</span></div><ul><li>Productized Aba, a fail-closed Azure OpenAI assistant (voice and text) on a metabolic-care platform, with patient-language rules and secrets in Key Vault.</li><li>Automated last-mile clinic work with a worker and transactional outbox: wearable custody pulls, scheduling, and Stripe sandbox events on Azure Container Apps.</li></ul></div><div class="job"><div class="job-head"><span class="job-org"><strong>FitGenius</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founding Technical Partner</span><span class="job-dates">May 2026 – Sep 2026</span></div><ul><li>Applied Gemini on Vertex AI to fitness: catalog-constrained coaching, JSON plans, and food estimates, with GPS, health samples, and photos stripped from model payloads.</li></ul></div><div class="job"><div class="job-head"><span class="job-org"><strong>Local AI</strong></span><span class="job-loc">New York, NY</span></div><div class="job-sub"><span class="job-role">Product Engineer</span><span class="job-dates">2026</span></div><ul><li>Built an offline Windows desktop client (Tauri 2, React, Rust) for local GGUF models via llama.cpp, including documents and retrieval-augmented generation with no cloud inference from the UI.</li></ul></div><div class="job"><div class="job-head"><span class="job-org"><strong>LaunchPage Studios</strong></span><span class="job-loc">New York, NY / New Jersey</span></div><div class="job-sub"><span class="job-role">Founding Engineer</span><span class="job-dates">Oct 2025 – Present</span></div><ul><li>Automated payments and intake with Stripe webhooks, scheduled Cloud Functions, and Google Apps Script on live operations and tax-record products. Prior: Database Engineer Intern, City of Elizabeth, May 2024 – Sep 2024.</li></ul></div><h2>Education</h2><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>Columbia University</strong></span><span class="edu-loc">New York, NY</span></div><div class="edu-sub"><span class="edu-degree">Bachelor of Science, Computer Engineering</span><span class="edu-dates">May 2025</span></div><p>Combined Plan with St. Lawrence University. Bachelor of Arts, Mathematics, May 2023. Exchange: James Cook University, Townsville, QLD, 2022.</p></div><h2>Skills</h2><div class="skills"><p><strong>Applied AI:</strong> Azure OpenAI, Gemini / Vertex AI, GPT-4o, llama.cpp / GGUF, prompt packs, kill switches, RAG  </p><p><strong>Automation:</strong> n8n, Cloud Functions (scheduled and webhooks), GitHub Actions, Google Apps Script, worker / outbox jobs  </p><p><strong>Build:</strong> TypeScript, Python, Swift, React, Firebase / GCP, Azure</p></div>
+    <p class="summary">I put models and scheduled jobs behind gates people can live with: grounding, quotas, a human approval step, and a kill switch. I build those applied-model features and job-based automations with a real failure path, across Cloud Functions, n8n, webhooks, and worker jobs. I completed a Columbia B.S. in Computer Engineering through the Combined Plan and I am based in New York / New Jersey.</p><h2>Relevant Experience</h2><div class="job"><div class="job-head"><span class="job-org"><strong>BariAccess</strong></span><span class="job-loc">Livingston, NJ / Hybrid</span></div><div class="job-sub"><span class="job-role">Software Engineer</span><span class="job-dates">June 2025 – Present</span></div><ul><li>Served as one of two primary engineers and productized fail-closed ABA plus a worker/outbox for wearable pulls, scheduling, and payment events on TREI (<a href="https://trei.care">trei.care</a>).</li><li>Landed features behind tests, CI, and fail-closed gates so an automation miss has a written recovery path.</li><li>Held ABA to approved clinical meaning through patient-language rules on public and clinic surfaces.</li><li>Automated Spike pulls, Calendly, and Stripe events through outbox jobs so the clinic path runs without a person clicking every step.</li><li>Wired ABA voice and text through one policy path so a spoken question cannot skip the typed safety checks, then asked Realtime to speak only the checked body.</li><li>Stored Azure OpenAI keys in Key Vault and encoded rate limits, 24-hour retention, and medical-claim output checks in code so a model miss cannot invent a clinical claim.</li></ul></div><div class="job"><div class="job-head"><span class="job-org"><strong>City of Elizabeth</strong></span><span class="job-loc">Elizabeth, NJ</span></div><div class="job-sub"><span class="job-role">Database Engineer Intern</span><span class="job-dates">May 2024 – September 2024</span></div><ul><li>Administered MongoDB and Excel document stores supporting a knowledge-sharing network used by more than 500 municipal staff.</li><li>Automated reporting pipelines and improved data flow across departments so shared records could be reused without a manual handoff.</li></ul></div><h2>Projects</h2><div class="project"><div class="job-head"><span class="job-org"><strong>FITD AI</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founder and Engineer</span><span class="job-dates">May 2024 – Present</span></div><ul><li>Shipped labeling, a wardrobe-grounded stylist, a virtual try-on proxy, and moderated community bots on Gemini, Vertex, and GPT-4o behind product gates.</li><li>Ran catalog import, Instagram CRM, and n8n posting workflows with human approval and a kill switch so growth jobs can be stopped without a code freeze.</li></ul></div><div class="project"><div class="job-head"><span class="job-org"><strong>LaunchPage Studio</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founding Engineer</span><span class="job-dates">October 2025 – Present</span></div><ul><li>Automated Automotive Operations System payments and intake with Stripe webhooks, scheduled Cloud Functions, and Google Apps Script on the same event path the shop already closes.</li><li>Shipped estimates, invoices, refunds, and role-based access for Automotive Operations System so money events land in the same operating loop.</li><li>Built TaxTracker Pro webhook and scheduled-job automation for tax-year records, documents, and export, with Stripe Checkout, Customer Portal, and store IAP entitlement jobs behind signature verification.</li></ul></div><div class="project"><div class="job-head"><span class="job-org"><strong>Local AI</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Product Engineer</span><span class="job-dates">August 2026 – Present</span></div><ul><li>Built an offline GGUF desktop client with documents and retrieval-augmented generation so inference stays on the machine.</li><li>Ran local inference via llama.cpp as a child process, with chats stored in SQLite.</li></ul></div><div class="project"><div class="job-head"><span class="job-org"><strong>FitGenius</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founding Technical Partner</span><span class="job-dates">May 2026 – Present</span></div><ul><li>Applied Gemini on Vertex AI to fitness with GPS, health samples, and photos stripped from model payloads before the request leaves the device path.</li><li>Scheduled Cloud Functions and IAP verification on the same Firebase project so entitlements and model jobs share one environment.</li></ul></div><h2>Education</h2><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>Columbia University</strong></span><span class="edu-loc">New York, NY</span></div><div class="edu-sub"><span class="edu-degree">Bachelor of Science in Computer Engineering</span><span class="edu-dates">May 2025</span></div><p>Fu Foundation Combined Plan 3+2</p><p>Computer Architecture, Databases, AI, Embedded Systems, and UI Design</p></div><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>St. Lawrence University</strong></span><span class="edu-loc">Canton, NY</span></div><div class="edu-sub"><span class="edu-degree">Bachelor of Arts in Mathematics</span><span class="edu-dates">May 2023</span></div><p>Dean’s List, Spring 2022</p><p>Calculus, Linear Algebra, Differential Equations, and Group Theory</p></div><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>James Cook University</strong></span><span class="edu-loc">Townsville, QLD, Australia</span></div><div class="edu-sub"><span class="edu-degree">Undergraduate Exchange</span><span class="edu-dates">Fall 2022</span></div><p>Statistical Data Mining, Probability and Stochastic Processes, Game Design, and Human Rights</p></div><h2>Skills/Interests</h2><div class="skills"><p><strong>Skills:</strong> Azure OpenAI, Gemini / Vertex AI, GPT-4o, llama.cpp / GGUF, n8n, Cloud Functions, GitHub Actions, Google Apps Script, worker / outbox jobs, TypeScript, Python, Swift, React, Firebase / GCP, Azure</p><p><strong>Interests:</strong> calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker</p><p><strong>Community:</strong> worship tech, Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church</p></div>
   </div>
 </body>
 </html>

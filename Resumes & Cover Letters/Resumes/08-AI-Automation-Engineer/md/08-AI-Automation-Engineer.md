@@ -1,43 +1,66 @@
 # Zakiy T. Manigo
-**AI & Automation Engineer**
 
-New York, NY  |  +1 (908) 230-6948  |  zakiymanigo@gmail.com  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
++1 (908) 230-6948  |  zakiymanigo@gmail.com  |  NY / NJ  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
 
-Applied AI and workflow-automation engineer who places models and scheduled jobs behind product gates: grounding, quotas, human approval, and kill switches.
+I put models and scheduled jobs behind gates people can live with: grounding, quotas, a human approval step, and a kill switch. I build those applied-model features and job-based automations with a real failure path, across Cloud Functions, n8n, webhooks, and worker jobs. I completed a Columbia B.S. in Computer Engineering through the Combined Plan and I am based in New York / New Jersey.
 
-## Experience
+## Relevant Experience
 
-**FITD** | New York, NY
-Founder and AI / Automation Engineer | 2025 – Present
-- Shipped Gemini 2.0 Flash in product for closet and brand labeling and a stylist grounded on wardrobe and weather; Vertex virtual try-on runs through a Cloud Function proxy so the mobile client never embeds the key.
-- Built community bots (Gemini, Imagen, Veo) with human approval, quotas, moderation, and a kill switch.
-- Automated brand and growth operations: catalog import for approximately 57 brands and 16,500 SKUs, an Instagram CRM (Flask, SQLite, GPT-4o), and n8n posting workflows.
+**BariAccess** | Livingston, NJ / Hybrid
+Software Engineer | June 2025 – Present
+- Served as one of two primary engineers and productized fail-closed ABA plus a worker/outbox for wearable pulls, scheduling, and payment events on TREI ([trei.care](https://trei.care)).
+- Landed features behind tests, CI, and fail-closed gates so an automation miss has a written recovery path.
+- Held ABA to approved clinical meaning through patient-language rules on public and clinic surfaces.
+- Automated Spike pulls, Calendly, and Stripe events through outbox jobs so the clinic path runs without a person clicking every step.
+- Wired ABA voice and text through one policy path so a spoken question cannot skip the typed safety checks, then asked Realtime to speak only the checked body.
+- Stored Azure OpenAI keys in Key Vault and encoded rate limits, 24-hour retention, and medical-claim output checks in code so a model miss cannot invent a clinical claim.
 
-**BariAccess (TREI)** | New York, NY / Remote
-Software Engineer (one of two primary engineers) | Jun 2025 – Present
-- Productized Aba, a fail-closed Azure OpenAI assistant (voice and text) on a metabolic-care platform, with patient-language rules and secrets in Key Vault.
-- Automated last-mile clinic work with a worker and transactional outbox: wearable custody pulls, scheduling, and Stripe sandbox events on Azure Container Apps.
+**City of Elizabeth** | Elizabeth, NJ
+Database Engineer Intern | May 2024 – September 2024
+- Administered MongoDB and Excel document stores supporting a knowledge-sharing network used by more than 500 municipal staff.
+- Automated reporting pipelines and improved data flow across departments so shared records could be reused without a manual handoff.
+
+## Projects
+
+**FITD AI** | Remote
+Founder and Engineer | May 2024 – Present
+- Shipped labeling, a wardrobe-grounded stylist, a virtual try-on proxy, and moderated community bots on Gemini, Vertex, and GPT-4o behind product gates.
+- Ran catalog import, Instagram CRM, and n8n posting workflows with human approval and a kill switch so growth jobs can be stopped without a code freeze.
+
+**LaunchPage Studio** | Remote
+Founding Engineer | October 2025 – Present
+- Automated Automotive Operations System payments and intake with Stripe webhooks, scheduled Cloud Functions, and Google Apps Script on the same event path the shop already closes.
+- Shipped estimates, invoices, refunds, and role-based access for Automotive Operations System so money events land in the same operating loop.
+- Built TaxTracker Pro webhook and scheduled-job automation for tax-year records, documents, and export, with Stripe Checkout, Customer Portal, and store IAP entitlement jobs behind signature verification.
+
+**Local AI** | Remote
+Product Engineer | August 2026 – Present
+- Built an offline GGUF desktop client with documents and retrieval-augmented generation so inference stays on the machine.
+- Ran local inference via llama.cpp as a child process, with chats stored in SQLite.
 
 **FitGenius** | Remote
-Founding Technical Partner | May 2026 – Sep 2026
-- Applied Gemini on Vertex AI to fitness: catalog-constrained coaching, JSON plans, and food estimates, with GPS, health samples, and photos stripped from model payloads.
-
-**Local AI** | New York, NY
-Product Engineer | 2026
-- Built an offline Windows desktop client (Tauri 2, React, Rust) for local GGUF models via llama.cpp, including documents and retrieval-augmented generation with no cloud inference from the UI.
-
-**LaunchPage Studios** | New York, NY / New Jersey
-Founding Engineer | Oct 2025 – Present
-- Automated payments and intake with Stripe webhooks, scheduled Cloud Functions, and Google Apps Script on live operations and tax-record products. Prior: Database Engineer Intern, City of Elizabeth, May 2024 – Sep 2024.
+Founding Technical Partner | May 2026 – Present
+- Applied Gemini on Vertex AI to fitness with GPS, health samples, and photos stripped from model payloads before the request leaves the device path.
+- Scheduled Cloud Functions and IAP verification on the same Firebase project so entitlements and model jobs share one environment.
 
 ## Education
 
 **Columbia University** | New York, NY
-Bachelor of Science, Computer Engineering | May 2025
-Combined Plan with St. Lawrence University. Bachelor of Arts, Mathematics, May 2023. Exchange: James Cook University, Townsville, QLD, 2022.
+Bachelor of Science in Computer Engineering | May 2025
+Fu Foundation Combined Plan 3+2
+Computer Architecture, Databases, AI, Embedded Systems, and UI Design
 
-## Skills
+**St. Lawrence University** | Canton, NY
+Bachelor of Arts in Mathematics | May 2023
+Dean’s List, Spring 2022
+Calculus, Linear Algebra, Differential Equations, and Group Theory
 
-**Applied AI:** Azure OpenAI, Gemini / Vertex AI, GPT-4o, llama.cpp / GGUF, prompt packs, kill switches, RAG  
-**Automation:** n8n, Cloud Functions (scheduled and webhooks), GitHub Actions, Google Apps Script, worker / outbox jobs  
-**Build:** TypeScript, Python, Swift, React, Firebase / GCP, Azure
+**James Cook University** | Townsville, QLD, Australia
+Undergraduate Exchange | Fall 2022
+Statistical Data Mining, Probability and Stochastic Processes, Game Design, and Human Rights
+
+## Skills/Interests
+
+**Skills:** Azure OpenAI, Gemini / Vertex AI, GPT-4o, llama.cpp / GGUF, n8n, Cloud Functions, GitHub Actions, Google Apps Script, worker / outbox jobs, TypeScript, Python, Swift, React, Firebase / GCP, Azure
+**Interests:** calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker
+**Community:** worship tech, Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church

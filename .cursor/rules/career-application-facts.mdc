@@ -1,0 +1,44 @@
+---
+description: Canonical names, dates, locations, and resume facts for Zakiy’s materials
+globs: "{**/Resumes & Cover Letters/**,**/public/**,**/Career/**}"
+alwaysApply: false
+---
+
+# Career application facts
+
+Use these names, dates, and locations on resumes, cover letters, the career site, and Career notes. Do not invent GPA.
+
+**Sources:** job experience from [`Career/Experience/Jobs`](Career/Experience/Jobs). Named products from [`Career/Experience/Projects`](Career/Experience/Projects). Do not list a Projects packet as an Experience employer.
+
+**Personal base:** NY / NJ (New York / New Jersey). Do not list New York, NY alone as the home city.
+
+**Employer display:** `FITD AI` (not `FITD`) when naming that project. Leave repo/account strings alone (`FITD-fash`, `FITD-Bible`, `FITD-App`, `fitdai.com`). FITD AI location is **Remote**.
+
+**Assistant name:** `ABA` (never `Aba`). On resumes, write ABA only in BariAccess experience bullets — never in Skills/Interests. Product name: `TaxTracker Pro` (not TaxTacker, not TaxTracker). Product name: `Automotive Operations System` (never Alex Road Service on user-facing copy). Studio name: `LaunchPage Studio` (not LaunchPage Studios). Leave Firebase IDs and GitHub slugs unchanged (`launchpage-alex-roadservice`, `ASWDWWW/Alex-Road-Service`, `launchpage-tax-tracker`).
+
+| Job (Experience) | Location | Dates |
+| --- | --- | --- |
+| BariAccess | Livingston, NJ / Hybrid | Jun 2025 – Present |
+| City of Elizabeth | Elizabeth, NJ | May 2024 – Sep 2024 |
+
+| Project (Projects section) | Packet |
+| --- | --- |
+| FITD AI | `Career/Experience/Projects/FITD-experience` |
+| FitGenius | `Career/Experience/Projects/FitGenius-experience` |
+| Local AI | `Career/Experience/Projects/Offline-Windows-Desktop-LLM-Client-experience` |
+| LaunchPage Studio | One project. Nested products: Automotive Operations System (`Projects/Automotive-Operations-Platform-experience`) and TaxTracker Pro (`Projects/Tax-Tracker-experience`). Do not list those products as sibling Projects. |
+| Insightful Care Solutions | `Career/Experience/Projects/Insightful-Care-Solutions-experience` |
+
+Current job (`Present`) first, then past jobs. Projects are not employers.
+
+Do not put a **target job title** under the name on a resume. Cover letters may name the role being applied for.
+
+Write only what Zakiy has done. Never list tools, titles, or methods he has not used.
+
+Do not put “(one of two primary engineers)” in the role line. Use a bullet instead.
+
+Every resume bullet is a full sentence.
+
+Education: school name, then degree or Undergraduate Exchange, then accolades and focus from `Career/University Transcripts/`. No invented GPA.
+
+Resumes need a **Projects** section sourced from `Career/Experience/Projects`. TREI lives under BariAccess in Experience, not as a separate project. Skills include `Career/Hobbies-Activities.md` (compact activities + community lines).

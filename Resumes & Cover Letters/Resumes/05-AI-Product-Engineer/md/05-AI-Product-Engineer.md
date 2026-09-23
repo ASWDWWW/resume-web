@@ -1,40 +1,64 @@
 # Zakiy T. Manigo
-**AI Product Engineer**
 
-New York, NY  |  +1 (908) 230-6948  |  zakiymanigo@gmail.com  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
++1 (908) 230-6948  |  zakiymanigo@gmail.com  |  NY / NJ  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
 
-AI product engineer who ships model-backed features with constraints: grounding, cost and latency, failure UX, and safety. Applies existing models in production products.
+I put models that already exist into products people use, with real limits on grounding, cost, latency, and what happens when the model is wrong. That last mile is the job: a proxy, a quota, a human in the loop, and a kill switch on the path the user sees. I completed a Columbia B.S. in Computer Engineering through the Combined Plan and I am based in New York / New Jersey.
 
-## Experience
+## Relevant Experience
 
-**FITD** | New York, NY
-Founder and AI Product Engineer | 2025 – Present
-- Shipped Gemini 2.0 Flash in product for closet and brand labeling, a stylist grounded on wardrobe and weather, daily colors and styles, and Vertex virtual try-on via a Cloud Function proxy so the mobile client never embeds the key.
-- Built community bots (Gemini, Imagen, Veo) with human approval, quotas, moderation, and a kill switch. Recommendation scoring from likes, onboarding, and implicit signals on a production SwiftUI app and Firebase / GCP backend.
+**BariAccess** | Livingston, NJ / Hybrid
+Software Engineer | June 2025 – Present
+- Served as one of two primary engineers and productized ABA as a fail-closed Azure OpenAI assistant on TREI ([trei.care](https://trei.care)), with voice and text sharing one policy path.
+- Kept the backend as the authority and the model as a renderer, classifying urgent, clinical, and injection routes before generation.
+- Stored keys in Key Vault and encoded rate limits, retention, and medical-claim output checks in code rather than in prompt text alone.
+- Held ABA to approved clinical meaning on public and clinic surfaces through patient-language rules in the product.
 
-**BariAccess (TREI)** | New York, NY / Remote
-Software Engineer (one of two primary engineers) | Jun 2025 – Present
-- Productized a guarded Azure OpenAI assistant on a GLP-1 / metabolic-care platform: voice and text, fail-closed public surfaces, and patient-language rules so the model cannot invent a clinical baseline. Staging on Azure with Key Vault-held secrets.
+**City of Elizabeth** | Elizabeth, NJ
+Database Engineer Intern | May 2024 – September 2024
+- Administered MongoDB and Excel document stores supporting a knowledge-sharing network used by more than 500 municipal staff.
+- Automated reporting pipelines and improved data flow across departments so shared records could be reused without a manual handoff.
+
+## Projects
+
+**FITD AI** | Remote
+Founder and Engineer | May 2024 – Present
+- Put closet and brand labeling, a wardrobe-grounded stylist, and Vertex virtual try-on behind a Cloud Function proxy with keys on the server.
+- Ran community bots with human approval, quotas, moderation, and a kill switch on Gemini, Imagen, and Veo so generation stays inside product gates.
+
+**Local AI** | Remote
+Product Engineer | August 2026 – Present
+- Built an offline GGUF desktop client with documents and retrieval-augmented generation on llama.cpp so inference stays on the machine.
+- Kept a fully offline default in which the UI runs local inference as a child process and stores chats in SQLite.
 
 **FitGenius** | Remote
-Founding Technical Partner | May 2026 – Sep 2026
-- Applied Gemini on Vertex AI to fitness: catalog-constrained coach, JSON plans, food estimates, and client / server context parity. GPS, health samples, and photos stripped from model payloads. Hybrid: LLM features plus deterministic overload, pace, and Fit Score engines.
+Founding Technical Partner | May 2026 – Present
+- Applied Gemini on Vertex AI to fitness under a catalog-constrained coach so answers stay inside allowed context.
+- Stripped GPS, health samples, and photos from model payloads before the request leaves the device path.
 
-**Local AI** | New York, NY
-Product Engineer | 2026
-- Offline Windows desktop app (Tauri 2, React, Rust): local GGUF via llama.cpp, chat, model library, documents and retrieval-augmented generation, NSIS installer. UI never calls cloud inference APIs.
-
-**LaunchPage Studios** | New York, NY / New Jersey
-Founding Engineer | Oct 2025 – Present
-- Shipped TaxTacker, Alex Road Service, and Insightful Care as full products. Prior: Database Engineer Intern, City of Elizabeth, May 2024 – Sep 2024.
+**LaunchPage Studio** | Remote
+Founding Engineer | October 2025 – Present
+- Shipped Automotive Operations System as a shop operations platform with role-based access and a delivery playbook so the next client can be stood up from the same path.
+- Automated the financial loop the shop already closes using Stripe webhooks and scheduled Cloud Functions on Automotive Operations System.
+- Built TaxTracker Pro as a records workspace with tax-year documents, exception reports, and export, with Stripe and store billing jobs behind signature verification.
 
 ## Education
 
 **Columbia University** | New York, NY
-Bachelor of Science, Computer Engineering | May 2025
-Combined Plan with St. Lawrence University. Bachelor of Arts, Mathematics, May 2023. Exchange: James Cook University, Townsville, QLD, 2022.
+Bachelor of Science in Computer Engineering | May 2025
+Fu Foundation Combined Plan 3+2
+Computer Architecture, Databases, AI, Embedded Systems, and UI Design
 
-## Skills
+**St. Lawrence University** | Canton, NY
+Bachelor of Arts in Mathematics | May 2023
+Dean’s List, Spring 2022
+Calculus, Linear Algebra, Differential Equations, and Group Theory
 
-**AI product:** Gemini, Vertex AI, Azure OpenAI, llama.cpp / GGUF, prompt packs, kill switches, grounding  
-**Build:** TypeScript, Swift, React, Expo, Fastify, Firebase / GCP, Azure, Rust / Tauri
+**James Cook University** | Townsville, QLD, Australia
+Undergraduate Exchange | Fall 2022
+Statistical Data Mining, Probability and Stochastic Processes, Game Design, and Human Rights
+
+## Skills/Interests
+
+**Skills:** Gemini, Vertex AI, Azure OpenAI, llama.cpp / GGUF, prompt packs, kill switches, grounding, TypeScript, Swift, React, Expo, Fastify, Firebase / GCP, Azure, Rust / Tauri
+**Interests:** calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker
+**Community:** worship tech, Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church

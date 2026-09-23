@@ -10,7 +10,7 @@ This file is the reusable intake. Mark every statement as **confirmed**, **assum
 
 - Legal/personal name used across git, LinkedIn, and Firebase: Zakiy Manigo (`zakiymanigo@gmail.com`).
 - This repository is the public career site (“personal website dev”) on GitHub `ASWDWWW/resume-web`, Firebase project `zakiymanigo-career`.
-- Product work evidenced in career packets includes: TREI/BariAccess (clinic-embedded GLP-1 / metabolic care for Bariatric Associates; trei.care; Azure staging); FITD (fashion AI consumer/brand hub; fitdai.com; Firebase FITD apps); FitGenius (pre-launch fitness); Insightful Care Solutions (NJ telepsychiatry site); Alex Road Service / LaunchPage Studios (shop ops + marketing sites); Tax Tracker; plus other ASWDWWW repos.
+- Product work evidenced in career packets includes: TREI/BariAccess (clinic-embedded GLP-1 / metabolic care for Bariatric Associates; trei.care; Azure staging); FITD (fashion AI consumer/brand hub; fitdai.com; Firebase FITD apps); FitGenius (pre-launch fitness); Insightful Care Solutions (NJ telepsychiatry site); LaunchPage Studio (Automotive Operations System shop ops + marketing sites, and TaxTracker Pro); plus other ASWDWWW repos.
 - Customers differ by product (clinic/care team, consumers, brands, a psychiatric practice, auto shops). This OS does not hold a CRM.
 
 **Assumed:**

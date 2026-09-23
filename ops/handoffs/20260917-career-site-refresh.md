@@ -18,7 +18,7 @@
   - Independent review (17 Sep 2026): acceptance largely met. Follow-up applied: dropped operator “packet” wording, added Resume to desktop nav, FitGenius date set to May 2026 from the overview
 - Unfinished / preserve:
   - `Career/`, `Content/` originals, `Resumes & Cover Letters/` unfinished set, `index-safety.html`, root `css/style.css`
-  - `Career/Experience/Offline-experience/` left on disk, unused by the site
+  - `Career/Experience/Projects/Offline-experience/` was left on disk on 17 Sep 2026, unused by the site. Removed 23 Sep 2026; the surviving packet is `Career/Experience/Projects/Offline-Windows-Desktop-LLM-Client-experience/`.
   - Hosting + Storage **rules released** 17 Sep 2026 to `zakiymanigo-career` (CLI `--project zakiymanigo-career`; 4 Hosting files, `media/**` ignored)
   - `public/media/` is ~80MB local fallback; live page uses Storage URLs
   - Optional later: compress gallery stills for phones; play Belgrade `.mov` on a real iPhone/Safari

@@ -47,14 +47,14 @@ Use these files. Quote public product facts, dates, and education/community note
 | `Career/Belgrade Profex Academy.md` | BariAccess / TREI story + Belgrade gallery |
 | `Career/Hobbies-Activities.md` | About / community; Siloam-Hope maps to church photos |
 | `Career/Weave News.md` | Education / writing (already linked from school section) |
-| `Career/Experience/BariAccess-experience/00-OVERVIEW.md` | TREI product paragraph and shipped surfaces. **Employment: Jun 2025 – Present (current).** Ignore rating bands and “do not claim.” Prefer this over the folder README if they overlap. |
-| `Career/Experience/FitGenius-experience/00-overview.md` | “What you built” inventory only |
-| `Career/Experience/Insightful-Care-Solutions-experience/00-overview.md` | Live-site / stack facts only |
-| `Career/Experience/Automotive-Operations-Platform-experience/00-OVERVIEW.md` | “What you actually built” bullets only |
-| `Career/Experience/FITD-experience/README.md` | “Findings (what this project actually is)” table/paragraph only |
-| `Career/Experience/Tax-Tracker-experience/OVERVIEW.md` | **Project snapshot** only (agreed). Do not publish scores, target/stretch lists, or title packets. Skip `README.md` (it only points here). |
+| `Career/Experience/Jobs/BariAccess-experience/00-OVERVIEW.md` | TREI product paragraph and shipped surfaces. **Employment: Jun 2025 – Present (current).** Ignore rating bands and “do not claim.” Prefer this over the folder README if they overlap. |
+| `Career/Experience/Projects/FitGenius-experience/00-overview.md` | “What you built” inventory only |
+| `Career/Experience/Projects/Insightful-Care-Solutions-experience/00-overview.md` | Live-site / stack facts only |
+| `Career/Experience/Projects/Automotive-Operations-Platform-experience/00-OVERVIEW.md` | “What you actually built” bullets only |
+| `Career/Experience/Projects/FITD-experience/README.md` | “Findings (what this project actually is)” table/paragraph only |
+| `Career/Experience/Projects/Tax-Tracker-experience/OVERVIEW.md` | **Project snapshot** only (agreed). Do not publish scores, target/stretch lists, or title packets. Skip `README.md` (it only points here). |
 
-Local AI public copy: **`Career/Experience/Offline-Windows-Desktop-LLM-Client-experience/OVERVIEW.md`** — “project in one paragraph” only. Do not also use `Career/Experience/Offline-experience/` (same product; leave that folder on disk). Do not publish ranked job-title tables.
+Local AI public copy: **`Career/Experience/Projects/Offline-Windows-Desktop-LLM-Client-experience/OVERVIEW.md`** — “project in one paragraph” only. The duplicate `Offline-experience/` folder was removed 23 September 2026. Do not publish ranked job-title tables.
 
 **Do not use:** any `*-engineer.md` packet; `Career/Job Listing.md`; University Transcripts; `Life/`.
 
@@ -80,7 +80,7 @@ Existing site media to keep (already in `public/`, not in `Content/`):
 
 - `public/index.html` is the hosted page (Tailwind CDN + inline CSS). Sections: hero, stats, experience, personal projects, skills, school, PDF resume, contact.
 - Experience: BariAccess/TREI (**current employment**, Jun 2025 – Present), FitGenius, City of Elizabeth intern, Columbia IDE intern.
-- Projects: FITD, LaunchPage Studios / Alex Road Service, TaxTacker, Insightful Care, Local AI.
+- Projects: FITD, LaunchPage Studio (Automotive Operations System and TaxTracker Pro), Insightful Care, Local AI.
 - Education: Columbia, St. Lawrence, James Cook. **No Berkshire.** **No galleries or video.**
 - Contact: `mailto:` plus Google Apps Script POST. Preserve the endpoint; do not send mail from agents.
 - Firebase Hosting already configured in `firebase.json` (`public` dir, SPA rewrite to `/index.html`). Identity: user `zakiymanigo@gmail.com`, project `zakiymanigo-career`. **Billing on** via Cloud Billing API (17 Sep 2026). MCP `get_environment` still printed `Billing Enabled: No` the same day — ignore that flag. No Storage block in `firebase.json`. No `storage.rules` in repo. No Firebase apps detected on the project. List API shows label `firebase/storage-default-bucket: created`.
@@ -94,8 +94,8 @@ Recorded in `ops/product-engineering/decisions/20260917-career-site-copy-conflic
 | GitHub on the public site | Link **both** `https://github.com/ztm2106` and `https://github.com/ASWDWWW` (hero, footer, contact). Git CLI/MCP for this repo stays **github-aswdwww**. Do not `gh auth switch`. |
 | BariAccess dates | Use live page: **Jun 2025 – Present**. This is **current employment** (full-time Software Engineer, BariAccess · TREI). `00-OVERVIEW.md` and folder `README.md` updated. Keep the July–September 2026 git snapshot labeled as packet evidence only. |
 | Football | Use `Berkshire School.md`: Sheffield, **MA**, Class of 2020, football **2016–2020**. `Football Career.md` rewritten. SLU football: two seasons (2020–2021) then Fall 2022 Australia, per the original football note aligned to the 3+2 calendar. |
-| Tax Tracker | Public facts from `OVERVIEW.md` **Project snapshot** only. |
-| Local AI folders | Site copy from **`Offline-Windows-Desktop-LLM-Client-experience` only**. Do not delete `Offline-experience/`. |
+| TaxTracker Pro | Public facts from `OVERVIEW.md` **Project snapshot** only. |
+| Local AI folders | Site copy from **`Career/Experience/Projects/Offline-Windows-Desktop-LLM-Client-experience`** only. Duplicate `Offline-experience/` removed 23 September 2026. |
 
 ## Missing / leftover (not the resolved conflicts)
 

@@ -71,7 +71,7 @@ Not for this repo. FITD/other products only. Do not fall back to it from `resume
 | Gmail | Mail | Plugin signed in, mailbox is not zakiymanigo (Sent = `fitdadmin@fitdai.com`) | Read on the wrong mailbox for this repo | Google | Reconnect to `zakiymanigo@gmail.com` | **awaiting access** (wrong identity) |
 | Hugging Face | Models/hub | `zakiymanigo`; OAuth expires **2026-09-21T03:41:58Z** | Hub + inference scopes | Hugging Face | MCP | **verified**. Refresh **upcoming** |
 | Meta VR | Quest/Horizon | `plugin-meta-vr-metavr` present; `auth_status` says debug tools disabled | Docs/tools | Meta | MCP | **untested** (debug auth off) |
-| Stripe | Payments | MCP ready. Accounts: Fleet Trucking Platform, TaxTracker, Zakiy T. Manigo — each with live and test/sandbox rows | Account list only. Live mode **not** used | Stripe | MCP | **verified** (list). Default remains **test**. Live changes need named authority |
+| Stripe | Payments | MCP ready. Accounts: Fleet Trucking Platform, TaxTracker Pro, Zakiy T. Manigo — each with live and test/sandbox rows | Account list only. Live mode **not** used | Stripe | MCP | **verified** (list). Default remains **test**. Live changes need named authority |
 | Zoom | Meetings | Catalog needsAuth by design. Bridge is the Zoom connection | See Zoom row above | Zoom | Bridge | Catalog **unsupported**. Bridge **verified** |
 
 ## Extra connectors present but not in the original prompt list

@@ -22,8 +22,6 @@ TITLES = [
 ]
 
 CORPORATE = set(TITLES)
-
-
 def inline(text: str) -> str:
     text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
@@ -38,16 +36,31 @@ def split_pair(line: str) -> tuple[str, str] | None:
     return left.strip(), right.strip()
 
 
+def parse_header(lines: list[str]) -> tuple[str, str, str, int]:
+    name = lines[0].lstrip("# ").strip()
+    i = 1
+    while i < len(lines) and not lines[i].strip():
+        i += 1
+    role = ""
+    if i < len(lines) and lines[i].startswith("**") and " | " not in lines[i] and not lines[i].startswith("## "):
+        role = lines[i].replace("**", "").strip()
+        i += 1
+        while i < len(lines) and not lines[i].strip():
+            i += 1
+    contact = inline(lines[i]) if i < len(lines) else ""
+    i += 1
+    while i < len(lines) and not lines[i].strip():
+        i += 1
+    return name, role, contact, i
+
+
 def render_md(md: str, *, corporate: bool) -> str:
     lines = md.strip().splitlines()
-    name = lines[0].lstrip("# ").strip()
-    role = lines[1].replace("**", "").strip()
-    contact = inline(lines[3])
+    name, role, contact, i = parse_header(lines)
     css = CSS_CORPORATE if corporate else CSS
     heading = name if corporate else name.upper()
 
     body: list[str] = []
-    i = 5
     summary: list[str] = []
     while i < len(lines) and not lines[i].startswith("## "):
         if lines[i].strip():
@@ -55,7 +68,7 @@ def render_md(md: str, *, corporate: bool) -> str:
         i += 1
 
     if summary:
-        body.append(f'<p class="summary">{"".join(summary)}</p>')
+        body.append(f'<p class="summary">{" ".join(summary)}</p>')
 
     section = ""
     job_open = False
@@ -86,11 +99,11 @@ def render_md(md: str, *, corporate: bool) -> str:
         if line.startswith("## "):
             close_job()
             close_edu()
-            if section in {"Education", "Skills"} and not corporate:
+            if section.startswith("Skills"):
                 body.append("</div>")
             section = line[3:].strip()
             body.append(f"<h2>{section}</h2>")
-            if section == "Skills":
+            if section.startswith("Skills"):
                 body.append('<div class="skills">')
             elif section == "Education" and not corporate:
                 body.append('<div class="edu">')
@@ -101,7 +114,7 @@ def render_md(md: str, *, corporate: bool) -> str:
             i += 1
             continue
 
-        if section == "Skills":
+        if section.startswith("Skills"):
             body.append(f"<p>{inline(line)}</p>")
             i += 1
             continue
@@ -135,7 +148,7 @@ def render_md(md: str, *, corporate: bool) -> str:
             i += 1
             continue
 
-        if section in {"Education"} and not corporate:
+        if section == "Education" and not corporate:
             body.append(f"<p>{inline(line)}</p>")
             i += 1
             continue
@@ -150,11 +163,12 @@ def render_md(md: str, *, corporate: bool) -> str:
 
         close_list()
         pair = split_pair(line)
+        block_class = "project" if section == "Projects" else "job"
 
         if line.startswith("**") and pair:
             close_job()
             org, loc = pair
-            body.append('<div class="job">')
+            body.append(f'<div class="{block_class}">')
             job_open = True
             body.append(
                 '<div class="job-head">'
@@ -183,7 +197,7 @@ def render_md(md: str, *, corporate: bool) -> str:
 
         if line.startswith("**"):
             close_job()
-            body.append('<div class="job">')
+            body.append(f'<div class="{block_class}">')
             job_open = True
             body.append(f'<div class="job-head"><span class="job-title">{inline(line)}</span></div>')
             i += 1
@@ -194,21 +208,24 @@ def render_md(md: str, *, corporate: bool) -> str:
 
     close_job()
     close_edu()
-    if section in {"Education", "Skills"}:
+    if section.startswith("Skills"):
         body.append("</div>")
+
+    role_html = f'<p class="role">{role}</p>' if role else ""
+    title = f"{name} — {role}" if role else name
 
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>{name} — {role}</title>
+  <title>{title}</title>
   <style>{css}</style>
 </head>
 <body>
   <div class="page">
     <header>
       <h1>{heading}</h1>
-      <p class="role">{role}</p>
+      {role_html}
       <p class="contact">{contact}</p>
     </header>
     {"".join(body)}

@@ -1,6 +1,6 @@
 @page {
   size: letter;
-  margin: 0.6in 0.7in;
+  margin: 0.26in 0.42in;
 }
 
 * {
@@ -14,37 +14,33 @@ html, body {
 
 body {
   font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
-  font-size: 10.5pt;
-  line-height: 1.28;
+  font-size: 9.7pt;
+  line-height: 1.12;
   color: #111;
   background: #fff;
 }
 
 .page {
-  max-width: 7.6in;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
 }
 
 header {
   text-align: center;
   border-bottom: 1px solid #111;
-  padding-bottom: 8px;
-  margin-bottom: 10px;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 h1 {
-  font-size: 16pt;
+  font-size: 16.5pt;
   font-weight: 700;
-  letter-spacing: 0.4px;
-  margin: 0 0 2px;
+  letter-spacing: 0.35px;
+  margin: 0 0 3px;
 }
 
 .role {
-  font-size: 10.5pt;
-  font-weight: 400;
-  margin: 0 0 4px;
-  color: #111;
-  font-style: normal;
+  display: none;
 }
 
 .contact {
@@ -52,40 +48,38 @@ h1 {
   margin: 0;
 }
 
-.contact a {
-  color: #111;
-  text-decoration: none;
-}
-
+.contact a,
 a {
   color: #111;
   text-decoration: none;
 }
 
 h2 {
-  font-size: 10pt;
+  font-size: 9.5pt;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
   border-bottom: 0.75px solid #111;
-  margin: 11px 0 6px;
-  padding-bottom: 2px;
+  margin: 4px 0 1px;
+  padding-bottom: 1px;
 }
 
 .summary {
   margin: 0 0 2px;
+  text-align: justify;
 }
 
 .job,
-.edu-block {
-  margin: 0 0 8px;
+.edu-block,
+.project {
+  margin: 0 0 1px;
 }
 
 .job-head,
 .edu-head {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   align-items: baseline;
 }
 
@@ -99,37 +93,42 @@ h2 {
 .job-dates,
 .edu-dates {
   white-space: nowrap;
-  font-size: 10.5pt;
+  font-size: 10pt;
 }
 
 .job-sub,
 .edu-sub {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   align-items: baseline;
-  font-size: 10.5pt;
-  margin-bottom: 1px;
+  font-size: 10pt;
+  margin-bottom: 0;
 }
 
-.job-role,
-.edu-degree {
+.job-role {
   font-style: italic;
 }
 
+.edu-degree {
+  font-style: normal;
+}
+
 ul {
-  margin: 2px 0 0 18px;
+  margin: 1px 0 0 18px;
   padding: 0;
+  list-style: disc;
 }
 
 li {
-  margin: 0 0 2.5px;
+  margin: 0;
 }
 
 .skills p,
 .edu p,
-.edu-block p {
-  margin: 0 0 2px;
+.edu-block p,
+.project p {
+  margin: 0 0 1px;
 }
 
 .skills strong,

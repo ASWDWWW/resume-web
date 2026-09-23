@@ -24,7 +24,7 @@ No employees recorded. If hiring: prepare a brief, access checklist, and offboar
 
 ## Portfolio prioritization
 
-Products evidenced: career site, TREI, FITD, FitGenius, Insightful Care, LaunchPage/Alex Road Service, Tax Tracker, others on `ASWDWWW`. Ranking is **assumed** until you confirm.
+Products evidenced: career site, TREI, FITD, FitGenius, Insightful Care, LaunchPage Studio (Automotive Operations System and TaxTracker Pro), others on `ASWDWWW`. Ranking is **assumed** until you confirm.
 
 ## Founder pivots
 

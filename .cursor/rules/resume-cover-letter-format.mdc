@@ -1,45 +1,64 @@
 ---
-description: Corporate format for all resumes and cover letters under Resumes & Cover Letters/
+description: Corporate format and biography facts for resumes and cover letters
 globs: "**/Resumes & Cover Letters/**"
 alwaysApply: false
 ---
 
 # Resume and cover-letter format
 
-Packets under `Resumes & Cover Letters/` use the corporate layout. Do not revive Palatino, all-caps names, or Education-before-Experience.
+**Render:** markdown → HTML (`resume-corporate.css` / `cover-letter-corporate.css`) → one-page PDF. Fill remaining bottom whitespace with complete bullets and transcript-backed education lines. Keep `md/`, `html/`, and `pdf/` in sync.
 
-**Render:** markdown → `_render.py` (titles list) → HTML with `resume-corporate.css` / `cover-letter-corporate.css` → one-page PDF. Keep `md/`, `html/`, and `pdf/` in sync.
+**Resume header:** name and contact only. Do **not** put a target job title under the name. Cover letters may keep the target title.
 
-**Section order (required):** header → summary → **Experience** → **Education** → **Skills**. Education sits immediately above Skills, never above Experience.
+**Layout:** follow `Resumes & Cover Letters/Examples/` (Ethan Ruiz PDFs) for structure and type only — never copy their content. Contact line is phone | email | NY / NJ | LinkedIn. Base is New York / New Jersey. Section titles: **Relevant Experience**, **Projects**, **Education**, **Skills/Interests**. Company left / location right; italic role left / dates right; disc bullets. Skills/Interests uses `Skills:`, `Interests:`, `Community:` labels like the examples.
 
-**Resume markdown**
+**Summary:** a **full three-line** justified paragraph (three sentences that wrap to three complete lines). First person, spoken tone — write like a person, not a keyword list. Affirmative. Not a one-liner. Not a short last line.
 
-```
-# Zakiy T. Manigo
-**Target Title**
+**Write only what he has done.** Never list tools, products, titles, or methods he has not used. Rephrase product constraints as positive facts.
 
-New York, NY  |  +1 (908) 230-6948  |  zakiymanigo@gmail.com  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
+**Every bullet is a full, robust sentence** (subject implied or stated, complete predicate, ending period). No fragment lists.
 
-One-line summary, third person, no “I”.
+**Section order:** header → summary → **Relevant Experience** → **Projects** → **Education** → **Skills/Interests**.
 
-## Experience
-**Employer** | City, ST
-Title | Mon YYYY – Present
-- Action + context + result.
+**Experience:** only employers from [`Career/Experience/Jobs`](Career/Experience/Jobs) (currently **BariAccess**). Current role first. Do **not** list a Projects-folder product as an employer. TREI and ABA may appear in BariAccess bullets only — do **not** put ABA in Skills/Interests. Do not write `(one of two primary engineers)` in the role line — put it in a bullet.
 
-## Education
-**Columbia University** | New York, NY
-Bachelor of Science, Computer Engineering | May 2025
-Combined Plan with St. Lawrence University. Bachelor of Arts, Mathematics, May 2023. Exchange: James Cook University, Townsville, QLD, 2022.
+City of Elizabeth (intern) is employment, not a product packet; keep it after BariAccess until it has its own Jobs folder.
 
-## Skills
-**Label:** items
-```
+**Projects:** only packets from [`Career/Experience/Projects`](Career/Experience/Projects). Format each like Relevant Experience: **name | location**, italic role | dates, then disc bullets. Stack goes in bullets, not in the location slot.
 
-Dates right of ` | `. Spell out degrees. BariAccess: **Jun 2025 – Present**. One page. No photos, tables, colors, or two-column layout. Honesty gaps go in the letter, not on the resume. Do not invent GPA.
+**LaunchPage Studio is one Project.** List products **inside** that block. Do **not** give Automotive Operations System or TaxTracker Pro their own Projects entries. Product name is **Automotive Operations System** (never Alex Road Service). Product name is **TaxTracker Pro** (not TaxTacker, not TaxTracker). Do **not** put TREI here — TREI is the BariAccess job product.
 
-**Cover letters:** same header. Reusable: date, then `Dear Hiring Team:`. Named employer: date, inside address, `Re:` line, `Dear Recruiting Team:`.
+**Locked facts**
 
-**Examples folder:** `Resumes & Cover Letters/Examples/` is third-party formatting reference only — not Zakiy’s biography. Copy layout, never their content.
+Jobs:
 
-Own packets: `06-Rillet-Consultant` (named letter) and `01-Forward-Deployed-Engineer` (reusable).
+| Employer | Location | Dates |
+|---|---|---|
+| BariAccess | Livingston, NJ / Hybrid | June 2025 – Present |
+| City of Elizabeth | Elizabeth, NJ | May 2024 – September 2024 |
+
+Projects (not employers):
+
+| Project | Location | Role | Dates | Packet folder |
+|---|---|---|---|---|
+| FITD AI | Remote | Founder and Engineer | May 2024 – Present | `Projects/FITD-experience` |
+| FitGenius | Remote | Founding Technical Partner | May 2026 – Present | `Projects/FitGenius-experience` |
+| Local AI | Remote | Product Engineer | August 2026 – Present | `Projects/Offline-Windows-Desktop-LLM-Client-experience` |
+| LaunchPage Studio | Remote | Founding Engineer | October 2025 – Present | Contains **Automotive Operations System** (`Projects/Automotive-Operations-Platform-experience`) and **TaxTracker Pro** (`Projects/Tax-Tracker-experience`) |
+| Insightful Care Solutions | New Jersey | Sole Engineer | October 2025 – July 2026 | `Projects/Insightful-Care-Solutions-experience` |
+
+Write **FITD AI**, never `FITD` alone. Assistant name is **ABA**, never `Aba`. BariAccess: one of two primary engineers (bullet only). Leave Firebase project IDs and GitHub repo slugs unchanged (`launchpage-alex-roadservice`, `ASWDWWW/Alex-Road-Service`).
+
+**Education:** school left / location right; next line is the degree or **Undergraduate Exchange** left / dates right (not italic); next line is accolades if any; **focus areas on their own line under that, initial caps**. From `Career/University Transcripts/`. No invented GPA. Do not list honors that are not on a transcript.
+
+| School | Credential | Dates | Accolade line | Focus line (initial caps) |
+|---|---|---|---|---|
+| Columbia University | Bachelor of Science in Computer Engineering | May 2025 | Fu Foundation Combined Plan 3+2 | Computer Architecture, Databases, AI, Embedded Systems, and UI Design |
+| St. Lawrence University | Bachelor of Arts in Mathematics | May 2023 | Dean’s List, Spring 2022 | Calculus, Linear Algebra, Differential Equations, and Group Theory |
+| James Cook University | Undergraduate Exchange | Fall 2022 | — | Statistical Data Mining, Probability and Stochastic Processes, Game Design, and Human Rights |
+
+**Skills:** `Skills:`, `Interests:`, `Community:` labels plus condensed items from `Career/Hobbies-Activities.md`. Do not copy first-person hobby prose.
+
+**Examples/** is third-party layout reference only — never copy their content.
+
+Cover letters: reusable packets use date + `Dear Hiring Team:`; named employers use inside address + `Re:`. Cover letters may name both jobs and projects. Name LaunchPage Studio as the project and Automotive Operations System / TaxTracker Pro as work inside it.

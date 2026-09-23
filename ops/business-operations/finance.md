@@ -14,7 +14,7 @@ Command: `/finance-review`. Skill: `finance-stripe`.
 
 Stripe MCP is **verified** (account list). Default mode: **test**. Live writes need Zakiy’s named approval in the ticket.
 
-Visible accounts (names only): Fleet Trucking Platform, TaxTracker, Zakiy T. Manigo. Which account this OS may use is **awaiting a decision**. TREI packets also mention a Stripe sandbox in that product’s Azure staging — operate it there unless a ticket names one of the MCP accounts.
+Visible accounts (names only): Fleet Trucking Platform, TaxTracker Pro, Zakiy T. Manigo. Which account this OS may use is **awaiting a decision**. TREI packets also mention a Stripe sandbox in that product’s Azure staging — operate it there unless a ticket names one of the MCP accounts.
 
 ## File split
 

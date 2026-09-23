@@ -8,7 +8,7 @@ Folders organize work. They are **not** security boundaries. Sensitive material 
 | --- | --- | --- |
 | Product and engineering (this site) | `public/`, `css/`, `firebase.json`, `.firebaserc` | Career site code and hosting config |
 | Product and engineering (ops) | `ops/product-engineering/` | Tickets, engineering workflows for the OS and this site |
-| Career evidence | `Career/` | Job-title packets and career notes (untracked at OS setup) |
+| Career evidence | `Career/` | Job-title packets and career notes (untracked at OS setup). Jobs: `Career/Experience/Jobs`. Projects: `Career/Experience/Projects`. |
 | Application materials | `Resumes & Cover Letters/` | Resume and cover-letter drafts |
 | Media | `Content/` | Photos/video (untracked at OS setup) |
 | Business operations and growth | `ops/business-operations/` | Strategy, marketing, sales/CS, finance, legal prep, fundraising, communications, team |

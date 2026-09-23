@@ -1,40 +1,64 @@
 # Zakiy T. Manigo
-**Forward Deployed Engineer**
 
-New York, NY  |  +1 (908) 230-6948  |  zakiymanigo@gmail.com  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
++1 (908) 230-6948  |  zakiymanigo@gmail.com  |  NY / NJ  |  [linkedin.com/in/zakiymanigo](https://www.linkedin.com/in/zakiymanigo)
 
-Software engineer who embeds with a customer, maps the operating loop, and ships production software that makes the product work there.
+I sit with a customer, learn how they actually run the day, and stay until the software is live in their building. I ship the web, phone, and API so identity, payments, scheduling, and a guarded assistant work for the staff who already do that work. I completed a Columbia B.S. in Computer Engineering through the Combined Plan and I am based in New York / New Jersey.
 
-## Experience
+## Relevant Experience
 
-**BariAccess (TREI)** | New York, NY / Remote
-Software Engineer (one of two primary engineers) | Jun 2025 – Present
-- Embedded with Bariatric Associates to implement TREI, a GLP-1 and metabolic-care platform: patient site ([trei.care](https://trei.care)), Expo iPhone app, React staff console, Fastify API, PostgreSQL, and a worker with a transactional outbox.
-- Delivered the clinic path end to end — identity, preparation, consults, membership, staff admission, daily programs, wearable custody, and a fail-closed Azure OpenAI assistant — and revised the product when office workflow did not match the first design.
-- Integrated last-mile clinic systems on Azure staging: Entra / External ID, Key Vault, Service Bus, Stripe sandbox, Calendly, and Spike wearable adapters.
-
-**LaunchPage Studios** | New York, NY / New Jersey
-Founding Engineer | Oct 2025 – Present
-- Embedded with Alex Road Service (Keasbey, NJ) and shipped the shop operating system: public site plus more than 20 operations screens (work orders, estimates, invoices, inventory, schedule, RBAC, Stripe Checkout, webhooks, and refunds).
-- Wrote the post-sale delivery playbook: intake, user-acceptance testing with client staff, role-based training, and hypercare so the platform can be duplicated for the next shop.
-- Launched Insightful Care Solutions ([insightfulcare.solutions](https://insightfulcare.solutions/)) and TaxTacker, a tax-record organizer on React web and Expo with Stripe entitlements and GitHub Actions.
-
-**FITD** | New York, NY
-Founder and Engineer | 2025 – Present
-- Ran brand onboarding for a fashion platform: catalog schema for approximately 57 brands and 16,500 SKUs, an administration CRM, growth automations, and an in-store kiosk concept on a production SwiftUI app and Firebase / GCP backend.
+**BariAccess** | Livingston, NJ / Hybrid
+Software Engineer | June 2025 – Present
+- Served as one of two primary engineers embedded with Bariatric Associates on TREI ([trei.care](https://trei.care)), covering identity, consults, membership, staff admission, scheduling, and payments.
+- Revised those clinic workflows when operations changed, with the decision records kept in the product so staff could keep running the same path.
+- Integrated Calendly, Stripe sandbox, Spike wearables, and a fail-closed ABA assistant into the last-mile clinic loop rather than leaving them as side tools.
+- Shipped patient web, iPhone, staff console, Fastify API, PostgreSQL, and a worker/outbox from one TypeScript monorepo so the practice runs a single product.
 
 **City of Elizabeth** | Elizabeth, NJ
-Database Engineer Intern | May 2024 – Sep 2024
-- Administered MongoDB and Excel document stores supporting a knowledge-sharing network used by more than 500 staff.
+Database Engineer Intern | May 2024 – September 2024
+- Administered MongoDB and Excel document stores supporting a knowledge-sharing network used by more than 500 municipal staff.
+- Automated reporting pipelines and improved data flow across departments so shared records could be reused without a manual handoff.
+
+## Projects
+
+**LaunchPage Studio** | Remote
+Founding Engineer | October 2025 – Present
+- Sat with the shop operator and shipped Automotive Operations System as the public marketing site plus more than twenty operations screens covering estimates through refunds and role-based access.
+- Wrote the post-sale delivery playbook for Automotive Operations System, including intake, user-acceptance testing with real staff, role-based training, and hypercare so the next shop can be stood up from the same path.
+- Built TaxTracker Pro inside the studio as a tax-record organizer with tax-year workspaces, documents, exception reports, Stripe billing, and a CPA export package.
+
+**FITD AI** | Remote
+Founder and Engineer | May 2024 – Present
+- Shipped a production fashion hub on iOS and Firebase / GCP, including catalog operations for approximately 57 brands that a later operator can run.
+- Put applied-model features behind Cloud Function proxies, quotas, moderation, and kill switches so labeling, styling, and community bots stay inside product gates.
+
+**Insightful Care Solutions** | New Jersey
+Sole Engineer | October 2025 – July 2026
+- Shipped a production telepsychiatry site with intake, scheduling handoff, and owner operating documentation. Live: [insightfulcare.solutions](https://insightfulcare.solutions/).
+- Sat with the practice on services, insurance copy, and crisis resources so staff could run the live site after launch.
+
+**Local AI** | Remote
+Product Engineer | August 2026 – Present
+- Built an offline Windows desktop client for local GGUF models, documents, and retrieval-augmented generation so a user can work without a cloud account.
+- Shipped a first-run wizard, model library, and NSIS installer so the product can be handed to a user as a desktop app rather than a development checkout.
 
 ## Education
 
 **Columbia University** | New York, NY
-Bachelor of Science, Computer Engineering | May 2025
-Combined Plan with St. Lawrence University. Bachelor of Arts, Mathematics, May 2023. Exchange: James Cook University, Townsville, QLD, 2022.
+Bachelor of Science in Computer Engineering | May 2025
+Fu Foundation Combined Plan 3+2
+Computer Architecture, Databases, AI, Embedded Systems, and UI Design
 
-## Skills
+**St. Lawrence University** | Canton, NY
+Bachelor of Arts in Mathematics | May 2023
+Dean’s List, Spring 2022
+Calculus, Linear Algebra, Differential Equations, and Group Theory
 
-**Delivery:** customer-embedded build, user-acceptance testing, runbooks, last-mile integrations, RBAC, fail-closed releases  
-**Stack:** TypeScript, React, Expo / React Native, Fastify, PostgreSQL, Firebase, Azure, Stripe, Swift  
-**Applied AI:** Azure OpenAI (guarded assistant), Gemini / Vertex AI
+**James Cook University** | Townsville, QLD, Australia
+Undergraduate Exchange | Fall 2022
+Statistical Data Mining, Probability and Stochastic Processes, Game Design, and Human Rights
+
+## Skills/Interests
+
+**Skills:** customer-embedded build, UAT, runbooks, last-mile integrations, TypeScript, React, Expo, Fastify, PostgreSQL, Firebase, Azure, Stripe, Swift, Azure OpenAI, Gemini / Vertex AI, llama.cpp
+**Interests:** calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker
+**Community:** worship tech, Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church
