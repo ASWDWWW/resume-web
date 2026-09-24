@@ -10,7 +10,7 @@ I sit with a client, map how they close the books and run the office, then confi
 Software Engineer | June 2025 – Present
 - Served as one of two primary engineers embedded with Bariatric Associates on TREI ([trei.care](https://trei.care)), covering identity, consults, membership, scheduling, and payments.
 - Revised those workflows when clinic operations changed so staff could keep running the product without a parallel paper process.
-- Shipped staff operating views and fail-closed ABA on the same clinic path the office already uses.
+- Shipped staff operating views and fail-closed ABA, a medical AI assistant and companion being built for TREI in BariAccess, on the same clinic path the office already uses.
 - Iterated in a user-acceptance style with the practice on intakes, admission, and daily program work until the software matched the building.
 
 **City of Elizabeth** | Elizabeth, NJ

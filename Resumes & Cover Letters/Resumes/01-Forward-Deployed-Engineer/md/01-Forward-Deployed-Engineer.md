@@ -10,7 +10,7 @@ I sit with a customer, learn how they actually run the day, and stay until the s
 Software Engineer | June 2025 – Present
 - Served as one of two primary engineers embedded with Bariatric Associates on TREI ([trei.care](https://trei.care)), covering identity, consults, membership, staff admission, scheduling, and payments.
 - Revised those clinic workflows when operations changed, with the decision records kept in the product so staff could keep running the same path.
-- Integrated Calendly, Stripe sandbox, Spike wearables, and a fail-closed ABA assistant into the last-mile clinic loop rather than leaving them as side tools.
+- Integrated Calendly, Stripe sandbox, Spike wearables, and fail-closed ABA, a medical AI assistant and companion being built for TREI in BariAccess, into the last-mile clinic loop rather than leaving them as side tools.
 - Shipped patient web, iPhone, staff console, Fastify API, PostgreSQL, and a worker/outbox from one TypeScript monorepo so the practice runs a single product.
 
 **City of Elizabeth** | Elizabeth, NJ

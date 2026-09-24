@@ -9,7 +9,7 @@ I work on the platform layer that keeps a product safe to run: identity, secrets
 **BariAccess** | Livingston, NJ / Hybrid
 Software Engineer | June 2025 – Present
 - Served as one of two primary engineers operating Azure staging for TREI ([trei.care](https://trei.care)), including Container Apps, Entra, Key Vault, and Service Bus.
-- Handled secrets on a least-privilege path with runbooks for failure, and kept ABA keys in Key Vault.
+- Handled secrets on a least-privilege path with runbooks for failure, and kept keys for ABA, a medical AI assistant and companion being built for TREI in BariAccess, in Key Vault.
 - Ran CI-oriented releases across API, PostgreSQL, worker/outbox, staff console, and iPhone, including rollback notes in the same habit.
 - Held public surfaces fail-closed so a model miss has a written recovery path instead of an open clinic screen.
 

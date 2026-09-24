@@ -8,11 +8,11 @@ I put models and scheduled jobs behind gates people can live with: grounding, qu
 
 **BariAccess** | Livingston, NJ / Hybrid
 Software Engineer | June 2025 – Present
-- Served as one of two primary engineers and productized fail-closed ABA plus a worker/outbox for wearable pulls, scheduling, and payment events on TREI ([trei.care](https://trei.care)).
+- Served as one of two primary engineers and productized fail-closed ABA, a medical AI assistant and companion being built for TREI in BariAccess ([trei.care](https://trei.care)), plus a worker/outbox for wearable pulls, scheduling, and payment events.
 - Landed features behind tests, CI, and fail-closed gates so an automation miss has a written recovery path.
-- Held ABA to approved clinical meaning through patient-language rules on public and clinic surfaces.
+- Held ABA, that medical AI assistant and companion, to approved clinical meaning through patient-language rules on public and clinic surfaces.
 - Automated Spike pulls, Calendly, and Stripe events through outbox jobs so the clinic path runs without a person clicking every step.
-- Wired ABA voice and text through one policy path so a spoken question cannot skip the typed safety checks, then asked Realtime to speak only the checked body.
+- Wired voice and text for ABA, that medical AI assistant and companion, through one policy path so a spoken question cannot skip the typed safety checks, then asked Realtime to speak only the checked body.
 - Stored Azure OpenAI keys in Key Vault and encoded rate limits, 24-hour retention, and medical-claim output checks in code so a model miss cannot invent a clinical claim.
 
 **City of Elizabeth** | Elizabeth, NJ
@@ -24,7 +24,7 @@ Database Engineer Intern | May 2024 – September 2024
 
 **FITD AI** | Remote
 Founder and Engineer | May 2024 – Present
-- Shipped labeling, a wardrobe-grounded stylist, a virtual try-on proxy, and moderated community bots on Gemini, Vertex, and GPT-4o behind product gates.
+- Shipped labeling, a wardrobe-grounded stylist, a virtual try-on proxy, and moderated community bots on Gemini, Vertex, Claude Code, and OpenAI Codex behind product gates.
 - Ran catalog import, Instagram CRM, and n8n posting workflows with human approval and a kill switch so growth jobs can be stopped without a code freeze.
 
 **LaunchPage Studio** | Remote
@@ -61,6 +61,6 @@ Statistical Data Mining, Probability and Stochastic Processes, Game Design, and 
 
 ## Skills/Interests
 
-**Skills:** Azure OpenAI, Gemini / Vertex AI, GPT-4o, llama.cpp / GGUF, n8n, Cloud Functions, GitHub Actions, Google Apps Script, worker / outbox jobs, TypeScript, Python, Swift, React, Firebase / GCP, Azure
+**Skills:** Azure OpenAI, Gemini / Vertex AI, Claude Code, OpenAI Codex, llama.cpp / GGUF, n8n, Cloud Functions, GitHub Actions, Google Apps Script, worker / outbox jobs, TypeScript, Python, Swift, React, Firebase / GCP, Azure
 **Interests:** calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker
 **Community:** Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church

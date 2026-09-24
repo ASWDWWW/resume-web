@@ -8,10 +8,10 @@ I put models that already exist into products people use, with real limits on gr
 
 **BariAccess** | Livingston, NJ / Hybrid
 Software Engineer | June 2025 – Present
-- Served as one of two primary engineers and productized ABA as a fail-closed Azure OpenAI assistant on TREI ([trei.care](https://trei.care)), with voice and text sharing one policy path.
+- Served as one of two primary engineers and productized ABA, a medical AI assistant and companion being built for TREI in BariAccess ([trei.care](https://trei.care)), as a fail-closed Azure OpenAI assistant with voice and text sharing one policy path.
 - Kept the backend as the authority and the model as a renderer, classifying urgent, clinical, and injection routes before generation.
 - Stored keys in Key Vault and encoded rate limits, retention, and medical-claim output checks in code rather than in prompt text alone.
-- Held ABA to approved clinical meaning on public and clinic surfaces through patient-language rules in the product.
+- Held ABA, that medical AI assistant and companion, to approved clinical meaning on public and clinic surfaces through patient-language rules in the product.
 
 **City of Elizabeth** | Elizabeth, NJ
 Database Engineer Intern | May 2024 – September 2024

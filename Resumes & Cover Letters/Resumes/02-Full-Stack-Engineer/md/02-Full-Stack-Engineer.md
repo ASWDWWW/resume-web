@@ -10,7 +10,7 @@ I take a feature from the screen someone uses through the API, the data, and the
 Software Engineer | June 2025 – Present
 - Served as one of two primary engineers shipping vertical slices across API, PostgreSQL, worker/outbox, iPhone, staff console, and public web at [trei.care](https://trei.care).
 - Wired shared identity from Apple on iOS to the same account on the patient site, and health connectivity from OAuth through worker pulls onto the phone shelf.
-- Landed tests, CI, schema migrations, and fail-closed release gates, including a guarded ABA assistant on the same product path.
+- Landed tests, CI, schema migrations, and fail-closed release gates, including ABA, a medical AI assistant and companion being built for TREI in BariAccess, on the same product path.
 - Operated Azure Container Apps staging with Entra, Key Vault, and Service Bus so the clinic stack has a written environment to recover from.
 
 **City of Elizabeth** | Elizabeth, NJ

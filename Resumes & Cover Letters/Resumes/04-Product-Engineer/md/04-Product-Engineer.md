@@ -10,7 +10,7 @@ I sit with the people who will use the product, shape the workflow with them, an
 Software Engineer | June 2025 – Present
 - Served as one of two primary engineers building TREI inside a bariatric practice’s real onboarding on [trei.care](https://trei.care).
 - Encoded first-release decisions as software, including Free Basic versus Path A, preparation readiness, patient language, and Healthspan gated until destination release.
-- Held public surfaces fail-closed and held ABA to approved clinical meaning so the product does not speak a claim the clinic has not approved.
+- Held public surfaces fail-closed and held ABA, a medical AI assistant and companion being built for TREI in BariAccess, to approved clinical meaning so the product does not speak a claim the clinic has not approved.
 - Partnered with a scientific / product counterpart on intakes, remotes, membership, and daily program work so the shipped workflow matches how the office actually runs.
 
 **City of Elizabeth** | Elizabeth, NJ

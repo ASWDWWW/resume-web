@@ -11,7 +11,7 @@ Software Engineer | June 2025 – Present
 - Served as one of two primary engineers building production TypeScript across API, worker, website, staff console, and iPhone for TREI ([trei.care](https://trei.care)), with tests, CI, and fail-closed gates.
 - Owned production-hard paths including delayed scheduling creates, Stripe event ordering, wearable disconnect versus outage, webhook idempotency, and stale-load guards.
 - Operated Azure Container Apps staging with Entra, Key Vault, and Service Bus, and shipped TestFlight-oriented iOS builds on the same release habit.
-- Landed schema migrations and a fail-closed ABA assistant on the same path so a model miss does not open an unguarded clinic surface.
+- Landed schema migrations and fail-closed ABA, a medical AI assistant and companion being built for TREI in BariAccess, on the same path so a model miss does not open an unguarded clinic surface.
 
 **City of Elizabeth** | Elizabeth, NJ
 Database Engineer Intern | May 2024 – September 2024
