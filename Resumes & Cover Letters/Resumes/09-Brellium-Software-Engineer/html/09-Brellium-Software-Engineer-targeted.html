@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Zakiy T. Manigo</title>
+  <style>@page {
+  size: letter;
+  margin: 0.26in 0.42in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
+  font-size: 9.7pt;
+  line-height: 1.12;
+  color: #111;
+  background: #fff;
+}
+
+.page {
+  width: 100%;
+  max-width: none;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #111;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 16.5pt;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  margin: 0 0 3px;
+}
+
+.role {
+  display: none;
+}
+
+.contact {
+  font-size: 9.5pt;
+  margin: 0;
+}
+
+.contact a,
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 9.5pt;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  border-bottom: 0.75px solid #111;
+  margin: 4px 0 1px;
+  padding-bottom: 1px;
+}
+
+.summary {
+  margin: 0 0 2px;
+  text-align: justify;
+}
+
+.job,
+.edu-block,
+.project {
+  margin: 0 0 1px;
+}
+
+.job-head,
+.edu-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.job-org,
+.edu-org {
+  font-weight: 700;
+}
+
+.job-loc,
+.edu-loc,
+.job-dates,
+.edu-dates {
+  white-space: nowrap;
+  font-size: 10pt;
+}
+
+.job-sub,
+.edu-sub {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 10pt;
+  margin-bottom: 0;
+}
+
+.job-role {
+  font-style: italic;
+}
+
+.edu-degree {
+  font-style: normal;
+}
+
+ul {
+  margin: 1px 0 0 18px;
+  padding: 0;
+  list-style: disc;
+}
+
+li {
+  margin: 0;
+}
+
+.skills p,
+.edu p,
+.edu-block p,
+.project p {
+  margin: 0 0 1px;
+}
+
+.skills strong,
+.edu strong {
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Zakiy T. Manigo</h1>
+      
+      <p class="contact">+1 (908) 230-6948  |  zakiymanigo@gmail.com  |  NY / NJ  |  <a href="https://www.linkedin.com/in/zakiymanigo">linkedin.com/in/zakiymanigo</a></p>
+    </header>
+    <p class="summary">I build TypeScript services and Python data jobs where PostgreSQL is the record and a model call cannot outrun a written check. I am one of two primary engineers on a clinic product: a worker moves events into that database, and clinical meaning stays in code. I completed a Columbia B.S. in Computer Engineering and I am based in New York / New Jersey.</p><h2>Relevant Experience</h2><div class="job"><div class="job-head"><span class="job-org"><strong>BariAccess</strong></span><span class="job-loc">Livingston, NJ / Hybrid</span></div><div class="job-sub"><span class="job-role">Software Engineer</span><span class="job-dates">June 2025 – Present</span></div><ul><li>Served as one of two primary engineers on TREI (<a href="https://trei.care">trei.care</a>): TypeScript across the Fastify API, PostgreSQL, a worker and transactional outbox, the React staff console, the patient site, and the iPhone app.</li><li>Owned intake into Postgres for wearable pulls, scheduling create/cancel/reschedule races, and Stripe event ordering, with versioned migrations and idempotent handlers so a late or duplicate event does not rewrite the record.</li><li>Held the clinic assistant to checks in code on Azure OpenAI. Voice and text share one policy path, medical-claim checks run before a reply is kept, and the model cannot read the chart or become the clinical record.</li><li>Governed medical and healthcare changes against the clinic HIPAA program and the privacy and legal pages, so consent, erasure, least privilege, no PHI in telemetry or model logs, and secrets in Key Vault were written rules for the API, worker, and apps.</li><li>Operated Azure Container Apps staging with Entra and Service Bus, and required tests, CI, and fail-closed gates before a change could move.</li></ul></div><div class="job"><div class="job-head"><span class="job-org"><strong>City of Elizabeth</strong></span><span class="job-loc">Elizabeth, NJ</span></div><div class="job-sub"><span class="job-role">Database Engineer Intern</span><span class="job-dates">May 2024 – September 2024</span></div><ul><li>Administered MongoDB and Excel document stores supporting a knowledge-sharing network used by more than 500 municipal staff.</li><li>Automated reporting pipelines and improved data flow across departments so shared records could be reused without a manual handoff.</li></ul></div><h2>Projects</h2><div class="project"><div class="job-head"><span class="job-org"><strong>FITD AI</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founder and Engineer</span><span class="job-dates">May 2024 – Present</span></div><ul><li>Built a Next.js 14 admin with role-based access, and Python jobs that load scraped records into SQLite and import a catalog of about 57 brands through a Cloud Function.</li><li>Put Gemini closet labeling, a wardrobe-grounded stylist, and Vertex virtual try-on behind a server proxy, with quotas, moderation, and a kill switch on community bots.</li><li>Shipped the production SwiftUI iOS app with StoreKit 2, App Check, and Firestore rules on the same account path as Cloud Functions and the staging project.</li></ul></div><div class="project"><div class="job-head"><span class="job-org"><strong>FitGenius</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founding Technical Partner</span><span class="job-dates">May 2026 – Present</span></div><ul><li>Shipped a pre-launch fitness app on Expo and React Native, with Cloud Functions, Firestore rules tests, and GitHub Actions across mobile and backend.</li><li>Ran Gemini on Vertex inside a legal and compliance suite, stripping GPS, health samples, and photos before the model call, with consent gates and account deletion.</li></ul></div><div class="project"><div class="job-head"><span class="job-org"><strong>LaunchPage Studio</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founding Engineer</span><span class="job-dates">October 2025 – Present</span></div><ul><li>Built Automotive Operations System with role-based access, server-owned writes, Stripe Checkout and refunds, security-rules tests, and GitHub Actions on Firebase Hosting.</li><li>Extended that shop platform across estimates, invoices, inventory, schedule, and encrypted messages, with sequential IDs, optimistic concurrency, and a delivery playbook.</li><li>Shipped TaxTracker Pro with one account, one data model, and one billing state across a React web client and Expo iOS and Android apps.</li></ul></div><h2>Education</h2><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>Columbia University</strong></span><span class="edu-loc">New York, NY</span></div><div class="edu-sub"><span class="edu-degree">Bachelor of Science in Computer Engineering</span><span class="edu-dates">May 2025</span></div><p>Fu Foundation Combined Plan 3+2</p><p>Computer Architecture, Databases, AI, Embedded Systems, and UI Design</p></div><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>St. Lawrence University</strong></span><span class="edu-loc">Canton, NY</span></div><div class="edu-sub"><span class="edu-degree">Bachelor of Arts in Mathematics</span><span class="edu-dates">May 2023</span></div><p>Dean’s List, Spring 2022</p><p>Calculus, Linear Algebra, Differential Equations, and Group Theory</p></div><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>James Cook University</strong></span><span class="edu-loc">Townsville, QLD, Australia</span></div><div class="edu-sub"><span class="edu-degree">Undergraduate Exchange</span><span class="edu-dates">Fall 2022</span></div><p>Statistical Data Mining, Probability and Stochastic Processes, Game Design, and Human Rights</p></div><h2>Skills/Interests</h2><div class="skills"><p><strong>Skills:</strong> TypeScript, Python, SQL, JavaScript, React, Next.js, Fastify, PostgreSQL, SQLite, Azure OpenAI, Gemini / Vertex AI, Firebase / GCP, Azure, GitHub Actions</p><p><strong>Interests:</strong> calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker</p><p><strong>Community:</strong> Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church</p></div>
+  </div>
+</body>
+</html>

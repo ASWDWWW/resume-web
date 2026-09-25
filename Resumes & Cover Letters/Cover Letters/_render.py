@@ -19,6 +19,7 @@ TITLES = [
     "06-Rillet-Consultant",
     "07-Data-AI-Platform-Engineer",
     "08-AI-Automation-Engineer",
+    "09-Brellium-Software-Engineer",
 ]
 
 CORPORATE = set(TITLES)

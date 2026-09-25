@@ -10,4 +10,6 @@ These cover letters pair with the matching folder in `../Resumes`. Titles were c
 | 4 | Product Engineer | TREI 9.1, FitGenius 9.1, Linear/Figma/Ramp-shaped jobs | Notion, Linear, Figma, Ramp, Dropbox, PostHog |
 | 5 | AI Product Engineer | FITD 9, Local AI 9.0, FitGenius 8.6; applied models in shipped UX | Anthropic, OpenAI, Perplexity, Cursor, Notion AI, Oura personalization |
 
-Each job-title folder contains `md` (source), `html` (rendered), and `pdf` (one-page application file). Render HTML with `_render.py`. All eight packets use the corporate layout. Packets 01–05 are reusable (date + Dear Hiring Team). Packets 06–08 are Armanino business letters with inside address and Re line (`06-Rillet-Consultant` JR104362, `07-Data-AI-Platform-Engineer` JR104191, `08-AI-Automation-Engineer` unposted practice seat).
+Packet 09 pairs with the matching resume: Software Engineer at Brellium (LinkedIn job 4424442430).
+
+Each job-title folder contains `md` (source), `html` (rendered), and `pdf` (one-page application file). Render HTML with `_render.py`. All eight packets use the corporate layout. Packets 01–05 are reusable (date + Dear Hiring Team). Packets 06–08 are Armanino business letters with inside address and Re line (`06-Rillet-Consultant` JR104362, `07-Data-AI-Platform-Engineer` JR104191, `08-AI-Automation-Engineer` unposted practice seat). Packet 09 is a Brellium business letter for the Software Engineer posting (LinkedIn job 4424442430).

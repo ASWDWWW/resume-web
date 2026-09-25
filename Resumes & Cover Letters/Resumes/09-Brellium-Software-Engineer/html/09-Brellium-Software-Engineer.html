@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Zakiy T. Manigo</title>
+  <style>@page {
+  size: letter;
+  margin: 0.26in 0.42in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
+  font-size: 9.7pt;
+  line-height: 1.12;
+  color: #111;
+  background: #fff;
+}
+
+.page {
+  width: 100%;
+  max-width: none;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #111;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 16.5pt;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  margin: 0 0 3px;
+}
+
+.role {
+  display: none;
+}
+
+.contact {
+  font-size: 9.5pt;
+  margin: 0;
+}
+
+.contact a,
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 9.5pt;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  border-bottom: 0.75px solid #111;
+  margin: 4px 0 1px;
+  padding-bottom: 1px;
+}
+
+.summary {
+  margin: 0 0 2px;
+  text-align: justify;
+}
+
+.job,
+.edu-block,
+.project {
+  margin: 0 0 1px;
+}
+
+.job-head,
+.edu-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.job-org,
+.edu-org {
+  font-weight: 700;
+}
+
+.job-loc,
+.edu-loc,
+.job-dates,
+.edu-dates {
+  white-space: nowrap;
+  font-size: 10pt;
+}
+
+.job-sub,
+.edu-sub {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 10pt;
+  margin-bottom: 0;
+}
+
+.job-role {
+  font-style: italic;
+}
+
+.edu-degree {
+  font-style: normal;
+}
+
+ul {
+  margin: 1px 0 0 18px;
+  padding: 0;
+  list-style: disc;
+}
+
+li {
+  margin: 0;
+}
+
+.skills p,
+.edu p,
+.edu-block p,
+.project p {
+  margin: 0 0 1px;
+}
+
+.skills strong,
+.edu strong {
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Zakiy T. Manigo</h1>
+      
+      <p class="contact">+1 (908) 230-6948  |  zakiymanigo@gmail.com  |  NY / NJ  |  <a href="https://www.linkedin.com/in/zakiymanigo">linkedin.com/in/zakiymanigo</a></p>
+    </header>
+    <p class="summary">I ship TypeScript services and Python data jobs with PostgreSQL as the record and LLM features held to written checks. I am one of two primary engineers on a clinic platform. I completed a Columbia B.S. in Computer Engineering through the Combined Plan and I am based in New York / New Jersey.</p><h2>Relevant Experience</h2><div class="job"><div class="job-head"><span class="job-org"><strong>BariAccess</strong></span><span class="job-loc">Livingston, NJ / Hybrid</span></div><div class="job-sub"><span class="job-role">Software Engineer</span><span class="job-dates">June 2025 – Present</span></div><ul><li>Served as one of two primary engineers on TREI (<a href="https://trei.care">trei.care</a>), building TypeScript from the Fastify API and PostgreSQL through a worker and transactional outbox to the React staff console and patient site.</li><li>Owned operational data workflows into Postgres: wearable pulls, Calendly scheduling races, and Stripe event ordering, with versioned migrations and idempotent handlers so a late or duplicate event does not rewrite the record.</li><li>Productized ABA, a medical AI assistant and companion being built for TREI, on Azure OpenAI so voice and text share one policy path and a model miss cannot invent a clinical claim or become the chart.</li><li>Used HIPAA and GDPR documentation, and the clinic privacy and legal pages, as the written guide for API, worker, and app changes.</li><li>Encoded consent, erasure, least privilege, no PHI in telemetry, Key Vault secrets, and no patient record or secrets in ABA logs.</li><li>Operated Azure Container Apps staging with Entra, Key Vault, and Service Bus, and landed features behind tests, CI, and fail-closed release gates.</li></ul></div><div class="job"><div class="job-head"><span class="job-org"><strong>City of Elizabeth</strong></span><span class="job-loc">Elizabeth, NJ</span></div><div class="job-sub"><span class="job-role">Database Engineer Intern</span><span class="job-dates">May 2024 – September 2024</span></div><ul><li>Administered MongoDB and Excel document stores supporting a knowledge-sharing network used by more than 500 municipal staff.</li><li>Automated reporting pipelines and improved data flow across departments so shared records could be reused without a manual handoff.</li></ul></div><h2>Projects</h2><div class="project"><div class="job-head"><span class="job-org"><strong>FITD AI</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founder and Engineer</span><span class="job-dates">May 2024 – Present</span></div><ul><li>Built a Next.js 14 admin CRM with role-based access, and Python automations including a Flask and SQLite Instagram CRM that calls GPT-4o.</li><li>Moved brand catalog data from crawl files through a Cloud Function import into Firestore for approximately 57 brands, and ran an Instagram scrape into SQLite for later analysis.</li><li>Put Gemini closet labeling, a wardrobe-grounded stylist, and Vertex virtual try-on behind a Cloud Function proxy, with quotas, moderation, and a kill switch on community bots.</li></ul></div><div class="project"><div class="job-head"><span class="job-org"><strong>Local AI</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Product Engineer</span><span class="job-dates">August 2026 – Present</span></div><ul><li>Built an offline Windows client for local models, documents, and retrieval, with llama.cpp under Tauri, Rust, and React, and chats stored in SQLite.</li></ul></div><div class="project"><div class="job-head"><span class="job-org"><strong>LaunchPage Studio</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founding Engineer</span><span class="job-dates">October 2025 – Present</span></div><ul><li>Built Automotive Operations System with role-based access, server-owned writes, Stripe Checkout and refunds, security-rules tests, and GitHub Actions on Firebase Hosting.</li><li>Extended that shop platform across estimates, invoices, inventory, schedule, and encrypted messages, with sequential IDs, optimistic concurrency, and a delivery playbook.</li><li>Shipped TaxTracker Pro with one account, one data model, and one billing state across a React web client and Expo iOS and Android apps.</li><li>Wrote TaxTracker Pro privacy and terms with CCPA and GDPR language, plus operator runbooks for billing, documents, and CPA export.</li></ul></div><div class="project"><div class="job-head"><span class="job-org"><strong>FitGenius</strong></span><span class="job-loc">Remote</span></div><div class="job-sub"><span class="job-role">Founding Technical Partner</span><span class="job-dates">May 2026 – Present</span></div><ul><li>Shipped a pre-launch fitness app on Expo and React Native, with Cloud Functions, Firestore rules tests, and GitHub Actions.</li><li>Ran Gemini on Vertex inside a legal and compliance suite, with consent gates, account deletion, and payloads stripped of GPS, health samples, and photos.</li></ul></div><h2>Education</h2><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>Columbia University</strong></span><span class="edu-loc">New York, NY</span></div><div class="edu-sub"><span class="edu-degree">Bachelor of Science in Computer Engineering</span><span class="edu-dates">May 2025</span></div><p>Fu Foundation Combined Plan 3+2</p></div><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>St. Lawrence University</strong></span><span class="edu-loc">Canton, NY</span></div><div class="edu-sub"><span class="edu-degree">Bachelor of Arts in Mathematics</span><span class="edu-dates">May 2023</span></div><p>Dean’s List, Spring 2022</p></div><div class="edu-block"><div class="edu-head"><span class="edu-org"><strong>James Cook University</strong></span><span class="edu-loc">Townsville, QLD, Australia</span></div><div class="edu-sub"><span class="edu-degree">Undergraduate Exchange</span><span class="edu-dates">Fall 2022</span></div></div><h2>Skills/Interests</h2><div class="skills"><p><strong>Skills:</strong> TypeScript, Python, SQL, JavaScript, React, Next.js, Fastify, Flask, PostgreSQL, SQLite, Azure OpenAI, Gemini / Vertex AI, Firebase / GCP, Azure, GitHub Actions</p><p><strong>Interests:</strong> calisthenics, gym, running, basketball, golf, snowboarding, hiking, skeet, pop/R&B production, cooking, journaling, travel, poker</p><p><strong>Community:</strong> Siloam-Hope First Presbyterian; NAACP Elizabeth Branch; Supervising Tutor, Central Presbyterian Church</p></div>
+  </div>
+</body>
+</html>

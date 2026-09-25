@@ -17,3 +17,4 @@ Each job-title folder contains `md` (source), `html` (rendered), and `pdf` (one-
 | 6 | Rillet Consultant | JR104362 — implementation consulting, UAT, finance-ops systems |
 | 7 | Data & AI Platform Engineer | JR104191 — Azure ops, CI/CD, runbooks, guarded GenAI enablement |
 | 8 | AI & Automation Engineer | Unposted practice seat — custom AI, n8n/workflow automation, fail-closed assistants |
+| 9 | Software Engineer | Brellium — healthcare LLM platform; TypeScript, Python, PostgreSQL, Next.js |
